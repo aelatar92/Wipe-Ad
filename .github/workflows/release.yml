@@ -18,7 +18,7 @@ jobs:
         with: { node-version: 22 }
       - run: npm test
       # Chromium is used at build time to validate regex rules with the real RE2 engine
-      - run: npx -y playwright@1.49.1 install chromium
+      - run: npx -y playwright@1.49.1 install --with-deps chromium
       - run: node tools/build.mjs
       - name: Sign Firefox add-on (optional — needs AMO_JWT_ISSUER / AMO_JWT_SECRET secrets)
         if: ${{ env.AMO_JWT_ISSUER != '' }}

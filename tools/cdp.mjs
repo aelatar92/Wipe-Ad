@@ -51,7 +51,8 @@ export function findChromium(explicit) {
 export async function launchWithExtension(chrome, extDir, port = 9333) {
   const profile = mkdtempSync(join(tmpdir(), 'wipead-chromium-'));
   const proc = spawn(chrome, [`--remote-debugging-port=${port}`, `--user-data-dir=${profile}`, `--load-extension=${extDir}`,
-    `--disable-extensions-except=${extDir}`, '--headless=new', '--no-first-run', '--no-default-browser-check', '--window-size=1280,900', 'about:blank'], { stdio: 'ignore' });
+    `--disable-extensions-except=${extDir}`, '--headless=new', '--no-first-run', '--no-default-browser-check', '--window-size=1280,900',
+    ...(process.env.CI || process.platform === 'linux' ? ['--no-sandbox', '--disable-dev-shm-usage', '--disable-gpu'] : []), 'about:blank'], { stdio: 'ignore' });
   let ver;
   for (let i = 0; i < 75 && !ver; i++) { try { ver = await (await fetch(`http://127.0.0.1:${port}/json/version`)).json(); } catch { await sleep(200); } }
   if (!ver) { proc.kill(); throw new Error('Chromium did not start'); }
