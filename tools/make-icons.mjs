@@ -60,7 +60,7 @@ function drawIcon(size, off) {
 mkdirSync(join(ROOT, 'icons'), { recursive: true });
 for (const s of [16, 32, 48, 128]) {
   writeFileSync(join(ROOT, 'icons', `icon-${s}.png`), drawIcon(s, false));
-  writeFileSync(join(ROOT, 'icons', `icon-${s}-off.png`), drawIcon(s, true));
+  if (s <= 32) writeFileSync(join(ROOT, 'icons', `icon-${s}-off.png`), drawIcon(s, true)); // toolbar only
 }
 mkdirSync(join(ROOT, 'resources'), { recursive: true });
 writeFileSync(join(ROOT, 'resources', '1x1.gif'), Buffer.from('R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7', 'base64'));

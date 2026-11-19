@@ -60,7 +60,6 @@ export async function setSettings(patch) {
 
 export function onSettingsChanged(fn) { listeners.add(fn); }
 
-export function invalidateSettings() { cache = null; }
 
 // Temporarily paused sites (session only): host -> until timestamp
 let paused = null;

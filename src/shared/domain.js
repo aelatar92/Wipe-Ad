@@ -75,11 +75,6 @@ export function hostnameOf(url) {
   try { return new URL(url).hostname.toLowerCase(); } catch { return ''; }
 }
 
-export function isThirdParty(requestHost, pageHost) {
-  if (!requestHost || !pageHost) return false;
-  return getBaseDomain(requestHost) !== getBaseDomain(pageHost);
-}
-
 // Organisations that own several registrable domains (treated as first party to each other)
 const ENTITY_GROUPS = [
   ['google.com', 'youtube.com', 'gstatic.com', 'googleapis.com', 'googleusercontent.com', 'ytimg.com', 'ggpht.com', 'googlevideo.com', 'gmail.com', 'blogger.com', 'google.com.eg', 'google.com.sa', 'google.ae'],

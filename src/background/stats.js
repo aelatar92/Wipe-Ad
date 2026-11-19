@@ -13,7 +13,7 @@ let badgeOn = true;
 
 function tabState(tabId) {
   let t = tabs.get(tabId);
-  if (!t) { t = { url: '', host: '', blocked: 0, allowed3p: 0, domains: new Map(), log: [] }; tabs.set(tabId, t); }
+  if (!t) { t = { url: '', host: '', blocked: 0, domains: new Map(), log: [] }; tabs.set(tabId, t); }
   return t;
 }
 

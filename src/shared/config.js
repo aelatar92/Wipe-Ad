@@ -2,7 +2,6 @@
 // Change UPDATE_BASE to wherever you host the `updates/` folder (GitHub raw by default).
 
 export const CONFIG = {
-  name: 'Wipe Ad',
   // Remote folder that holds version.json and filters/manifest.json
   UPDATE_BASE: 'https://raw.githubusercontent.com/aelatar92/Wipe-Ad/main/updates',
   RELEASES_URL: 'https://github.com/aelatar92/Wipe-Ad/releases/latest',

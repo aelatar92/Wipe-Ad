@@ -1,7 +1,7 @@
 // Wipe Ad — UI translations (Arabic / English) with runtime language switching.
 export const STRINGS = {
   en: {
-    appName: 'Wipe Ad', on: 'On', off: 'Off', enabledHere: 'Protection is ON for this site', disabledHere: 'Protection is OFF for this site',
+    on: 'On', off: 'Off', enabledHere: 'Protection is ON for this site', disabledHere: 'Protection is OFF for this site',
     pausedHere: 'Paused until', globalOff: 'Wipe Ad is turned off everywhere', turnOnEverywhere: 'Turn on',
     blockedPage: 'Blocked on this page', blockedTotal: 'Blocked in total', cookieBanners: 'Cookie banners refused',
     mode: 'Filtering mode', modeBasic: 'Basic', modeStandard: 'Standard', modeStrict: 'Strict',
@@ -11,7 +11,7 @@ export const STRINGS = {
     picker: 'Block element', zapper: 'Zap element', pause: 'Pause 30 min', resume: 'Resume', dashboard: 'Dashboard', log: 'Log',
     trackers: 'Trackers & third parties on this page', noTrackers: 'Nothing detected yet.',
     cat_a: 'Advertising', cat_t: 'Tracking', cat_m: 'Malware', cat_n: 'Annoyance', cat_s: 'Social', cat_o: 'Other',
-    blocked: 'blocked', allowed: 'allowed', learned: 'learned',
+    blocked: 'blocked', allowed: 'allowed',
     updateAvailable: 'Update available', getUpdate: 'Get update', notWebPage: 'Wipe Ad works on web pages (http/https).',
     // dashboard
     navOverview: 'Overview', navLists: 'Filter lists', navMyFilters: 'My filters', navSites: 'Sites', navPrivacy: 'Privacy',
@@ -54,7 +54,7 @@ export const STRINGS = {
     goBack: 'Go back to safety', proceed: 'Proceed anyway (not recommended)', alwaysAllow: 'Always allow this site', blockedUrl: 'Blocked address',
   },
   ar: {
-    appName: 'Wipe Ad', on: 'تشغيل', off: 'إيقاف', enabledHere: 'الحماية تعمل على هذا الموقع', disabledHere: 'الحماية متوقفة على هذا الموقع',
+    on: 'تشغيل', off: 'إيقاف', enabledHere: 'الحماية تعمل على هذا الموقع', disabledHere: 'الحماية متوقفة على هذا الموقع',
     pausedHere: 'متوقفة مؤقتاً حتى', globalOff: 'Wipe Ad متوقف في كل المواقع', turnOnEverywhere: 'تشغيل',
     blockedPage: 'محجوب في هذه الصفحة', blockedTotal: 'إجمالي المحجوب', cookieBanners: 'نوافذ كوكيز تم رفضها',
     mode: 'وضع الفلترة', modeBasic: 'أساسي', modeStandard: 'قياسي', modeStrict: 'صارم',
@@ -64,7 +64,7 @@ export const STRINGS = {
     picker: 'حجب عنصر', zapper: 'إزالة عنصر', pause: 'إيقاف 30 دقيقة', resume: 'استئناف', dashboard: 'لوحة التحكم', log: 'السجل',
     trackers: 'المتتبعون والأطراف الثالثة في هذه الصفحة', noTrackers: 'لم يُكتشف شيء بعد.',
     cat_a: 'إعلانات', cat_t: 'تتبع', cat_m: 'برمجيات ضارة', cat_n: 'مزعجات', cat_s: 'شبكات اجتماعية', cat_o: 'أخرى',
-    blocked: 'محجوب', allowed: 'مسموح', learned: 'مُتعلَّم',
+    blocked: 'محجوب', allowed: 'مسموح',
     updateAvailable: 'يتوفر تحديث', getUpdate: 'تحميل التحديث', notWebPage: 'يعمل Wipe Ad على صفحات الويب (http/https).',
     navOverview: 'نظرة عامة', navLists: 'قوائم الفلاتر', navMyFilters: 'فلاتري', navSites: 'المواقع', navPrivacy: 'الخصوصية',
     navLearning: 'تعلّم المتتبعين', navLog: 'سجل الفلترة', navUpdates: 'التحديثات', navSettings: 'الإعدادات', navAbout: 'حول',
@@ -108,7 +108,6 @@ export const STRINGS = {
 
 let lang = 'en';
 export function t(key) { return STRINGS[lang][key] ?? STRINGS.en[key] ?? key; }
-export function currentLang() { return lang; }
 
 export async function initI18n() {
   let pref = 'auto';

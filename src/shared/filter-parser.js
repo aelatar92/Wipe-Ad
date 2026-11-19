@@ -62,7 +62,6 @@ const SCRIPTLET_ALIASES = {
   'prevent-refresh': 'prevent-refresh', 'refresh-defuser': 'prevent-refresh',
   'href-sanitizer': 'href-sanitizer', 'trusted-click-element': 'click-element', 'click-element': 'click-element',
 };
-export const SCRIPTLET_NAMES = new Set(Object.values(SCRIPTLET_ALIASES));
 
 export function normalizeScriptletName(raw) {
   let n = String(raw || '').trim().replace(/^ubo-/, '').replace(/\.js$/, '');
