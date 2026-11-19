@@ -1,0 +1,9 @@
+node_modules/
+.cache/
+build/
+dist/
+research/downloads/
+research/vendor/
+tests/e2e/out/
+*.pem
+*.crx

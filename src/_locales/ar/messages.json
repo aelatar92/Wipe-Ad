@@ -1,0 +1,12 @@
+{
+  "extName": { "message": "Wipe Ad — حاجب الإعلانات والمتتبعين" },
+  "extDescription": { "message": "الكل في واحد: يحجب الإعلانات والمتتبعين والمواقع الضارة ونوافذ الكوكيز، ويتعلم المتتبعين الجدد، مع وضع خصوصية متخفٍ وتحديث تلقائي." },
+  "cmdPicker": { "message": "حجب عنصر في الصفحة" },
+  "cmdZapper": { "message": "إزالة عنصر مؤقتاً" },
+  "cmdToggleSite": { "message": "تشغيل / إيقاف Wipe Ad على الموقع الحالي" },
+  "menuBlockElement": { "message": "Wipe Ad: حجب عنصر…" },
+  "menuZapElement": { "message": "Wipe Ad: إزالة عنصر مؤقتاً" },
+  "menuToggleSite": { "message": "Wipe Ad: تشغيل/إيقاف على هذا الموقع" },
+  "updateAvailableTitle": { "message": "يتوفر إصدار جديد من Wipe Ad: $1" },
+  "updateAvailableBody": { "message": "لديك الإصدار $1. انقر للحصول على الإصدار الجديد." }
+}

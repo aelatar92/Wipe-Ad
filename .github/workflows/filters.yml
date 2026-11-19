@@ -1,0 +1,24 @@
+# Publishes live rule updates every day: new upstream filters reach users within hours,
+# without a new extension release (the extension polls updates/filters/manifest.json).
+name: Live filter updates
+on:
+  schedule:
+    - cron: '17 */6 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  delta:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - run: node tools/make-delta.mjs
+      - name: Commit if changed
+        run: |
+          git config user.name "wipe-ad-bot"
+          git config user.email "wipe-ad-bot@users.noreply.github.com"
+          git add updates/filters
+          git diff --cached --quiet || git commit -m "Live filter update $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push

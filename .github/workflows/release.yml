@@ -1,0 +1,34 @@
+# On a version tag (vX.Y.Z): test, build, and publish the packages to GitHub Releases.
+# The extension's update checker reads updates/version.json (written by `npm run release`).
+name: Release
+on:
+  push:
+    tags: ['v*']
+permissions:
+  contents: write
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    env:
+      AMO_JWT_ISSUER: ${{ secrets.AMO_JWT_ISSUER }}
+      AMO_JWT_SECRET: ${{ secrets.AMO_JWT_SECRET }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - run: npm test
+      # Chromium is used at build time to validate regex rules with the real RE2 engine
+      - run: npx -y playwright@1.49.1 install chromium
+      - run: node tools/build.mjs
+      - name: Sign Firefox add-on (optional — needs AMO_JWT_ISSUER / AMO_JWT_SECRET secrets)
+        if: ${{ env.AMO_JWT_ISSUER != '' }}
+        run: |
+          npx -y web-ext@8 sign --source-dir dist/firefox --channel unlisted --artifacts-dir dist/signed \
+            --api-key "$AMO_JWT_ISSUER" --api-secret "$AMO_JWT_SECRET"
+          cp dist/signed/*.xpi "dist/wipe-ad-${GITHUB_REF_NAME#v}-firefox.xpi"
+      - name: Publish release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" dist/*.zip dist/*.xpi --title "Wipe Ad $GITHUB_REF_NAME" --generate-notes 2>/dev/null \
+            || gh release create "$GITHUB_REF_NAME" dist/*.zip --title "Wipe Ad $GITHUB_REF_NAME" --generate-notes

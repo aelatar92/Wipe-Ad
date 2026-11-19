@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wipe Ad — Dashboard</title>
+<link rel="icon" href="../icons/icon-32.png">
+<link rel="stylesheet" href="common.css">
+<link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+<div class="layout">
+  <aside class="side">
+    <div class="logo"><img src="../icons/icon-48.png" width="34" height="34" alt=""><div><b>Wipe Ad</b><div class="muted small">v<span id="ver"></span></div></div></div>
+    <nav id="nav">
+      <a data-sec="overview">📊 <span data-i18n="navOverview"></span></a>
+      <a data-sec="lists">🧾 <span data-i18n="navLists"></span></a>
+      <a data-sec="myfilters">✍️ <span data-i18n="navMyFilters"></span></a>
+      <a data-sec="sites">🌐 <span data-i18n="navSites"></span></a>
+      <a data-sec="privacy">🕶️ <span data-i18n="navPrivacy"></span></a>
+      <a data-sec="learning">🧠 <span data-i18n="navLearning"></span></a>
+      <a data-sec="log">📜 <span data-i18n="navLog"></span></a>
+      <a data-sec="updates">⬆️ <span data-i18n="navUpdates"></span><i id="updDot" class="dot" hidden></i></a>
+      <a data-sec="settings">⚙️ <span data-i18n="navSettings"></span></a>
+      <a data-sec="about">ℹ️ <span data-i18n="navAbout"></span></a>
+    </nav>
+  </aside>
+
+  <main>
+    <!-- OVERVIEW -->
+    <section id="sec-overview">
+      <div id="welcome" class="card welcome" hidden><h2 data-i18n="welcomeTitle"></h2><p data-i18n="welcomeBody"></p></div>
+      <div class="card row master">
+        <div><b data-i18n="masterSwitch"></b><div class="muted small" data-i18n="masterHint"></div></div>
+        <span class="spacer"></span>
+        <label class="switch"><input type="checkbox" data-setting="enabled"><span></span></label>
+      </div>
+      <div class="stats">
+        <div class="card stat big"><b id="stBlocked">0</b><span data-i18n="statBlocked"></span></div>
+        <div class="card stat"><b id="stAds">0</b><span data-i18n="statAds"></span></div>
+        <div class="card stat"><b id="stTrackers">0</b><span data-i18n="statTrackers"></span></div>
+        <div class="card stat"><b id="stMalware">0</b><span data-i18n="statMalware"></span></div>
+        <div class="card stat"><b id="stBanners">0</b><span data-i18n="statBanners"></span></div>
+      </div>
+      <div class="card"><div id="bars" class="bars"></div><div class="row small muted"><span data-i18n="statSince"></span>&nbsp;<span id="stSince"></span><span class="spacer"></span><button id="resetStats" class="danger" data-i18n="resetStats"></button></div></div>
+    </section>
+
+    <!-- LISTS -->
+    <section id="sec-lists" hidden>
+      <div class="card row"><b data-i18n="ruleBudget"></b><span class="spacer"></span><span id="budget" class="muted small"></span></div>
+      <div id="lists"></div>
+      <div class="card">
+        <h3 data-i18n="customLists"></h3>
+        <div class="row"><input id="customUrl" type="url" data-i18n-ph="customListPlaceholder" style="flex:1"><button id="addCustom" class="primary" data-i18n="addList"></button></div>
+        <div id="customs" class="customs"></div>
+      </div>
+    </section>
+
+    <!-- MY FILTERS -->
+    <section id="sec-myfilters" hidden>
+      <div class="card">
+        <p class="muted small" data-i18n="myFiltersHint"></p>
+        <textarea id="userFilters" rows="20" spellcheck="false"></textarea>
+        <div class="row" style="margin-top:10px"><button id="saveFilters" class="primary" data-i18n="save"></button><button id="testFilters" data-i18n="test"></button><span id="filtersMsg" class="muted small"></span></div>
+      </div>
+    </section>
+
+    <!-- SITES -->
+    <section id="sec-sites" hidden>
+      <div class="card">
+        <h3 data-i18n="allowlist"></h3>
+        <p class="muted small" data-i18n="allowlistHint"></p>
+        <textarea id="allowlist" rows="10" spellcheck="false"></textarea>
+        <div class="row" style="margin-top:10px"><button id="saveAllow" class="primary" data-i18n="save"></button><span id="allowMsg" class="muted small"></span></div>
+      </div>
+      <div class="card"><h3 data-i18n="siteModes"></h3><div id="siteModes"></div></div>
+    </section>
+
+    <!-- PRIVACY -->
+    <section id="sec-privacy" hidden>
+      <div class="card">
+        <h3 data-i18n="privacyStealth"></h3>
+        <div class="opts" id="privacyOpts"></div>
+      </div>
+    </section>
+
+    <!-- LEARNING -->
+    <section id="sec-learning" hidden>
+      <div class="card">
+        <div class="row"><div><b data-i18n="learningOn"></b><div class="muted small" data-i18n="learningHint"></div></div><span class="spacer"></span><label class="switch"><input type="checkbox" data-setting="learning"><span></span></label></div>
+        <div class="row" style="margin-top:10px"><span data-i18n="threshold"></span><input type="number" min="2" max="10" data-setting="learningThreshold" style="width:70px"><span data-i18n="sites"></span><span class="spacer"></span><button id="resetLearning" class="danger" data-i18n="resetLearning"></button></div>
+      </div>
+      <div class="card"><input id="learnFilter" type="text" data-i18n-ph="filterPlaceholder" style="width:100%;margin-bottom:10px"><div id="learnTable"></div></div>
+    </section>
+
+    <!-- LOG -->
+    <section id="sec-log" hidden>
+      <div class="card row wrap">
+        <span data-i18n="tab"></span><select id="logTab"></select>
+        <input id="logFilter" type="text" data-i18n-ph="filterPlaceholder">
+        <label class="row small"><input type="checkbox" id="logOnlyBlocked"><span data-i18n="st_blocked"></span></label>
+        <span class="spacer"></span>
+        <button id="logPause" data-i18n="pauseLog"></button><button id="logClear" data-i18n="clear"></button>
+      </div>
+      <div class="card logwrap"><table class="log"><thead><tr><th data-i18n="time"></th><th data-i18n="status"></th><th data-i18n="type"></th><th data-i18n="category"></th><th data-i18n="url"></th><th></th></tr></thead><tbody id="logBody"></tbody></table></div>
+    </section>
+
+    <!-- UPDATES -->
+    <section id="sec-updates" hidden>
+      <div class="card">
+        <div class="kv"><span data-i18n="currentVersion"></span><b id="uCur"></b></div>
+        <div class="kv"><span data-i18n="latestVersion"></span><b id="uLatest"></b></div>
+        <div class="kv"><span data-i18n="lastCheck"></span><span id="uLast"></span></div>
+        <div id="uNotes" class="notes" hidden></div>
+        <div class="row" style="margin-top:12px"><button id="checkNow" class="primary" data-i18n="checkNow"></button><a id="uDownload" class="btnlink" hidden data-i18n="getUpdate"></a><span id="uMsg" class="muted small"></span></div>
+      </div>
+      <div class="card">
+        <h3 data-i18n="remoteRules"></h3>
+        <div class="kv"><span data-i18n="rulesVersion"></span><b id="rVer"></b></div>
+        <div class="kv"><span data-i18n="lastCheck"></span><span id="rLast"></span></div>
+        <div class="kv"><span data-i18n="rules"></span><span id="rRules"></span></div>
+      </div>
+      <div class="card opts">
+        <label class="opt"><span data-i18n="autoUpdateExtension"></span><label class="switch"><input type="checkbox" data-setting="autoUpdateExtension"><span></span></label></label>
+        <label class="opt"><span data-i18n="autoUpdateFilters"></span><label class="switch"><input type="checkbox" data-setting="autoUpdateFilters"><span></span></label></label>
+        <label class="opt"><span data-i18n="updateInterval"></span><select data-setting="updateIntervalMin" data-num="1"><option value="60">1</option><option value="180">3</option><option value="360">6</option><option value="720">12</option><option value="1440">24</option></select><span data-i18n="hours"></span></label>
+      </div>
+    </section>
+
+    <!-- SETTINGS -->
+    <section id="sec-settings" hidden>
+      <div class="card opts">
+        <label class="opt"><span data-i18n="language"></span><select data-setting="language"><option value="auto" data-i18n="langAuto"></option><option value="ar">العربية</option><option value="en">English</option></select></label>
+        <label class="opt"><span data-i18n="showBadge"></span><label class="switch"><input type="checkbox" data-setting="showBadge"><span></span></label></label>
+        <label class="opt"><span data-i18n="cosmetic"></span><label class="switch"><input type="checkbox" data-setting="cosmetic"><span></span></label></label>
+        <label class="opt"><span data-i18n="scriptlets"></span><label class="switch"><input type="checkbox" data-setting="scriptlets"><span></span></label></label>
+      </div>
+      <div class="card">
+        <h3 data-i18n="backup"></h3>
+        <div class="row"><button id="exportBtn" data-i18n="exportBtn"></button><button id="importBtn" data-i18n="importBtn"></button><input id="importFile" type="file" accept=".json" hidden><span id="backupMsg" class="muted small"></span></div>
+      </div>
+      <div class="card">
+        <h3 data-i18n="shortcuts"></h3>
+        <div class="muted small">Alt+Shift+P — <span data-i18n="picker"></span><br>Alt+Shift+Z — <span data-i18n="zapper"></span></div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="sec-about" hidden>
+      <div class="card"><h2>Wipe Ad</h2><p data-i18n="aboutBody"></p><h3 data-i18n="credits"></h3><ul id="credits"></ul></div>
+    </section>
+  </main>
+</div>
+
+<dialog id="subDialog">
+  <form method="dialog">
+    <h3 data-i18n="confirmSubscribe"></h3>
+    <p id="subTitle"></p><code id="subUrl"></code>
+    <div class="row" style="margin-top:14px"><button value="ok" class="primary" data-i18n="subscribe"></button><button value="cancel" data-i18n="cancel"></button></div>
+  </form>
+</dialog>
+<script type="module" src="dashboard.js"></script>
+</body>
+</html>

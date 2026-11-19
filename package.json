@@ -1,0 +1,19 @@
+{
+  "name": "wipe-ad",
+  "version": "1.0.0",
+  "description": "Wipe Ad — all-in-one ad blocker, tracker blocker and privacy guard (MV3, Chromium + Firefox)",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "icons": "node tools/make-icons.mjs",
+    "build": "node tools/build.mjs",
+    "build:offline": "node tools/build.mjs --offline",
+    "delta": "node tools/make-delta.mjs",
+    "release": "node tools/release.mjs",
+    "test": "node --test tests/parser.test.mjs",
+    "e2e": "node tests/e2e/run.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

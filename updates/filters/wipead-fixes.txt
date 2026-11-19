@@ -1,0 +1,2 @@
+! Wipe Ad — hot fixes. Anything added here reaches every user within hours (no new release needed).
+! Syntax: Adblock Plus / uBlock Origin / AdGuard.

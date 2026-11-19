@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Wipe Ad</title>
+<link rel="stylesheet" href="common.css">
+<link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="row">
+      <img src="../icons/icon-32.png" width="26" height="26" alt="">
+      <strong class="brand">Wipe Ad</strong>
+      <span class="spacer"></span>
+      <button id="openLog" class="icon" data-i18n-title="log" title="Log">≡</button>
+      <button id="openDash" class="icon" data-i18n-title="dashboard" title="Dashboard">⚙</button>
+    </div>
+    <div id="update" class="update" hidden>
+      <span>⬆ <span data-i18n="updateAvailable"></span> <b id="updVer"></b></span>
+      <a id="updLink" href="#" data-i18n="getUpdate"></a>
+    </div>
+    <div class="site">
+      <div id="host" class="host">—</div>
+      <button id="power" class="power" aria-pressed="true">⏻</button>
+      <div id="stateText" class="state"></div>
+    </div>
+    <div class="counters">
+      <div><b id="cntPage">0</b><span data-i18n="blockedPage"></span></div>
+      <div><b id="cntTotal">0</b><span data-i18n="blockedTotal"></span></div>
+      <div><b id="cntBanners">0</b><span data-i18n="cookieBanners"></span></div>
+    </div>
+  </header>
+
+  <main id="main">
+    <div id="globalOff" class="card notice" hidden>
+      <span data-i18n="globalOff"></span>
+      <button id="turnOn" class="primary" data-i18n="turnOnEverywhere"></button>
+    </div>
+    <div id="notWeb" class="card notice muted" hidden data-i18n="notWebPage"></div>
+
+    <section id="siteControls">
+      <div class="label" data-i18n="mode"></div>
+      <div class="seg" id="modes">
+        <button data-mode="basic" data-i18n="modeBasic"></button>
+        <button data-mode="standard" data-i18n="modeStandard"></button>
+        <button data-mode="strict" data-i18n="modeStrict"></button>
+      </div>
+      <div id="modeHint" class="muted small hint"></div>
+
+      <div class="tools">
+        <button id="pick"><span>🎯</span><span data-i18n="picker"></span></button>
+        <button id="zap"><span>⚡</span><span data-i18n="zapper"></span></button>
+        <button id="pause"><span>⏸</span><span id="pauseLabel" data-i18n="pause"></span></button>
+      </div>
+
+      <div class="label" data-i18n="trackers"></div>
+      <div id="trackers" class="trackers"></div>
+    </section>
+  </main>
+  <footer class="muted small row"><span>v<span id="ver"></span></span><span class="spacer"></span><span id="paused" class="small"></span></footer>
+  <script type="module" src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+{
+ "version": "202611192302",
+ "generated": "2026-11-19T23:02:16.739Z",
+ "baselineVersion": "1.0.0",
+ "lists": [
+  {
+   "id": "easylist",
+   "ruleset": "easylist",
+   "url": "delta-easylist.txt",
+   "sha256": "232e2fe6f18395cfe815ea586d243627b4a16894272f5215b95ef80b7b71f330",
+   "lines": 1
+  },
+  {
+   "id": "wipead-fixes",
+   "ruleset": null,
+   "url": "wipead-fixes.txt",
+   "sha256": "9b4ea991f427e1181a70b8fc2ab5e4f5c98004f519b2f25897f24a6944b6e951",
+   "lines": 3
+  }
+ ],
+ "yellowlist": [],
+ "consentRules": [],
+ "notice": null
+}

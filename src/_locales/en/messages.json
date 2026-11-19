@@ -1,0 +1,12 @@
+{
+  "extName": { "message": "Wipe Ad — Ad & Tracker Blocker" },
+  "extDescription": { "message": "All-in-one: blocks ads, trackers, malware, cookie banners; learns new trackers; stealth privacy mode. Auto-updating." },
+  "cmdPicker": { "message": "Block an element on the page" },
+  "cmdZapper": { "message": "Remove an element temporarily" },
+  "cmdToggleSite": { "message": "Enable / disable Wipe Ad on the current site" },
+  "menuBlockElement": { "message": "Wipe Ad: Block element…" },
+  "menuZapElement": { "message": "Wipe Ad: Remove element temporarily" },
+  "menuToggleSite": { "message": "Wipe Ad: Enable/disable on this site" },
+  "updateAvailableTitle": { "message": "Wipe Ad $1 is available" },
+  "updateAvailableBody": { "message": "You have $1. Click to get the new version." }
+}
