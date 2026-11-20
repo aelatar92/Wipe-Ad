@@ -3,8 +3,16 @@
 
 export function wipeAdScriptlets(list) {
   'use strict';
-  if (window.__wipeAdScriptlets) return;
-  try { Object.defineProperty(window, '__wipeAdScriptlets', { value: true }); } catch { return; }
+  // Several injections can reach the same page (registered at document_start + executeScript
+  // for user / live rules): apply each scriptlet only once per document.
+  const KEY = Symbol.for('wipead.scriptlets');
+  let applied = window[KEY];
+  if (!applied) {
+    applied = new Set();
+    try { Object.defineProperty(window, KEY, { value: applied }); } catch { return; }
+  }
+  list = list.filter(item => { const sig = JSON.stringify(item); if (applied.has(sig)) return false; applied.add(sig); return true; });
+  if (!list.length) return;
 
   const toRegex = (s) => {
     if (s === undefined || s === '' || s === '*') return /^/;
@@ -105,6 +113,89 @@ export function wipeAdScriptlets(list) {
       JSON.parse = new Proxy(origParse, { apply(t, th, a) { return fix(Reflect.apply(t, th, a)); } });
       const origJson = Response.prototype.json;
       Response.prototype.json = new Proxy(origJson, { apply(t, th, a) { return Reflect.apply(t, th, a).then(fix); } });
+    },
+    // shared JSON pruner used by the fetch / XHR response variants
+    _pruner(paths, required) {
+      const prune = (paths || '').split(/ +/).filter(Boolean);
+      const req = (required || '').split(/ +/).filter(Boolean);
+      const get = (o, p) => p.split('.').reduce((a, k) => (a && typeof a === 'object' && k in a) ? a[k] : undefined, o);
+      const del = (o, p) => {
+        const ks = p.split('.');
+        const walk = (node, i) => {
+          if (!node || typeof node !== 'object') return;
+          const k = ks[i];
+          if (k === '[]') { for (const v of Object.values(node)) walk(v, i + 1); return; }
+          if (i === ks.length - 1) { delete node[k]; return; }
+          walk(node[k], i + 1);
+        };
+        walk(o, 0);
+      };
+      return (obj) => {
+        try { if (req.length && !req.every(p => get(obj, p) !== undefined)) return obj; prune.forEach(p => del(obj, p)); } catch { /* ignore */ }
+        return obj;
+      };
+    },
+    _urlMatcher(rest) {
+      // uBO style trailing args: "propsToMatch", "<url pattern>"
+      const i = rest.indexOf('propsToMatch');
+      const pat = i >= 0 ? rest[i + 1] : '';
+      const re = toRegex((pat || '').replace(/^url:/, ''));
+      return url => !pat || re.test(url);
+    },
+    'json-prune-fetch-response'(paths, required, ...rest) {
+      const fix = this._pruner(paths, required), match = this._urlMatcher(rest);
+      window.fetch = new Proxy(window.fetch, { apply(t, th, a) {
+        const url = a[0] instanceof Request ? a[0].url : String(a[0]);
+        const p = Reflect.apply(t, th, a);
+        if (!match(url)) return p;
+        return p.then(res => res.clone().text().then(text => {
+          let obj; try { obj = JSON.parse(text); } catch { return res; }
+          return new Response(JSON.stringify(fix(obj)), { status: res.status, statusText: res.statusText, headers: res.headers });
+        }).catch(() => res));
+      } });
+    },
+    'json-prune-xhr-response'(paths, required, ...rest) {
+      const fix = this._pruner(paths, required), match = this._urlMatcher(rest);
+      const open = XMLHttpRequest.prototype.open;
+      XMLHttpRequest.prototype.open = function (m, u, ...r) { this.__waPrune = match(String(u)); return open.call(this, m, u, ...r); };
+      for (const prop of ['response', 'responseText']) {
+        const desc = Object.getOwnPropertyDescriptor(XMLHttpRequest.prototype, prop);
+        if (!desc?.get) continue;
+        Object.defineProperty(XMLHttpRequest.prototype, prop, { configurable: true, get() {
+          const v = desc.get.call(this);
+          if (!this.__waPrune || this.readyState !== 4) return v;
+          try {
+            if (typeof v === 'string') return JSON.stringify(fix(JSON.parse(v)));
+            if (v && typeof v === 'object') return fix(v);
+          } catch { /* not JSON */ }
+          return v;
+        } });
+      }
+    },
+    'auto-click'(selectors, maxMs) {
+      const list = (selectors || '').split(',').map(s => s.trim()).filter(Boolean);
+      const tick = () => { for (const s of list) { try { document.querySelectorAll(s).forEach(el => { if (el.offsetParent !== null) el.click(); }); } catch { /* ignore */ } } };
+      const mo = new MutationObserver(tick);
+      const start = () => { mo.observe(document.documentElement, { childList: true, subtree: true }); tick(); };
+      if (document.documentElement) start(); else document.addEventListener('DOMContentLoaded', start, { once: true });
+      if (maxMs) setTimeout(() => mo.disconnect(), parseInt(maxMs, 10));
+    },
+    // YouTube: skip / fast-forward video ads that slip through the JSON pruning
+    'wipead-youtube'() {
+      const SKIP = '.ytp-ad-skip-button, .ytp-ad-skip-button-modern, .ytp-skip-ad-button, button[id^="skip-button"]';
+      const check = () => {
+        const player = document.querySelector('.html5-video-player');
+        if (!player) return;
+        document.querySelectorAll(SKIP).forEach(b => b.click());
+        if (player.classList.contains('ad-showing') || player.classList.contains('ad-interrupting')) {
+          const v = player.querySelector('video');
+          if (v && Number.isFinite(v.duration) && v.duration > 0) { v.muted = true; v.playbackRate = 16; v.currentTime = Math.max(v.currentTime, v.duration - 0.1); }
+        }
+      };
+      const mo = new MutationObserver(check);
+      const start = () => { mo.observe(document.documentElement, { childList: true, subtree: true, attributes: true, attributeFilter: ['class'] }); check(); };
+      if (document.documentElement) start(); else document.addEventListener('DOMContentLoaded', start, { once: true });
+      setInterval(check, 500);
     },
     'no-setTimeout-if'(needle, delay) { this._timer('setTimeout', needle, delay); },
     'no-setInterval-if'(needle, delay) { this._timer('setInterval', needle, delay); },

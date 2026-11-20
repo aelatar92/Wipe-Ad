@@ -36,6 +36,15 @@ export const LISTS = [
     home: 'https://github.com/AdguardTeam/AdguardFilters', urls: ['https://filters.adtidy.org/extension/chromium/filters/4.txt'] },
   { id: 'ubo-annoyances', name: 'uBlock filters – Annoyances', group: 'annoyances', category: 'n', enabled: false,
     home: 'https://github.com/uBlockOrigin/uAssets', urls: ['https://ublockorigin.github.io/uAssets/filters/annoyances.txt'] },
+  // Wipe Ad's own rules (local file, also pushed live every hour)
+  { id: 'wipead-youtube', name: 'Wipe Ad — YouTube', group: 'ads', category: 'a', enabled: true,
+    home: 'https://github.com/aelatar92/Wipe-Ad/blob/main/updates/filters/youtube.txt', urls: ['local:updates/filters/youtube.txt'] },
+  // Family safety (enabled by "Safe mode")
+  { id: 'adult', name: 'Adult content (StevenBlack sinfonietta + clefspeare13)', group: 'family', category: 'p', enabled: false, forceAllTypes: true, format: 'hosts',
+    home: 'https://github.com/StevenBlack/hosts', urls: [
+      'https://raw.githubusercontent.com/StevenBlack/hosts/master/extensions/porn/sinfonietta/hosts',
+      'https://raw.githubusercontent.com/StevenBlack/hosts/master/extensions/porn/clefspeare13/hosts',
+    ] },
   // Regional
   { id: 'ara', name: 'العربية — Liste AR', group: 'regions', category: 'a', enabled: true, lang: 'ar',
     home: 'https://forums.lanik.us/viewforum.php?f=98', urls: ['https://easylist-downloads.adblockplus.org/Liste_AR.txt'] },

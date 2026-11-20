@@ -12,6 +12,55 @@ import { compileFilters, preprocess } from '../src/shared/filter-parser.js';
 import { CONFIG } from '../src/shared/config.js';
 import { zipDirectory } from './zip.mjs';
 import { validateRegexes } from './regex-validator.mjs';
+import { wipeAdScriptlets } from '../src/scriptlets/scriptlets.js';
+
+const HOST_RE = /^[a-z0-9]([a-z0-9-]*[a-z0-9])?(\.[a-z0-9]([a-z0-9-]*[a-z0-9])?)+$/;
+
+/**
+ * Page-world script for one list: looks up the current host and runs its scriptlets at
+ * document_start (registered by the background with `matches` = the hosts below), so they
+ * are in place before any page script. Entity rules (google.*) still go through executeScript.
+ */
+const SHARD = 150; // hosts per generated file: a page only loads the small shard that names it
+
+function scriptletShards(cos) {
+  const all = Object.keys(cos.scriptlets).filter(h => HOST_RE.test(h)).sort();
+  const shards = [];
+  for (let i = 0; i < all.length; i += SHARD) {
+    const hosts = all.slice(i, i + SHARD);
+    const data = Object.fromEntries(hosts.map(h => [h, cos.scriptlets[h]]));
+    // exceptions that can apply to these hosts (same host or a parent domain)
+    const exc = {};
+    for (const [eh, names] of Object.entries(cos.scriptletExceptions)) {
+      if (HOST_RE.test(eh) && hosts.some(h => h === eh || h.endsWith('.' + eh) || eh.endsWith('.' + h))) exc[eh] = names;
+    }
+    shards.push({ hosts, code: scriptletCode(data, exc) });
+  }
+  return shards;
+}
+
+// A shard only queues its data; scriptlets/runtime.js (loaded right after it) runs it.
+function scriptletCode(data, exc) {
+  return `(window[Symbol.for('wipead.q')] = window[Symbol.for('wipead.q')] || []).push([${JSON.stringify(data)},${JSON.stringify(exc)}]);\n`;
+}
+
+function scriptletRuntime() {
+  return `(() => {
+const K = Symbol.for('wipead.q'), Q = window[K];
+if (!Q) return;
+try { delete window[K]; } catch {}
+const keys = []; let h = location.hostname;
+while (h) { keys.push(h); const i = h.indexOf('.'); if (i < 0) break; h = h.slice(i + 1); }
+const run = ${wipeAdScriptlets.toString()};
+for (const [D, X] of Q) {
+  const ex = new Set(); for (const k of keys) for (const n of (X[k] || [])) ex.add(n);
+  if (ex.has('*')) continue;
+  const list = []; for (const k of keys) for (const it of (D[k] || [])) if (!ex.has(it[0])) list.push(it);
+  if (list.length) run(list);
+}
+})();
+`;
+}
 import { lineHash } from './make-delta.mjs';
 import { gzipSync } from 'node:zlib';
 
@@ -54,6 +103,7 @@ const safeName = u => u.replace(/^https?:\/\//, '').replace(/[^a-z0-9.]+/gi, '_'
 
 // resolves uBlock "!#include" directives (same origin only)
 async function fetchList(url, depth = 0) {
+  if (url.startsWith('local:')) return readFileSync(join(ROOT, url.slice(6)), 'utf8');
   const text = await fetchText(url, safeName(url));
   if (depth > 2 || !text.includes('!#include')) return text;
   const out = [];
@@ -100,7 +150,7 @@ async function main() {
   console.log(`  PSL: ${psl.r.length + psl.w.length + psl.e.length} rules`);
 
   const catalog = [];
-  const categories = { m: new Set(), t: new Set(), a: new Set(), n: new Set(), s: new Set() };
+  const categories = { m: new Set(), t: new Set(), a: new Set(), n: new Set(), s: new Set(), p: new Set() };
   let totalRules = 0;
   const compiled = [];
   const baseline = new Set();
@@ -114,6 +164,8 @@ async function main() {
       console.warn(`  ! skipping ${list.id}: ${e.message}`);
       continue;
     }
+    // in hosts files every line starting with '#' is a comment (even "##…")
+    if (list.format === 'hosts') text = text.split(/\r?\n/).filter(l => !l.trimStart().startsWith('#')).join('\n');
     const lines = preprocess(text);
     for (const l of lines) { const t = l.trim(); if (t && !t.startsWith('!')) baseline.add(lineHash(t)); }
     const res = compileFilters(lines, { forceAllTypes: !!list.forceAllTypes, maxRegex: 900 });
@@ -141,18 +193,35 @@ async function main() {
       writeFileSync(join(BUILD, 'data', 'cosmetic', `${list.id}.json`), JSON.stringify(res.cosmetic));
     }
     totalRules += list.enabled ? res.rules.length : 0;
+    const shards = scriptletShards(res.cosmetic);
+    if (shards.length) { mkdirSync(join(BUILD, 'scriptlets'), { recursive: true }); writeFileSync(join(BUILD, 'scriptlets', 'runtime.js'), scriptletRuntime()); }
+    shards.forEach((s, i) => writeFileSync(join(BUILD, 'scriptlets', `${list.id}-${i}.js`), s.code));
     catalog.push({ id: list.id, name: list.name, group: list.group, category: list.category, enabled: list.enabled, home: list.home,
-      lang: list.lang || null, dnr: hasDnr, cosmetic: cc > 0, rules: res.rules.length, cosmeticCount: cc, filters: res.stats.total, unsupported: res.stats.unsupported });
+      lang: list.lang || null, dnr: hasDnr, cosmetic: cc > 0, rules: res.rules.length, cosmeticCount: cc, filters: res.stats.total, unsupported: res.stats.unsupported,
+      scriptletShards: shards.map((s, i) => ({ file: `scriptlets/lists/${list.id}-${i}.js`, hosts: s.hosts })) });
     console.log(`  ${list.id.padEnd(20)} ${String(res.stats.total).padStart(7)} filters → ${String(res.rules.length).padStart(6)} DNR, ${String(cc).padStart(6)} cosmetic, ${String(res.stats.unsupported).padStart(5)} unsupported`);
   }
   // categories: malware > tracking > ads > annoyance > social (each domain listed once)
   const seen = new Set();
   const catOut = {};
-  for (const k of ['m', 't', 'a', 'n', 's']) { catOut[k] = [...categories[k]].filter(d => !seen.has(d)); catOut[k].forEach(d => seen.add(d)); }
+  for (const k of ['m', 'p', 't', 'a', 'n', 's']) { catOut[k] = [...categories[k]].filter(d => !seen.has(d)); catOut[k].forEach(d => seen.add(d)); }
   writeFileSync(join(BUILD, 'data', 'categories.json'), JSON.stringify(catOut));
   writeFileSync(join(BUILD, 'data', 'rulesets.json'), JSON.stringify(catalog, null, 1));
   writeFileSync(join(BUILD, 'baseline.txt.gz'), gzipSync([...baseline].join('\n')));
   console.log(`  enabled-by-default DNR rules: ${totalRules}`);
+
+  // bundle the official Anthropic SDK for the AI filter assistant (dev dependency, bundled locally)
+  try {
+    const { build } = await import('esbuild');
+    await build({ entryPoints: [join(ROOT, 'tools', 'anthropic-entry.mjs')], bundle: true, format: 'esm', platform: 'browser',
+      minify: true, legalComments: 'none', outfile: join(BUILD, 'vendor', 'anthropic.mjs'), logLevel: 'error' });
+    console.log('  vendor: @anthropic-ai/sdk bundled');
+  } catch (e) {
+    // the service worker imports this file statically, so always provide it
+    mkdirSync(join(BUILD, 'vendor'), { recursive: true });
+    writeFileSync(join(BUILD, 'vendor', 'anthropic.mjs'), 'export const Anthropic = null;\n');
+    console.warn(`  ! AI assistant disabled — cannot bundle @anthropic-ai/sdk (${e.message}). Run npm install.`);
+  }
 
   // assemble targets
   rmSync(DIST, { recursive: true, force: true });
@@ -161,6 +230,8 @@ async function main() {
     cpSync(join(ROOT, 'src'), out, { recursive: true });
     cpSync(join(BUILD, 'rulesets'), join(out, 'rulesets'), { recursive: true });
     cpSync(join(BUILD, 'data'), join(out, 'data'), { recursive: true });
+    if (existsSync(join(BUILD, 'vendor'))) cpSync(join(BUILD, 'vendor'), join(out, 'vendor'), { recursive: true });
+    if (existsSync(join(BUILD, 'scriptlets'))) cpSync(join(BUILD, 'scriptlets'), join(out, 'scriptlets', 'lists'), { recursive: true });
     const manifest = JSON.parse(readFileSync(join(ROOT, 'src', 'manifest.json'), 'utf8'));
     manifest.version = pkg.version;
     manifest.declarative_net_request.rule_resources = catalog.filter(c => c.dnr).map(c => ({ id: c.id, enabled: c.enabled, path: `rulesets/${c.id}.json` }));

@@ -16,6 +16,14 @@ const OUT = join(ROOT, 'updates', 'filters');
 const BASELINE = join(OUT, 'baseline.txt.gz');
 const MAX_DELTA = 20000; // above this, cut a new release instead
 
+export const ALWAYS_LISTS = [['wipead-fixes', 'wipead-fixes.txt'], ['wipead-youtube', 'youtube.txt']];
+export function alwaysLists(dir) {
+  return ALWAYS_LISTS.filter(([, f]) => existsSync(join(dir, f))).map(([id, f]) => {
+    const body = readFileSync(join(dir, f), 'utf8');
+    return { id, ruleset: null, url: f, sha256: createHash('sha256').update(body).digest('hex'), lines: body.split('\n').length };
+  });
+}
+
 export const lineHash = l => createHash('sha1').update(l.trim()).digest('hex').slice(0, 12);
 
 async function fetchText(url) {
@@ -32,7 +40,7 @@ async function main() {
 
   const lists = [];
   let total = 0;
-  for (const list of LISTS) {
+  for (const list of LISTS.filter(l => !l.urls.some(u => u.startsWith('local:')))) {
     let text;
     try { text = (await Promise.all(list.urls.map(fetchText))).join('\n'); }
     catch (e) { console.warn(`! ${list.id}: ${e.message}`); continue; }
@@ -53,12 +61,8 @@ async function main() {
     total += fresh.length;
     console.log(`  ${list.id.padEnd(20)} +${fresh.length}`);
   }
-  // hand-written hot fixes, always applied
-  const fixesFile = join(OUT, 'wipead-fixes.txt');
-  if (existsSync(fixesFile)) {
-    const body = readFileSync(fixesFile, 'utf8');
-    lists.push({ id: 'wipead-fixes', ruleset: null, url: 'wipead-fixes.txt', sha256: createHash('sha256').update(body).digest('hex'), lines: body.split('\n').length });
-  }
+  // hand-written lists (hot fixes, YouTube), always applied
+  lists.push(...alwaysLists(OUT));
   const prev = existsSync(join(OUT, 'manifest.json')) ? JSON.parse(readFileSync(join(OUT, 'manifest.json'), 'utf8')) : {};
   const manifest = {
     version: new Date().toISOString().replace(/[-:T]/g, '').slice(0, 12),
@@ -77,4 +81,4 @@ async function main() {
   }
 }
 
-if (import.meta.url === `file:///${process.argv[1].replace(/\\/g, '/')}` || process.argv[1]?.endsWith('make-delta.mjs')) main().catch(e => { console.error(e); process.exit(1); });
+if (process.argv[1]?.endsWith('make-delta.mjs')) main().catch(e => { console.error(e); process.exit(1); });

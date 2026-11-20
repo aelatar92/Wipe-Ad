@@ -10,6 +10,7 @@ import { createHash } from 'node:crypto';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { CONFIG } from '../src/shared/config.js';
+import { alwaysLists } from './make-delta.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const [bump = 'patch', notesEn = '', notesAr = ''] = process.argv.slice(2);
@@ -40,8 +41,7 @@ copyFileSync(join(ROOT, 'build', 'baseline.txt.gz'), join(FIL, 'baseline.txt.gz'
 const prev = existsSync(join(FIL, 'manifest.json')) ? JSON.parse(readFileSync(join(FIL, 'manifest.json'), 'utf8')) : {};
 for (const l of prev.lists || []) if (l.url.startsWith('delta-')) rmSync(join(FIL, l.url), { force: true });
 rmSync(join(FIL, 'NEEDS_RELEASE'), { force: true });
-const fixesBody = existsSync(join(FIL, 'wipead-fixes.txt')) ? readFileSync(join(FIL, 'wipead-fixes.txt'), 'utf8') : '';
-const fixes = fixesBody ? [{ id: 'wipead-fixes', ruleset: null, url: 'wipead-fixes.txt', sha256: createHash('sha256').update(fixesBody).digest('hex'), lines: fixesBody.split(/\n/).length }] : [];
+const fixes = alwaysLists(FIL);
 writeFileSync(join(FIL, 'manifest.json'), JSON.stringify({
   version: `${version}-0`, generated: new Date().toISOString(), baselineVersion: version, lists: fixes,
   yellowlist: prev.yellowlist || [], consentRules: prev.consentRules || [], notice: prev.notice || null,

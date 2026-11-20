@@ -1,0 +1,42 @@
+! Wipe Ad — YouTube rules (bundled in every build AND pushed live every hour).
+! Edit this file to react quickly when YouTube changes something.
+!
+! --- strip ad data from the player / browse responses
+youtube.com,youtube-nocookie.com,youtubekids.com##+js(set-constant, ytInitialPlayerResponse.playerAds, undefined)
+youtube.com,youtube-nocookie.com,youtubekids.com##+js(set-constant, ytInitialPlayerResponse.adPlacements, undefined)
+youtube.com,youtube-nocookie.com,youtubekids.com##+js(set-constant, ytInitialPlayerResponse.adSlots, undefined)
+youtube.com,youtube-nocookie.com,youtubekids.com##+js(set-constant, playerResponse.adPlacements, undefined)
+youtube.com,youtube-nocookie.com,youtubekids.com##+js(json-prune, playerResponse.adPlacements playerResponse.playerAds playerResponse.adSlots adPlacements playerAds adSlots)
+youtube.com,youtube-nocookie.com,youtubekids.com##+js(json-prune-fetch-response, playerAds adPlacements adSlots playerResponse.playerAds playerResponse.adPlacements playerResponse.adSlots, , propsToMatch, /\/youtubei\/v1\/(player|next|browse)/)
+youtube.com,youtube-nocookie.com,youtubekids.com##+js(json-prune-xhr-response, playerAds adPlacements adSlots playerResponse.playerAds playerResponse.adPlacements playerResponse.adSlots, , propsToMatch, /\/youtubei\/v1\/(player|next|browse)/)
+! --- skip / fast-forward anything that still plays
+youtube.com,youtubekids.com##+js(wipead-youtube)
+! --- ad telemetry
+||youtube.com/api/stats/ads$xmlhttprequest,image,ping
+||youtube.com/pagead/$xmlhttprequest,image,ping
+||youtube.com/ptracking$xmlhttprequest,image,ping
+||youtube.com/get_midroll_info$xmlhttprequest
+||doubleclick.net^$third-party,domain=youtube.com
+! --- leftover ad containers in the page
+youtube.com##ytd-ad-slot-renderer
+youtube.com##ytd-rich-item-renderer:has(ytd-ad-slot-renderer)
+youtube.com##ytd-in-feed-ad-layout-renderer
+youtube.com##ytd-promoted-sparkles-web-renderer
+youtube.com##ytd-promoted-video-renderer
+youtube.com##ytd-display-ad-renderer
+youtube.com##ytd-banner-promo-renderer
+youtube.com##ytd-statement-banner-renderer
+youtube.com##ytd-player-legacy-desktop-watch-ads-renderer
+youtube.com##ytd-engagement-panel-section-list-renderer[target-id="engagement-panel-ads"]
+youtube.com###masthead-ad
+youtube.com###player-ads
+youtube.com##.ytp-ad-module
+youtube.com##.ytp-ad-overlay-container
+youtube.com##.ytd-merch-shelf-renderer
+youtube.com##ytm-promoted-sparkles-web-renderer
+m.youtube.com##ad-slot-renderer
+m.youtube.com##ytm-companion-ad-renderer
+! --- "ad blockers are not allowed" pop-up
+youtube.com##ytd-enforcement-message-view-model
+youtube.com##tp-yt-paper-dialog:has(ytd-enforcement-message-view-model)
+youtube.com##tp-yt-iron-overlay-backdrop.opened

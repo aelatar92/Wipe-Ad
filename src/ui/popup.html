@@ -53,8 +53,22 @@
         <button id="pause"><span>⏸</span><span id="pauseLabel" data-i18n="pause"></span></button>
       </div>
 
+      <div id="fpBox" class="fp" hidden>
+        <div class="label" data-i18n="fpDetected"></div>
+        <div id="fpList"></div>
+      </div>
+
       <div class="label" data-i18n="trackers"></div>
       <div id="trackers" class="trackers"></div>
+
+      <details class="broken">
+        <summary data-i18n="siteBroken"></summary>
+        <div class="tools">
+          <button id="brBasic"><span>🧩</span><span data-i18n="brokenBasic"></span></button>
+          <button id="brOff"><span>⏻</span><span data-i18n="brokenOff"></span></button>
+          <button id="brReport"><span>🐞</span><span data-i18n="brokenReport"></span></button>
+        </div>
+      </details>
     </section>
   </main>
   <footer class="muted small row"><span>v<span id="ver"></span></span><span class="spacer"></span><span id="paused" class="small"></span></footer>

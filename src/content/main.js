@@ -203,10 +203,56 @@
   }, true);
 
   // -------------------------------------------------------------------------
+  // Fingerprinting reports from content/fp-detect.js (page world)
+  // -------------------------------------------------------------------------
+  document.addEventListener('wipead:fp', e => {
+    try { const d = JSON.parse(e.detail); send({ type: 'fp:report', api: String(d.api).slice(0, 20), script: String(d.script).slice(0, 300) }); } catch { /* ignore */ }
+  });
+
+  // -------------------------------------------------------------------------
+  // Search result badges: malware / phishing warnings + known tracker counts
+  // -------------------------------------------------------------------------
+  const SERP = [
+    { host: /(^|\.)google\.[a-z.]+$/, path: /^\/search/, links: '#search a[href^="http"]:has(h3), #rso a[href^="http"]:has(h3)' },
+    { host: /(^|\.)bing\.com$/, path: /^\/search/, links: '#b_results li.b_algo h2 a[href^="http"]' },
+    { host: /(^|\.)duckduckgo\.com$/, path: /^\/$/, links: 'a[data-testid="result-title-a"][href^="http"]' },
+    { host: /(^|\.)search\.brave\.com$/, path: /^\/search/, links: '#results .snippet a.heading-serpresult[href^="http"], #results a[href^="http"]:has(.title)' },
+    { host: /(^|\.)ecosia\.org$/, path: /^\/search/, links: 'a.result__link[href^="http"]' },
+  ];
+  function serpBadges(isAr) {
+    const engine = SERP.find(s => s.host.test(location.hostname) && s.path.test(location.pathname));
+    if (!engine) return;
+    const done = new WeakSet();
+    const T = isAr ? { m: '⚠ موقع ضار', p: '🔞 محتوى للبالغين', tr: n => `🛡 ${n} متتبع` } : { m: '⚠ Malicious site', p: '🔞 Adult content', tr: n => `🛡 ${n} trackers` };
+    const run = async () => {
+      const links = [...document.querySelectorAll(engine.links)].filter(a => !done.has(a));
+      if (!links.length) return;
+      links.forEach(a => done.add(a));
+      const hosts = [...new Set(links.map(a => { try { return new URL(a.href).hostname; } catch { return ''; } }).filter(Boolean))];
+      const info = await send({ type: 'serp:check', hosts });
+      if (!info) return;
+      for (const a of links) {
+        let h = ''; try { h = new URL(a.href).hostname; } catch { continue; }
+        const r = info[h];
+        if (!r || (!r.category && !r.trackers)) continue;
+        const b = document.createElement('span');
+        const bad = r.category === 'm' || r.category === 'p';
+        b.textContent = r.category === 'm' ? T.m : r.category === 'p' ? T.p : T.tr(r.trackers);
+        b.title = 'Wipe Ad';
+        b.style.cssText = `display:inline-block;margin-inline-start:8px;padding:1px 8px;border-radius:999px;font:600 11px/18px system-ui,sans-serif;vertical-align:middle;${bad ? 'background:#fee2e2;color:#991b1b' : 'background:#ede9fe;color:#5b21b6'}`;
+        (a.querySelector('h3') || a).after(b);
+      }
+    };
+    const start = () => { run(); new MutationObserver(() => { clearTimeout(start.t); start.t = setTimeout(run, 300); }).observe(document.body, { childList: true, subtree: true }); };
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start, { once: true }); else start();
+  }
+
+  // -------------------------------------------------------------------------
   // Boot
   // -------------------------------------------------------------------------
   send({ type: 'frame:init', url: location.href }).then(async cfg => {
     if (!cfg || cfg.mode === 'off') return;
+    if (cfg.serpBadges && window === window.top) serpBadges(cfg.lang === 'ar');
     if (cfg.mode !== 'basic' && cfg.cosmetic) {
       procedural = (cfg.procedural || []).map(parseProcedural);
       const observer = new MutationObserver(muts => {

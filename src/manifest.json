@@ -67,13 +67,18 @@
   "web_accessible_resources": [
     {
       "resources": [
-        "resources/*"
+        "resources/*",
+        "ui/skip.html",
+        "ui/focus.html"
       ],
       "matches": [
         "<all_urls>"
       ]
     }
   ],
+  "storage": {
+    "managed_schema": "managed_schema.json"
+  },
   "declarative_net_request": {
     "rule_resources": []
   },

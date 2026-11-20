@@ -87,3 +87,30 @@ test('version comparison', () => {
   assert.equal(compareVersions('1.0', '1.0.0'), 0);
   assert.equal(compareVersions('0.9.9', '1.0.0'), -1);
 });
+
+// ---- v1.1
+const { extractTarget } = await import('../src/ui/skip.js');
+const { focusActive } = await import('../src/background/features.js');
+
+test('tracking redirect targets are decoded', () => {
+  assert.equal(extractTarget('https://l.facebook.com/l.php?u=https%3A%2F%2Fexample.com%2Fa%3Fb%3D1&h=AT0'), 'https://example.com/a?b=1');
+  assert.equal(extractTarget('https://www.google.com/url?sa=t&q=https://news.example/x&ved=1'), 'https://news.example/x');
+  assert.equal(extractTarget('https://www.youtube.com/redirect?event=video&q=https%3A%2F%2Fshop.example'), 'https://shop.example');
+  assert.equal(extractTarget('https://href.li/?https://example.org/page'), 'https://example.org/page');
+  assert.equal(extractTarget('https://www.google.com/url?q=javascript:alert(1)'), null);
+});
+
+test('focus schedule', () => {
+  const f = { enabled: true, sites: ['x.com'], days: [1, 2, 3, 4, 5], from: '09:00', to: '17:00' };
+  assert.equal(focusActive(f, new Date(2026, 10, 16, 10, 0)), true);   // Monday 10:00
+  assert.equal(focusActive(f, new Date(2026, 10, 16, 18, 0)), false);  // Monday 18:00
+  assert.equal(focusActive(f, new Date(2026, 10, 15, 10, 0)), false);  // Sunday
+  assert.equal(focusActive({ ...f, from: '22:00', to: '06:00' }, new Date(2026, 10, 17, 2, 0)), true); // overnight
+  assert.equal(focusActive({ ...f, allDay: true }, new Date(2026, 10, 16, 23, 0)), true);
+});
+
+test('new scriptlets are recognised', () => {
+  const { cosmetic } = compileFilters('youtube.com##+js(json-prune-fetch-response, playerAds adPlacements, , propsToMatch, /player/)\nyoutube.com##+js(wipead-youtube)');
+  assert.deepEqual(cosmetic.scriptlets['youtube.com'][0], ['json-prune-fetch-response', 'playerAds adPlacements', '', 'propsToMatch', '/player/']);
+  assert.deepEqual(cosmetic.scriptlets['youtube.com'][1], ['wipead-youtube']);
+});

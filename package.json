@@ -15,5 +15,9 @@
   },
   "engines": {
     "node": ">=20"
+  },
+  "devDependencies": {
+    "@anthropic-ai/sdk": "^1.11.0",
+    "esbuild": "^0.28.2"
   }
 }

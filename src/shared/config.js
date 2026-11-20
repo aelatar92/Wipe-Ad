@@ -5,8 +5,12 @@ export const CONFIG = {
   // Remote folder that holds version.json and filters/manifest.json
   UPDATE_BASE: 'https://raw.githubusercontent.com/aelatar92/Wipe-Ad/main/updates',
   RELEASES_URL: 'https://github.com/aelatar92/Wipe-Ad/releases/latest',
-  // How often the extension checks for new versions / new rules (minutes)
+  ISSUES_URL: 'https://github.com/aelatar92/Wipe-Ad/issues/new',
+  // How often the extension checks for new versions (minutes); rules are checked hourly
   UPDATE_INTERVAL_MIN: 360,
+  FILTER_INTERVAL_MIN: 60,
+  // AI filter assistant
+  AI_MODEL: 'claude-opus-5-5',
   // Privacy-Badger-style learning
   TRACKING_THRESHOLD: 3,
   MAX_COOKIE_ENTROPY: 12,
@@ -18,7 +22,11 @@ export const CONFIG = {
 export const RULE_IDS = {
   STEALTH_START: 1, STEALTH_END: 99,
   LEARN_START: 100, LEARN_END: 199,
-  SITES_START: 200, SITES_END: 999,
+  SITES_START: 200, SITES_END: 499,
+  SKIP_START: 500, SKIP_END: 549,       // tracking-redirect skipping
+  FOCUS_START: 550, FOCUS_END: 599,     // focus mode
+  SAFE_START: 600, SAFE_END: 649,       // family safe mode
+  CNAME_START: 650, CNAME_END: 699,     // CNAME-cloaked trackers
   USER_START: 1000, USER_END: 19999,
   REMOTE_START: 20000, REMOTE_END: 49999,
 };

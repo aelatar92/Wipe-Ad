@@ -5,10 +5,18 @@ import { getCatalog } from './data.js';
 
 const DNR = chrome.declarativeNetRequest;
 
+/** Rulesets forced on by features or by an administrator policy. */
+export function forcedRulesets(settings) {
+  const ids = [...(settings.forcedRulesets || [])];
+  if (settings.safeMode) ids.push('adult');
+  if (settings.hideNewsletters) ids.push('annoyances', 'ubo-annoyances');
+  return ids;
+}
+
 export async function enabledRulesetIds(settings) {
   const cat = await getCatalog();
-  if (settings.rulesets) return cat.filter(r => settings.rulesets[r.id] ?? r.enabled).map(r => r.id);
-  return cat.filter(r => r.enabled).map(r => r.id);
+  const forced = new Set(forcedRulesets(settings));
+  return cat.filter(r => forced.has(r.id) || (settings.rulesets?.[r.id] ?? r.enabled)).map(r => r.id);
 }
 
 /** Make the browser's enabled static rulesets match our settings. */

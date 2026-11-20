@@ -4,12 +4,16 @@
 import { CONFIG } from '../shared/config.js';
 import { hostnameOf, getBaseDomain } from '../shared/domain.js';
 import { compileFilters } from '../shared/filter-parser.js';
-import { getSettings, setSettings, onSettingsChanged, siteModeFor, getPaused, setPausedHost, DEFAULTS } from './settings.js';
+import { getSettings, setSettings, onSettingsChanged, siteModeFor, getPaused, setPausedHost, DEFAULTS, LOCAL_ONLY, getPolicy } from './settings.js';
 import { ensurePSL, getCatalog, rebuildCosmetic, categoryOf } from './data.js';
 import { syncStaticRulesets, applySiteRules, setPaused as setPausedRules, allowOnce, ruleCounts, enabledRulesetIds } from './rules.js';
 import { applyStealth } from './stealth.js';
-import { startLearning, configureLearning, applyLearnedRules, getLearningState, setUserAction, resetLearning, learnedTrackers } from './learning.js';
-import { startStats, onMainFrameBlocked, tabSummary, tabLog, knownTabs, getTotals, resetTotals, attachLogPort, setBadgeEnabled, countCookieBanner } from './stats.js';
+import { startLearning, configureLearning, applyLearnedRules, getLearningState, setUserAction, resetLearning, learnedTrackers, getUserActions, setUserActions } from './learning.js';
+import { startStats, onMainFrameBlocked, tabSummary, tabLog, knownTabs, getTotals, resetTotals, attachLogPort, setBadgeEnabled, countCookieBanner, countSkipped, recordFingerprint, trackersForSites, weeklyReport } from './stats.js';
+import { applyMainWorldScripts, applyFeatureRules, applyFocus, applyScriptletScripts } from './features.js';
+import { configureCname, observeRequest as cnameObserve, applyCnameRules, cnameState, resetCname } from './cname.js';
+import { schedulePush, pull as syncPull, onRemoteChange, syncStatus } from './sync.js';
+import { suggestSelector, aiAvailable } from './ai.js';
 import { startCosmetic, onFrameInit, onTokens, applySelectorNow } from './cosmetic.js';
 import { getUserFilters, setUserFilters, addUserFilter, getUserCosmetic, getRemoteCosmetic, refreshCustomLists, customListsStatus, clearRemote } from './filters.js';
 import { ALARM, scheduleUpdates, runScheduledUpdate, checkExtensionUpdate, checkFilterUpdates, getUpdateStatus, onNotificationClicked, handleUpdateAvailable } from './updater.js';
@@ -17,6 +21,8 @@ import { ALARM, scheduleUpdates, runScheduledUpdate, checkExtensionUpdate, check
 const COOKIE_ALARM = 'wipead:cookies';
 const UNPAUSE_ALARM = 'wipead:unpause';
 const CUSTOM_ALARM = 'wipead:custom-lists';
+const FOCUS_ALARM = 'wipead:focus';
+const WEEKLY_ALARM = 'wipead:weekly';
 
 // ---------------------------------------------------------------------------
 // Initialisation
@@ -27,6 +33,7 @@ function ready() {
     await ensurePSL();
     const s = await getSettings();
     configureLearning(s);
+    configureCname(s, { categoryOf, learned: learnedTrackers });
     setBadgeEnabled(s.showBadge);
     await refreshCosmeticIndex(s);
   })().catch(e => { console.error('[WipeAd] init failed', e); readyPromise = null; });
@@ -47,9 +54,30 @@ async function applyAll() {
   await applyStealth(s);
   configureLearning(s);
   await applyLearnedRules();
+  await applyMainWorldScripts(s);
+  await applyScriptletScripts(s);
+  await applyFeatureRules(s);
+  configureCname(s, { categoryOf, learned: learnedTrackers });
+  await applyCnameRules();
   const paused = await getPaused();
   await setPausedRules(Object.keys(paused));
 }
+
+// ---------------------------------------------------------------------------
+// Settings sync (chrome.storage.sync)
+// ---------------------------------------------------------------------------
+async function collectForSync() {
+  return { settings: await getSettings(), userFilters: await getUserFilters(), learningUser: await getUserActions() };
+}
+async function applyFromSync({ settings, userFilters, learningUser }) {
+  const cur = await getSettings();
+  const incoming = Object.fromEntries(Object.entries(settings).filter(([k]) => !LOCAL_ONLY.includes(k) && k in DEFAULTS));
+  await setSettings({ ...incoming, syncEnabled: cur.syncEnabled });
+  if (typeof userFilters === 'string' && userFilters !== await getUserFilters()) { await setUserFilters(userFilters); await refreshCosmeticIndex(); }
+  await setUserActions(learningUser || {});
+}
+const pushSync = () => schedulePush(collectForSync);
+onRemoteChange(async () => { const s = await getSettings(); if (s.syncEnabled) await syncPull(applyFromSync); });
 
 chrome.runtime.onInstalled.addListener(async ({ reason, previousVersion }) => {
   await ready();
@@ -58,7 +86,11 @@ chrome.runtime.onInstalled.addListener(async ({ reason, previousVersion }) => {
   await scheduleUpdates();
   await chrome.alarms.create(COOKIE_ALARM, { periodInMinutes: 15 });
   await chrome.alarms.create(CUSTOM_ALARM, { periodInMinutes: 24 * 60 });
+  await chrome.alarms.create(FOCUS_ALARM, { periodInMinutes: 1 });
+  if (!(await chrome.alarms.get(WEEKLY_ALARM))) await chrome.alarms.create(WEEKLY_ALARM, { delayInMinutes: 7 * 24 * 60, periodInMinutes: 7 * 24 * 60 });
   setupContextMenus();
+  const s0 = await getSettings();
+  if (s0.syncEnabled) await syncPull(applyFromSync).catch(() => {});
   if (reason === 'install') chrome.tabs.create({ url: chrome.runtime.getURL('ui/dashboard.html#welcome') });
   if (reason === 'update') {
     await chrome.storage.local.set({ justUpdated: { from: previousVersion, to: chrome.runtime.getManifest().version, at: Date.now() } });
@@ -75,6 +107,8 @@ chrome.runtime.onStartup.addListener(async () => {
   const s = await getSettings();
   await setPausedRules([]); // session rules are gone anyway; keep in sync
   if (s.enabled) await syncStaticRulesets(s);
+  await applyFocus(s, true);
+  if (s.syncEnabled) await syncPull(applyFromSync).catch(() => {});
 });
 
 chrome.runtime.onUpdateAvailable?.addListener(handleUpdateAvailable);
@@ -88,6 +122,13 @@ onSettingsChanged(async (cur, prev, patch) => {
   if (keys.includes('showBadge')) setBadgeEnabled(cur.showBadge);
   if (keys.includes('updateIntervalMin')) await scheduleUpdates();
   if (keys.includes('customLists')) await refreshCustomLists(cur.customLists).then(() => refreshCosmeticIndex(cur));
+  if (keys.some(k => ['safeMode', 'hideNewsletters'].includes(k))) { await syncStaticRulesets(cur); await refreshCosmeticIndex(cur); }
+  if (keys.some(k => ['enabled', 'rulesets', 'scriptlets', 'allowlist', 'siteModes', 'safeMode', 'hideNewsletters'].includes(k))) await applyScriptletScripts(cur);
+  if (keys.some(k => ['enabled', 'antiFingerprint', 'fpDetect', 'blockNotificationPrompts', 'stopAutoplay', 'allowlist'].includes(k))) await applyMainWorldScripts(cur);
+  if (keys.some(k => ['enabled', 'skipRedirects', 'safeMode', 'focus'].includes(k))) await applyFeatureRules(cur);
+  if (keys.some(k => ['enabled', 'cnameUncloak'].includes(k))) { configureCname(cur, { categoryOf, learned: learnedTrackers }); await applyCnameRules(); }
+  if (keys.includes('syncEnabled') && cur.syncEnabled) { await syncPull(applyFromSync, { force: true }).catch(() => {}); pushSync(); }
+  if (cur.syncEnabled && keys.some(k => !LOCAL_ONLY.includes(k))) pushSync();
 });
 
 // ---------------------------------------------------------------------------
@@ -97,6 +138,7 @@ startStats();
 startLearning();
 startCosmetic();
 ready();
+chrome.webRequest.onCompleted.addListener(d => { cnameObserve(d); }, { urls: ['http://*/*', 'https://*/*'] });
 
 onMainFrameBlocked(async d => {
   const s = await getSettings();
@@ -123,8 +165,27 @@ chrome.alarms.onAlarm.addListener(async alarm => {
   } else if (alarm.name === CUSTOM_ALARM) {
     const s = await getSettings();
     if (s.customLists.length) { await refreshCustomLists(s.customLists); await refreshCosmeticIndex(s); }
+  } else if (alarm.name === FOCUS_ALARM) {
+    await applyFocus(await getSettings());
+  } else if (alarm.name === WEEKLY_ALARM) {
+    await notifyWeeklyReport();
   }
 });
+
+async function notifyWeeklyReport() {
+  const s = await getSettings();
+  if (!s.weeklyReport || !chrome.notifications) return;
+  const r = await weeklyReport();
+  if (!r.blocked) return;
+  const ar = s.language === 'ar' || (s.language === 'auto' && (chrome.i18n.getUILanguage() || '').startsWith('ar'));
+  chrome.notifications.create('wipead-weekly', {
+    type: 'basic', iconUrl: chrome.runtime.getURL('icons/icon-128.png'),
+    title: ar ? 'تقرير Wipe Ad الأسبوعي' : 'Your Wipe Ad weekly report',
+    message: ar
+      ? `هذا الأسبوع: حُجب ${r.blocked} طلب (${r.trackers} متتبع، ${r.ads} إعلان) ووُفّر حوالي ${r.savedMB} ميجابايت.`
+      : `This week: ${r.blocked} requests blocked (${r.trackers} trackers, ${r.ads} ads), about ${r.savedMB} MB saved.`,
+  });
+}
 
 // Cookie self-destruct for known trackers (AdGuard-like)
 async function deleteTrackerCookies() {
@@ -181,7 +242,10 @@ chrome.commands?.onCommand.addListener(async (cmd, tab) => {
   else if (cmd === 'toggle-site') toggleSite(hostnameOf(tab.url), tab.id);
 });
 
-chrome.notifications?.onClicked.addListener(onNotificationClicked);
+chrome.notifications?.onClicked.addListener(id => {
+  if (id === 'wipead-weekly') chrome.tabs.create({ url: chrome.runtime.getURL('ui/dashboard.html#report') });
+  else onNotificationClicked(id);
+});
 
 async function setSiteMode(host, mode) {
   host = host.replace(/^www\./, '');
@@ -220,6 +284,24 @@ const handlers = {
   'frame:init': (m, s) => onFrameInit(m, s),
   'cosmetic:tokens': (m, s) => onTokens(m, s),
   'consent:handled': () => countCookieBanner().then(() => ({ ok: true })),
+  async 'fp:report'({ api, script }, sender) { if (sender.tab?.id !== undefined) await recordFingerprint(sender.tab.id, api, script); return { ok: true }; },
+  async 'stats:skipped'() { await countSkipped(); return { ok: true }; },
+  async 'serp:check'({ hosts }) {
+    const list = (hosts || []).slice(0, 60);
+    const bases = list.map(h => getBaseDomain(h));
+    const counts = await trackersForSites(bases);
+    const out = {};
+    for (let i = 0; i < list.length; i++) out[list[i]] = { category: await categoryOf(list[i]), trackers: counts[bases[i]] || 0 };
+    return out;
+  },
+  async 'ai:selector'({ description, outline, host }) {
+    const s = await getSettings();
+    if ((await getPolicy()).disableAI) return { error: 'DISABLED' };
+    const lang = s.language === 'auto' ? ((chrome.i18n.getUILanguage() || '').startsWith('ar') ? 'ar' : 'en') : s.language;
+    try {
+      return await suggestSelector({ apiKey: s.aiApiKey, description: String(description).slice(0, 500), outline: String(outline).slice(0, 60000), host, lang });
+    } catch (e) { return { error: String(e.message || e) }; }
+  },
 
   async 'popup:get'({ tabId }) {
     const tab = await chrome.tabs.get(tabId).catch(() => null);
@@ -245,17 +327,45 @@ const handlers = {
   },
   'picker:start': ({ tabId, mode }) => startPicker(tabId, mode),
   async 'picker:create'({ selector, host }, sender) {
+    if ((await getPolicy()).disableUserFilters) return { ok: false, error: 'DISABLED_BY_POLICY' };
     const h = (host || hostnameOf(sender.tab?.url || '')).replace(/^www\./, '');
     const line = `${h}##${selector}`;
     const res = await addUserFilter(line);
     await refreshCosmeticIndex();
     if (sender.tab?.id) await applySelectorNow(sender.tab.id, selector);
+    pushSync();
     return { ok: true, line, stats: res.stats };
   },
 
   'settings:get': () => getSettings(),
   'settings:defaults': () => DEFAULTS,
   'settings:set': ({ patch }) => setSettings(patch),
+  'settings:policy': () => getPolicy(),
+  'report:weekly': ({ weeksBack }) => weeklyReport(weeksBack || 0),
+  'cname:state': () => cnameState(),
+  async 'cname:reset'() { await resetCname(); return { ok: true }; },
+  'sync:status': () => syncStatus(),
+  async 'sync:now'() { pushSync(); const r = await syncPull(applyFromSync, { force: true }); return { ...r, status: await syncStatus() }; },
+  'ai:status': async () => ({ available: aiAvailable(), hasKey: !!(await getSettings()).aiApiKey, disabled: (await getPolicy()).disableAI, model: CONFIG.AI_MODEL }),
+  async 'site:report'({ tabId }) {
+    // builds a pre-filled GitHub issue; the user reviews and submits it themselves
+    const tab = await chrome.tabs.get(tabId).catch(() => null);
+    const host = hostnameOf(tab?.url || '');
+    const s = await getSettings();
+    const sum = await tabSummary(tabId);
+    const lists = await enabledRulesetIds(s);
+    const body = [
+      `**Site:** ${host}`,
+      `**Wipe Ad:** ${chrome.runtime.getManifest().version} · mode: ${siteModeFor(s, host, await getPaused())}`,
+      `**Browser:** ${navigator.userAgent}`,
+      `**Enabled lists:** ${lists.join(', ')}`,
+      `**Blocked on the page (${sum.blocked}):** ${sum.domains.filter(d => d.blocked).slice(0, 15).map(d => `${d.base} (${d.blocked})`).join(', ') || '—'}`,
+      '', '**What is broken?**', '<!-- describe the problem: missing video, login fails, layout broken, ad still visible… -->', '',
+    ].join('\n');
+    const url = `${CONFIG.ISSUES_URL}?title=${encodeURIComponent(`Broken site: ${host}`)}&labels=broken-site&body=${encodeURIComponent(body)}`;
+    await chrome.tabs.create({ url });
+    return { ok: true };
+  },
 
   async 'rulesets:list'() {
     const s = await getSettings();
@@ -271,14 +381,16 @@ const handlers = {
 
   async 'userFilters:get'() { return { text: await getUserFilters() }; },
   async 'userFilters:set'({ text }) {
+    if ((await getPolicy()).disableUserFilters) return { error: 'DISABLED_BY_POLICY' };
     const res = await setUserFilters(text);
     await refreshCosmeticIndex();
+    pushSync();
     return res;
   },
   'userFilters:test'({ text }) { return compileFilters(text, {}).stats; },
 
   'learning:get': () => getLearningState(),
-  async 'learning:set'({ domain, action }) { await setUserAction(domain, action); return { ok: true }; },
+  async 'learning:set'({ domain, action }) { await setUserAction(domain, action); pushSync(); return { ok: true }; },
   async 'learning:reset'() { await resetLearning(); return { ok: true }; },
 
   'log:tabs': () => knownTabs(),
@@ -312,12 +424,17 @@ const handlers = {
 
   async 'backup:export'() {
     const data = await chrome.storage.local.get(['settings', 'userFilters', 'learning']);
+    if (data.settings) for (const k of LOCAL_ONLY) delete data.settings[k]; // never export the API key
     return { app: 'wipe-ad', version: chrome.runtime.getManifest().version, exported: new Date().toISOString(), ...data };
   },
   async 'backup:import'({ data }) {
     if (data?.app !== 'wipe-ad') return { ok: false, error: 'Not a Wipe Ad backup' };
     if (data.learning) await chrome.storage.local.set({ learning: data.learning });
-    if (data.settings) await setSettings({ ...DEFAULTS, ...data.settings });
+    if (data.settings) {
+      const cur = await getSettings();
+      const keep = Object.fromEntries(LOCAL_ONLY.map(k => [k, cur[k]]));
+      await setSettings({ ...DEFAULTS, ...data.settings, ...keep });
+    }
     if (typeof data.userFilters === 'string') await setUserFilters(data.userFilters);
     await applyAll();
     await refreshCosmeticIndex();
@@ -341,7 +458,7 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
   if (!h) return false;
   // content scripts may only call the content-facing handlers
   const fromExtension = sender.url?.startsWith(chrome.runtime.getURL(''));
-  const contentAllowed = ['frame:init', 'cosmetic:tokens', 'consent:handled', 'picker:create', 'subscribe:add'];
+  const contentAllowed = ['frame:init', 'cosmetic:tokens', 'consent:handled', 'picker:create', 'subscribe:add', 'fp:report', 'serp:check', 'ai:selector', 'ai:status'];
   if (!fromExtension && !contentAllowed.includes(msg.type)) { sendResponse({ error: 'forbidden' }); return false; }
   if (msg.type === 'subscribe:add' && !fromExtension) {
     // a web page asked to subscribe: open the dashboard so the user confirms

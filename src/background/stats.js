@@ -13,19 +13,45 @@ let badgeOn = true;
 
 function tabState(tabId) {
   let t = tabs.get(tabId);
-  if (!t) { t = { url: '', host: '', blocked: 0, domains: new Map(), log: [] }; tabs.set(tabId, t); }
+  if (!t) { t = { url: '', host: '', blocked: 0, domains: new Map(), log: [], fp: new Map() }; tabs.set(tabId, t); }
   return t;
 }
+
+const emptyTotals = () => ({ blocked: 0, byCategory: {}, cookieBanners: 0, skipped: 0, fingerprinting: 0, since: Date.now(), daily: {}, topDomains: {}, siteTrackers: {} });
 
 async function loadTotals() {
   if (totals) return totals;
   const { totals: t } = await chrome.storage.local.get('totals');
-  totals = { blocked: 0, byCategory: {}, cookieBanners: 0, since: Date.now(), ...(t || {}) };
+  totals = { ...emptyTotals(), ...(t || {}) };
   return totals;
 }
 function saveTotals() {
   clearTimeout(totalsTimer);
   totalsTimer = setTimeout(() => chrome.storage.local.set({ totals }), 3000);
+}
+
+const dayKey = (d = new Date()) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+
+/** Add to today's bucket (kept 120 days) — feeds the weekly report. */
+function bump(tot, field, n = 1) {
+  const k = dayKey();
+  const day = tot.daily[k] || (tot.daily[k] = {});
+  day[field] = (day[field] || 0) + n;
+  const keys = Object.keys(tot.daily);
+  if (keys.length > 120) for (const old of keys.sort().slice(0, keys.length - 120)) delete tot.daily[old];
+}
+
+function remember(tot, blockedBase, siteBase) {
+  tot.topDomains[blockedBase] = (tot.topDomains[blockedBase] || 0) + 1;
+  if (Object.keys(tot.topDomains).length > 800) {
+    tot.topDomains = Object.fromEntries(Object.entries(tot.topDomains).sort((a, b) => b[1] - a[1]).slice(0, 400));
+  }
+  if (siteBase && siteBase !== blockedBase) {
+    const list = tot.siteTrackers[siteBase] || (tot.siteTrackers[siteBase] = []);
+    if (!list.includes(blockedBase) && list.length < 60) list.push(blockedBase);
+    const sites = Object.keys(tot.siteTrackers);
+    if (sites.length > 3000) for (const s of sites.slice(0, 500)) delete tot.siteTrackers[s];
+  }
 }
 
 export function setBadgeEnabled(on) { badgeOn = on; if (!on) chrome.action.setBadgeText({ text: '' }); }
@@ -55,6 +81,8 @@ async function record(details, status) {
     tot.blocked++;
     const c = category || 'o';
     tot.byCategory[c] = (tot.byCategory[c] || 0) + 1;
+    bump(tot, 'b'); bump(tot, c);
+    remember(tot, base, t.host ? getBaseDomain(t.host) : null);
     saveTotals();
     updateBadge(details.tabId, t);
   }
@@ -84,7 +112,7 @@ export function startStats() {
   chrome.webNavigation.onCommitted.addListener(d => {
     if (d.frameId !== 0) return;
     const t = tabState(d.tabId);
-    t.url = d.url; t.host = hostnameOf(d.url); t.blocked = 0; t.domains = new Map(); t.log = [];
+    t.url = d.url; t.host = hostnameOf(d.url); t.blocked = 0; t.domains = new Map(); t.log = []; t.fp = new Map();
     updateBadge(d.tabId, t);
   });
   chrome.tabs.onRemoved.addListener(id => tabs.delete(id));
@@ -101,14 +129,56 @@ export async function tabSummary(tabId) {
   if (!t) return { blocked: 0, domains: [] };
   const domains = [...t.domains.entries()].map(([base, d]) => ({ base, count: d.count, blocked: d.blocked, category: d.category, hosts: [...d.hosts] }));
   domains.sort((a, b) => b.blocked - a.blocked || b.count - a.count);
-  return { blocked: t.blocked, host: t.host, domains };
+  const fingerprinting = [...t.fp.entries()].map(([script, apis]) => ({ script, apis: [...apis] }));
+  return { blocked: t.blocked, host: t.host, domains, fingerprinting };
 }
 
 export function tabLog(tabId) { return tabs.get(tabId)?.log || []; }
 export function knownTabs() { return [...tabs.entries()].map(([id, t]) => ({ id, url: t.url, host: t.host, blocked: t.blocked })); }
 export async function getTotals() { return loadTotals(); }
-export async function countCookieBanner() { const t = await loadTotals(); t.cookieBanners++; saveTotals(); }
-export async function resetTotals() { totals = { blocked: 0, byCategory: {}, cookieBanners: 0, since: Date.now() }; await chrome.storage.local.set({ totals }); }
+export async function countCookieBanner() { const t = await loadTotals(); t.cookieBanners++; bump(t, 'cb'); saveTotals(); }
+export async function countSkipped() { const t = await loadTotals(); t.skipped++; bump(t, 'sk'); saveTotals(); }
+export async function resetTotals() { totals = emptyTotals(); await chrome.storage.local.set({ totals }); }
+
+/** A page used a fingerprinting API (reported by content/fp-detect.js). */
+export async function recordFingerprint(tabId, api, script) {
+  if (tabId < 0) return;
+  const t = tabState(tabId);
+  let host = '';
+  try { host = new URL(script).hostname; } catch { host = t.host; }
+  const key = host || t.host;
+  const set = t.fp.get(key) || new Set();
+  const isNew = !set.has(api);
+  set.add(api); t.fp.set(key, set);
+  if (isNew) { const tot = await loadTotals(); tot.fingerprinting++; bump(tot, 'fp'); saveTotals(); }
+}
+
+/** Known trackers per site, for search-result badges. */
+export async function trackersForSites(bases) {
+  const tot = await loadTotals();
+  return Object.fromEntries(bases.map(b => [b, (tot.siteTrackers[b] || []).length]));
+}
+
+// Estimates used by the report (labelled as estimates in the UI)
+const AVG_KB = 28, AVG_MS = 45;
+
+export async function weeklyReport(weeksBack = 0) {
+  const tot = await loadTotals();
+  const days = [];
+  const end = new Date(); end.setDate(end.getDate() - weeksBack * 7);
+  for (let i = 6; i >= 0; i--) { const d = new Date(end); d.setDate(end.getDate() - i); days.push({ date: dayKey(d), ...(tot.daily[dayKey(d)] || {}) }); }
+  const sum = f => days.reduce((n, d) => n + (d[f] || 0), 0);
+  const prevDays = [];
+  for (let i = 13; i >= 7; i--) { const d = new Date(end); d.setDate(end.getDate() - i); prevDays.push(tot.daily[dayKey(d)] || {}); }
+  const prevBlocked = prevDays.reduce((n, d) => n + (d.b || 0), 0);
+  const blocked = sum('b');
+  return {
+    days, blocked, prevBlocked, ads: sum('a'), trackers: sum('t'), malware: sum('m'), banners: sum('cb'), skipped: sum('sk'), fingerprinting: sum('fp'),
+    savedMB: +(blocked * AVG_KB / 1024).toFixed(1), savedSeconds: Math.round(blocked * AVG_MS / 1000),
+    topDomains: Object.entries(tot.topDomains).sort((a, b) => b[1] - a[1]).slice(0, 10),
+    worstSites: Object.entries(tot.siteTrackers).map(([s, l]) => [s, l.length]).sort((a, b) => b[1] - a[1]).slice(0, 10),
+  };
+}
 
 export function attachLogPort(port) {
   port.tabFilter = null;

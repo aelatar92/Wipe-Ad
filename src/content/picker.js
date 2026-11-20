@@ -7,9 +7,13 @@
   const T = isAr ? {
     pickTitle: 'اختر العنصر المراد حجبه', zapTitle: 'انقر على أي عنصر لإزالته — Esc للخروج',
     create: 'إنشاء فلتر', cancel: 'إلغاء', preview: 'معاينة', matches: 'عنصر مطابق', more: 'أعم', less: 'أدق', done: 'تم حفظ الفلتر ✓',
+    aiPh: '✨ أو صف ما تريد إخفاءه… (مثال: الشريط الجانبي للفيديوهات)', aiAsk: 'اسأل Claude', aiWait: 'Claude يفكر…',
+    aiNoKey: 'أضف مفتاح Anthropic API في إعدادات Wipe Ad أولاً.', aiErr: 'تعذّر إنشاء الفلتر: ', aiNone: 'المحدد المقترح لا يطابق أي عنصر.',
   } : {
     pickTitle: 'Pick the element to block', zapTitle: 'Click any element to remove it — Esc to exit',
     create: 'Create filter', cancel: 'Cancel', preview: 'Preview', matches: 'matching element(s)', more: 'Broader', less: 'Narrower', done: 'Filter saved ✓',
+    aiPh: '✨ or describe what to hide… (e.g. "the video sidebar")', aiAsk: 'Ask Claude', aiWait: 'Claude is thinking…',
+    aiNoKey: 'Add your Anthropic API key in Wipe Ad settings first.', aiErr: 'Could not create a filter: ', aiNone: 'The suggested selector matches nothing.',
   };
 
   const host = document.createElement('wipe-ad-picker');
@@ -29,10 +33,17 @@
     button.p{background:linear-gradient(135deg,#7c3aed,#2563eb)}
     .n{color:#9ca3af;font-size:12px;margin-inline-start:auto}
     input[type=range]{flex:1}
+    [hidden]{display:none!important}
+    .ai{margin:0 0 8px}
+    .aiq{flex:1;min-width:0;border-radius:8px;border:1px solid #374151;background:#030712;color:#e5e7eb;font:inherit;padding:7px 9px}
+    .aib{background:linear-gradient(135deg,#d97706,#db2777)}
+    .aiexp{color:#c4b5fd;font-size:12px;margin:0 0 8px;min-height:0}
   </style>
   <div class="hl"></div>
   <div class="bar" style="display:none">
     <div class="t"><i></i><span class="title"></span></div>
+    <div class="row ai" hidden><input class="aiq" type="text" placeholder="${T.aiPh}"><button class="aib">${T.aiAsk}</button></div>
+    <div class="aiexp"></div>
     <textarea spellcheck="false"></textarea>
     <div class="row"><span>${T.less}</span><input type="range" min="0" max="0" value="0"><span>${T.more}</span></div>
     <div class="row"><button class="p create">${T.create}</button><button class="prev">${T.preview}</button><button class="cancel">${T.cancel}</button><span class="n"></span></div>
@@ -136,6 +147,51 @@
       setTimeout(stop, 700);
     });
   });
+  // ---- AI assistant: describe the element instead of clicking it
+  const aiRow = root.querySelector('.ai'), aiq = root.querySelector('.aiq'), aib = root.querySelector('.aib'), aiexp = root.querySelector('.aiexp');
+  function outline() {
+    const lines = [];
+    const SKIP = new Set(['SCRIPT', 'STYLE', 'NOSCRIPT', 'TEMPLATE', 'LINK', 'META', 'SVG', 'PATH', 'HEAD', 'WIPE-AD-PICKER']);
+    const walk = (el, depth) => {
+      if (lines.length > 900 || depth > 25 || SKIP.has(el.nodeName.toUpperCase())) return;
+      const r = el.getBoundingClientRect();
+      const visible = r.width > 0 && r.height > 0;
+      if (visible || el === document.body) {
+        const cls = [...el.classList].slice(0, 4).map(c => '.' + c).join('');
+        const own = [...el.childNodes].filter(n => n.nodeType === 3).map(n => n.textContent.trim()).join(' ').replace(/\s+/g, ' ').slice(0, 50);
+        const extra = ['aria-label', 'role', 'data-testid'].map(a => el.getAttribute(a) ? `[${a}="${el.getAttribute(a).slice(0, 30)}"]` : '').join('');
+        lines.push(`${'  '.repeat(Math.min(depth, 12))}${el.localName}${el.id ? '#' + el.id : ''}${cls}${extra} [${Math.round(r.width)}x${Math.round(r.height)}]${own ? ' "' + own + '"' : ''}`);
+      }
+      for (const c of el.children) walk(c, depth + 1);
+    };
+    walk(document.body, 0);
+    return lines.join('\n');
+  }
+  async function askAI() {
+    const q = aiq.value.trim();
+    if (!q) return;
+    aib.disabled = true; aiexp.textContent = T.aiWait;
+    chrome.runtime.sendMessage({ type: 'ai:selector', description: q, outline: outline(), host: location.hostname }, res => {
+      void chrome.runtime.lastError;
+      aib.disabled = false;
+      if (!res || res.error) { aiexp.textContent = res?.error === 'NO_KEY' ? T.aiNoKey : T.aiErr + (res?.error || 'unknown'); return; }
+      if (!countMatches(res.selector)) { aiexp.textContent = T.aiNone + ' (' + res.selector + ')'; return; }
+      picked = picked || document.body;
+      ta.value = res.selector;
+      aiexp.textContent = `✨ ${res.explanation}${res.confidence === 'low' ? ' (?)' : ''}`;
+      bar.style.display = 'block';
+      updateCount();
+    });
+  }
+  if (mode === 'pick') {
+    chrome.runtime.sendMessage({ type: 'ai:status' }, st => {
+      void chrome.runtime.lastError;
+      if (st?.available && !st.disabled) { aiRow.hidden = false; bar.style.display = 'block'; }
+    });
+    aib.addEventListener('click', askAI);
+    aiq.addEventListener('keydown', e => { e.stopPropagation(); if (e.key === 'Enter') askAI(); });
+  }
+
   document.addEventListener('mousemove', onMove, true);
   document.addEventListener('click', onClick, true);
   document.addEventListener('keydown', onKey, true);

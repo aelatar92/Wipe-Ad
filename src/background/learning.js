@@ -145,6 +145,17 @@ export async function setUserAction(domain, action) {
   await applyLearnedRules();
 }
 
+export async function getUserActions() { await load(); return { ...state.user }; }
+
+/** Replace the user's per-tracker choices (used by settings sync). */
+export async function setUserActions(user) {
+  await load();
+  if (JSON.stringify(user) === JSON.stringify(state.user)) return;
+  state.user = { ...user };
+  scheduleSave();
+  await applyLearnedRules();
+}
+
 export async function resetLearning() {
   state = { snitch: {}, actions: {}, user: {} };
   await chrome.storage.local.set({ learning: state });

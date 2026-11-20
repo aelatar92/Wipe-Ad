@@ -43,8 +43,8 @@ export async function getUpdateStatus() {
 }
 
 export async function scheduleUpdates() {
-  const s = await getSettings();
-  const period = Math.max(30, s.updateIntervalMin || CONFIG.UPDATE_INTERVAL_MIN);
+  // the alarm fires hourly for rules; extension-version checks are throttled to updateIntervalMin
+  const period = CONFIG.FILTER_INTERVAL_MIN;
   const existing = await chrome.alarms.get(ALARM);
   if (!existing || existing.periodInMinutes !== period) {
     await chrome.alarms.create(ALARM, { delayInMinutes: 1, periodInMinutes: period });
@@ -122,7 +122,9 @@ export async function checkFilterUpdates({ force = false, enabledIds = null } = 
 export async function runScheduledUpdate(onFiltersChanged, enabledIds) {
   const s = await getSettings();
   const out = {};
-  if (s.autoUpdateExtension) out.ext = await checkExtensionUpdate();
+  const { updateStatus = {} } = await chrome.storage.local.get('updateStatus');
+  const extDue = Date.now() - (updateStatus.lastExtCheck || 0) >= (s.updateIntervalMin || CONFIG.UPDATE_INTERVAL_MIN) * 60000 - 60000;
+  if (s.autoUpdateExtension && extDue) out.ext = await checkExtensionUpdate();
   if (s.autoUpdateFilters) {
     out.filters = await checkFilterUpdates({ enabledIds });
     if (out.filters.changed) await onFiltersChanged();

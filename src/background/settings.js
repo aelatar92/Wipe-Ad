@@ -35,20 +35,69 @@ export const DEFAULTS = {
   // filter lists enabled state; null = use build defaults
   rulesets: null,
   customLists: [],                // [{url, title}]
+  // v1.1 features
+  skipRedirects: true,            // l.facebook.com/l.php?u=…, google.com/url?q=… → straight to the target
+  fpDetect: true,                 // report fingerprinting attempts
+  antiFingerprint: false,         // add noise to canvas / WebGL / audio fingerprints
+  blockNotificationPrompts: false,
+  stopAutoplay: false,
+  hideNewsletters: false,         // enables the annoyance lists
+  cnameUncloak: false,            // resolve first-party subdomains (DNS-over-HTTPS) to find cloaked trackers
+  syncEnabled: false,             // chrome.storage.sync
+  weeklyReport: true,
+  serpBadges: true,               // warnings next to search results
+  safeMode: false,                // adult-content blocking + SafeSearch
+  focus: { enabled: false, sites: [], days: [0, 1, 2, 3, 4, 5, 6], from: '09:00', to: '17:00', allDay: false },
+  aiApiKey: '',                   // Anthropic API key for the AI filter assistant (never synced or exported)
 };
 
+// Settings that never leave this device (sync / backup)
+export const LOCAL_ONLY = ['aiApiKey', 'syncEnabled'];
+
 let cache = null;
+let policy = null;
 const listeners = new Set();
+
+/** Administrator policy from chrome.storage.managed (enterprise / school deployments). */
+export async function getPolicy() {
+  if (policy) return policy;
+  let p = {};
+  try { p = (await chrome.storage.managed?.get(null)) || {}; } catch { /* no policy / unsupported */ }
+  policy = {
+    lockedSettings: p.lockedSettings && typeof p.lockedSettings === 'object' ? p.lockedSettings : {},
+    allowlist: Array.isArray(p.allowlist) ? p.allowlist.map(s => String(s).toLowerCase()) : [],
+    forcedRulesets: Array.isArray(p.forcedRulesets) ? p.forcedRulesets.map(String) : [],
+    disableUserFilters: p.disableUserFilters === true,
+    disableAI: p.disableAI === true,
+  };
+  policy.active = Object.keys(policy.lockedSettings).length > 0 || policy.allowlist.length > 0 || policy.forcedRulesets.length > 0 || policy.disableUserFilters || policy.disableAI;
+  policy.lockedKeys = [...Object.keys(policy.lockedSettings), ...(policy.disableAI ? ['aiApiKey'] : [])];
+  return policy;
+}
+
+function applyPolicy(s, p) {
+  Object.assign(s, p.lockedSettings);
+  if (p.allowlist.length) s.allowlist = [...new Set([...(s.allowlist || []), ...p.allowlist])];
+  s.forcedRulesets = p.forcedRulesets;
+  if (p.disableAI) s.aiApiKey = '';
+  return s;
+}
+
+globalThis.chrome?.storage?.managed?.onChanged?.addListener(() => { policy = null; cache = null; });
 
 export async function getSettings() {
   if (cache) return cache;
   const { settings } = await chrome.storage.local.get('settings');
-  cache = { ...DEFAULTS, ...(settings || {}) };
+  cache = applyPolicy({ ...DEFAULTS, ...(settings || {}) }, await getPolicy());
   return cache;
 }
 
 export async function setSettings(patch) {
   const cur = await getSettings();
+  const p = await getPolicy();
+  patch = { ...patch };
+  for (const k of p.lockedKeys) delete patch[k];
+  if (patch.allowlist && p.allowlist.length) patch.allowlist = [...new Set([...patch.allowlist, ...p.allowlist])];
   const prev = { ...cur };
   Object.assign(cur, patch);
   await chrome.storage.local.set({ settings: cur });

@@ -138,7 +138,26 @@ const PRIVACY = [
   ['autoDeleteTrackerCookies', null, 'clean'], ['stripThirdPartyCookies'], ['blockWebRTC', 'privacy'],
   ['autoConsent'], ['malwareWarning'],
 ];
-loaders.privacy = () => {
+const ADVANCED = [['skipRedirects'], ['fpDetect'], ['antiFingerprint'], ['cnameUncloak', null, null, 'cnameHint'], ['serpBadges'], ['weeklyReport']];
+const ANNOY = [['blockNotificationPrompts'], ['stopAutoplay'], ['hideNewsletters']];
+
+function optionRows(list) {
+  return list.map(([key, perm, , hint]) => {
+    const inp = el('input', { type: 'checkbox', 'data-setting': key, ...(perm ? { 'data-permission': perm } : {}) });
+    return el('label', { class: 'opt' }, el('span', {}, t(key), hint ? el('div', { class: 'muted small' }, t(hint)) : null), el('label', { class: 'switch' }, inp, el('span')));
+  });
+}
+
+loaders.privacy = async () => {
+  $('advancedOpts').replaceChildren(...optionRows(ADVANCED));
+  $('annoyOpts').replaceChildren(...optionRows(ANNOY));
+  bindSettings($('advancedOpts')); bindSettings($('annoyOpts'));
+  const c = await send({ type: 'cname:state' });
+  const n = Object.keys(c.cloaked || {}).length;
+  $('cnameInfo').textContent = settings.cnameUncloak ? `${fmtNum(n)} ${t('cnameFound')}${n ? ': ' + Object.keys(c.cloaked).slice(0, 8).join(', ') : ''}` : '';
+  renderPrivacy();
+};
+function renderPrivacy() {
   const box = $('privacyOpts');
   box.replaceChildren(...PRIVACY.map(([key, perm, extra]) => {
     const inp = el('input', { type: 'checkbox', 'data-setting': key, ...(perm ? { 'data-permission': perm } : {}) });
@@ -151,6 +170,92 @@ loaders.privacy = () => {
     return label;
   }));
   bindSettings(box);
+};
+
+// ---------------------------------------------------------------------------
+// Weekly report
+// ---------------------------------------------------------------------------
+loaders.report = async () => {
+  const r = await send({ type: 'report:weekly' });
+  $('rBlocked').textContent = fmtNum(r.blocked);
+  const diff = r.prevBlocked ? Math.round(((r.blocked - r.prevBlocked) / r.prevBlocked) * 100) : null;
+  $('rTrend').textContent = diff === null ? '' : `${diff >= 0 ? '▲' : '▼'} ${Math.abs(diff)}% ${t('vsLastWeek')}`;
+  $('rTrend').hidden = diff === null;
+  $('rMB').textContent = `${fmtNum(r.savedMB)} ${t('mb')}`;
+  $('rTime').textContent = r.savedSeconds >= 120 ? `${fmtNum(Math.round(r.savedSeconds / 60))} ${t('minutes')}` : `${fmtNum(r.savedSeconds)} ${t('seconds')}`;
+  $('rTrackers').textContent = fmtNum(r.trackers); $('rAds').textContent = fmtNum(r.ads);
+  $('rFp').textContent = fmtNum(r.fingerprinting); $('rSkipped').textContent = fmtNum(r.skipped); $('rBanners').textContent = fmtNum(r.banners);
+  const max = Math.max(1, ...r.days.map(d => d.b || 0));
+  const lang = document.documentElement.lang === 'ar' ? 'ar-EG' : 'en-US';
+  $('rChart').replaceChildren(...r.days.map(d => el('div', { class: 'col' },
+    el('span', { class: 'val' }, fmtNum(d.b || 0)),
+    el('div', { class: 'bar2', style: `height:${((d.b || 0) / max) * 80}%` }),
+    el('span', { class: 'lbl' }, new Date(d.date + 'T12:00').toLocaleDateString(lang, { weekday: 'short' })))));
+  const rank = (box, rows) => box.replaceChildren(...(rows.length ? rows.map(([n, c]) => el('li', {}, el('span', {}, n), el('b', {}, fmtNum(c)))) : [el('li', { class: 'muted small' }, t('noData'))]));
+  rank($('rTop'), r.topDomains); rank($('rWorst'), r.worstSites);
+};
+
+// ---------------------------------------------------------------------------
+// Focus & family
+// ---------------------------------------------------------------------------
+loaders.focus = () => {
+  bindSettings($('sec-focus'));
+  const f = settings.focus || {};
+  $('focusEnabled').checked = !!f.enabled;
+  $('focusSites').value = (f.sites || []).join('\n');
+  $('focusFrom').value = f.from || '09:00'; $('focusTo').value = f.to || '17:00';
+  $('focusAllDay').checked = !!f.allDay;
+  const lang = document.documentElement.lang === 'ar' ? 'ar-EG' : 'en-US';
+  $('focusDays').replaceChildren(...[0, 1, 2, 3, 4, 5, 6].map(d => {
+    const cb = el('input', { type: 'checkbox', value: d });
+    cb.checked = (f.days || []).includes(d);
+    const name = new Date(2026, 10, 15 + d).toLocaleDateString(lang, { weekday: 'short' }); // 15 Nov 2026 is a Sunday
+    return el('label', {}, cb, name);
+  }));
+  $('focusNow').hidden = !focusOn(f);
+};
+function focusOn(f) {
+  if (!f.enabled || !f.sites?.length) return false;
+  const now = new Date();
+  if (!(f.days || []).includes(now.getDay())) return false;
+  if (f.allDay) return true;
+  const m = s => { const [h, mm] = s.split(':').map(Number); return h * 60 + mm; };
+  const cur = now.getHours() * 60 + now.getMinutes(), a = m(f.from), b = m(f.to);
+  return a <= b ? cur >= a && cur < b : cur >= a || cur < b;
+}
+async function saveFocus() {
+  const focus = {
+    enabled: $('focusEnabled').checked,
+    sites: [...new Set($('focusSites').value.split(/\s+/).map(s => s.trim().toLowerCase().replace(/^https?:\/\//, '').replace(/\/.*$/, '').replace(/^www\./, '')).filter(Boolean))],
+    days: [...$('focusDays').querySelectorAll('input:checked')].map(i => Number(i.value)),
+    from: $('focusFrom').value || '09:00', to: $('focusTo').value || '17:00', allDay: $('focusAllDay').checked,
+  };
+  settings = await send({ type: 'settings:set', patch: { focus } });
+  $('focusMsg').textContent = t('saved');
+  $('focusNow').hidden = !focusOn(focus);
+}
+$('focusSave').onclick = saveFocus;
+$('focusEnabled').onchange = saveFocus;
+
+// ---------------------------------------------------------------------------
+// Sync & AI
+// ---------------------------------------------------------------------------
+async function renderSync() {
+  const st = await send({ type: 'sync:status' });
+  $('syncLast').textContent = fmtDate(Math.max(st.lastPush || 0, st.lastPull || 0) || null) + (st.error ? ` ⚠ ${st.error}` : '');
+}
+$('syncNow').onclick = async () => { await send({ type: 'sync:now' }); settings = await send({ type: 'settings:get' }); renderSync(); };
+async function renderAI() {
+  const st = await send({ type: 'ai:status' });
+  $('aiKey').value = settings.aiApiKey ? '••••••••••••' + settings.aiApiKey.slice(-4) : '';
+  $('aiKey').disabled = $('aiSave').disabled = !st.available || st.disabled;
+  $('aiMsg').textContent = !st.available ? t('aiUnavailable') : st.hasKey ? `${t('aiKeySaved')} · ${st.model}` : '';
+}
+$('aiSave').onclick = async () => {
+  const v = $('aiKey').value.trim();
+  if (v.startsWith('••')) return;
+  settings = await send({ type: 'settings:set', patch: { aiApiKey: v } });
+  renderAI();
 };
 
 // ---------------------------------------------------------------------------
@@ -256,7 +361,7 @@ $('checkNow').onclick = async () => {
 // ---------------------------------------------------------------------------
 // Settings & backup
 // ---------------------------------------------------------------------------
-loaders.settings = () => bindSettings($('sec-settings'));
+loaders.settings = () => { bindSettings($('sec-settings')); renderSync(); renderAI(); };
 $('exportBtn').onclick = async () => {
   const data = await send({ type: 'backup:export' });
   const a = el('a', { href: URL.createObjectURL(new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' })), download: `wipe-ad-backup-${new Date().toISOString().slice(0, 10)}.json` });
@@ -287,6 +392,10 @@ loaders.about = async () => {
 await initI18n();
 settings = await send({ type: 'settings:get' });
 $('ver').textContent = chrome.runtime.getManifest().version;
+const policy = await send({ type: 'settings:policy' });
+$('managed').hidden = !policy?.active;
+for (const k of policy?.lockedKeys || []) document.querySelectorAll(`[data-setting="${k}"]`).forEach(i => { i.disabled = true; i.title = t('managedBanner'); });
+if (policy?.disableUserFilters) { $('userFilters').disabled = true; $('saveFilters').disabled = true; }
 bindSettings();
 send({ type: 'update:status' }).then(st => { $('updDot').hidden = !st.available; });
 

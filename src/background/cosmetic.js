@@ -83,7 +83,8 @@ export async function onFrameInit(msg, sender) {
   const url = msg.url || sender.url || '';
   const pageUrl = sender.tab?.url || url;
   const { settings, mode } = await modeForUrl(pageUrl);
-  const res = { mode, cosmetic: settings.cosmetic, autoConsent: settings.autoConsent && mode !== 'off', procedural: [], generic: false };
+  const lang = settings.language === 'auto' ? ((chrome.i18n.getUILanguage() || '').startsWith('ar') ? 'ar' : 'en') : settings.language;
+  const res = { mode, lang, cosmetic: settings.cosmetic, serpBadges: settings.serpBadges, autoConsent: settings.autoConsent && mode !== 'off', procedural: [], generic: false };
   if (mode === 'off' || mode === 'basic' || tabId === undefined) return res;
   await injectFrame(tabId, frameId, url, pageUrl); // no-op when already done by onCommitted
   if (settings.cosmetic) {

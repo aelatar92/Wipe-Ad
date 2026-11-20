@@ -16,6 +16,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with: { node-version: 22 }
+      - run: npm ci
       - run: npm test
       # Chromium is used at build time to validate regex rules with the real RE2 engine
       - run: npx -y playwright@1.49.1 install --with-deps chromium

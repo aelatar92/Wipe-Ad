@@ -14,10 +14,12 @@
     <div class="logo"><img src="../icons/icon-48.png" width="34" height="34" alt=""><div><b>Wipe Ad</b><div class="muted small">v<span id="ver"></span></div></div></div>
     <nav id="nav">
       <a data-sec="overview">📊 <span data-i18n="navOverview"></span></a>
+      <a data-sec="report">🗓️ <span data-i18n="navReport"></span></a>
       <a data-sec="lists">🧾 <span data-i18n="navLists"></span></a>
       <a data-sec="myfilters">✍️ <span data-i18n="navMyFilters"></span></a>
       <a data-sec="sites">🌐 <span data-i18n="navSites"></span></a>
       <a data-sec="privacy">🕶️ <span data-i18n="navPrivacy"></span></a>
+      <a data-sec="focus">🎯 <span data-i18n="navFocus"></span></a>
       <a data-sec="learning">🧠 <span data-i18n="navLearning"></span></a>
       <a data-sec="log">📜 <span data-i18n="navLog"></span></a>
       <a data-sec="updates">⬆️ <span data-i18n="navUpdates"></span><i id="updDot" class="dot" hidden></i></a>
@@ -27,6 +29,49 @@
   </aside>
 
   <main>
+    <div id="managed" class="card managed" hidden>🏢 <span data-i18n="managedBanner"></span></div>
+
+    <!-- WEEKLY REPORT -->
+    <section id="sec-report" hidden>
+      <div class="card report-hero">
+        <div><div class="muted small" data-i18n="reportTitle"></div><b id="rBlocked" class="huge">0</b> <span id="rTrend" class="trend"></span></div>
+        <div class="report-kpis">
+          <div><b id="rMB">0</b><span data-i18n="savedData"></span></div>
+          <div><b id="rTime">0</b><span data-i18n="savedTime"></span></div>
+          <div><b id="rTrackers">0</b><span data-i18n="statTrackers"></span></div>
+          <div><b id="rAds">0</b><span data-i18n="statAds"></span></div>
+          <div><b id="rFp">0</b><span data-i18n="statFingerprinting"></span></div>
+          <div><b id="rSkipped">0</b><span data-i18n="statSkipped"></span></div>
+          <div><b id="rBanners">0</b><span data-i18n="statBanners"></span></div>
+        </div>
+      </div>
+      <div class="card"><div id="rChart" class="chart"></div></div>
+      <div class="two">
+        <div class="card"><h3 data-i18n="topBlocked"></h3><ol id="rTop" class="rank"></ol></div>
+        <div class="card"><h3 data-i18n="worstSites"></h3><ol id="rWorst" class="rank"></ol></div>
+      </div>
+    </section>
+
+    <!-- FOCUS & FAMILY -->
+    <section id="sec-focus" hidden>
+      <div class="card">
+        <div class="row"><div><b data-i18n="focusMode"></b><div class="muted small" data-i18n="focusHint"></div></div><span class="spacer"></span><span id="focusNow" class="chip cat-s" hidden data-i18n="focusActiveNow"></span><label class="switch"><input type="checkbox" id="focusEnabled"><span></span></label></div>
+        <div class="focus-grid">
+          <label><span data-i18n="focusSites"></span><textarea id="focusSites" rows="7" spellcheck="false" placeholder="facebook.com&#10;tiktok.com&#10;youtube.com"></textarea></label>
+          <div>
+            <div class="small muted" data-i18n="focusDays"></div>
+            <div id="focusDays" class="days"></div>
+            <div class="row" style="margin-top:12px"><span data-i18n="focusFrom"></span><input type="time" id="focusFrom"><span data-i18n="focusTo"></span><input type="time" id="focusTo"></div>
+            <label class="row small" style="margin-top:10px"><input type="checkbox" id="focusAllDay"><span data-i18n="focusAllDay"></span></label>
+            <div class="row" style="margin-top:14px"><button id="focusSave" class="primary" data-i18n="save"></button><span id="focusMsg" class="muted small"></span></div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="row"><div><b data-i18n="safeMode"></b><div class="muted small" data-i18n="safeModeHint"></div></div><span class="spacer"></span><label class="switch"><input type="checkbox" data-setting="safeMode"><span></span></label></div>
+      </div>
+    </section>
+
     <!-- OVERVIEW -->
     <section id="sec-overview">
       <div id="welcome" class="card welcome" hidden><h2 data-i18n="welcomeTitle"></h2><p data-i18n="welcomeBody"></p></div>
@@ -82,6 +127,15 @@
         <h3 data-i18n="privacyStealth"></h3>
         <div class="opts" id="privacyOpts"></div>
       </div>
+      <div class="card">
+        <h3 data-i18n="secAdvanced"></h3>
+        <div class="opts" id="advancedOpts"></div>
+        <div id="cnameInfo" class="muted small"></div>
+      </div>
+      <div class="card">
+        <h3 data-i18n="secAnnoyances"></h3>
+        <div class="opts" id="annoyOpts"></div>
+      </div>
     </section>
 
     <!-- LEARNING -->
@@ -134,6 +188,17 @@
         <label class="opt"><span data-i18n="showBadge"></span><label class="switch"><input type="checkbox" data-setting="showBadge"><span></span></label></label>
         <label class="opt"><span data-i18n="cosmetic"></span><label class="switch"><input type="checkbox" data-setting="cosmetic"><span></span></label></label>
         <label class="opt"><span data-i18n="scriptlets"></span><label class="switch"><input type="checkbox" data-setting="scriptlets"><span></span></label></label>
+      </div>
+      <div class="card">
+        <h3 data-i18n="syncTitle"></h3>
+        <label class="opt"><span data-i18n="syncEnabled"></span><label class="switch"><input type="checkbox" data-setting="syncEnabled"><span></span></label></label>
+        <div class="row" style="margin-top:8px"><button id="syncNow" data-i18n="syncNow"></button><span class="muted small"><span data-i18n="lastSync"></span>: <span id="syncLast"></span></span></div>
+      </div>
+      <div class="card">
+        <h3>✨ <span data-i18n="aiTitle"></span></h3>
+        <p class="muted small" data-i18n="aiHint"></p>
+        <div class="row"><input id="aiKey" type="password" autocomplete="off" spellcheck="false" placeholder="sk-ant-…" style="flex:1;direction:ltr"><button id="aiSave" class="primary" data-i18n="save"></button></div>
+        <div class="row small" style="margin-top:6px"><span id="aiMsg" class="muted"></span><span class="spacer"></span><a href="https://platform.claude.com/settings/keys" target="_blank" data-i18n="getKey"></a></div>
       </div>
       <div class="card">
         <h3 data-i18n="backup"></h3>

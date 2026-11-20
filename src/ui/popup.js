@@ -43,6 +43,13 @@ function render() {
     $('updLink').onclick = e => { e.preventDefault(); chrome.tabs.create({ url: avail.download?.[ua] || avail.page || 'https://github.com' }); };
   }
 
+  const fp = data.summary.fingerprinting || [];
+  $('fpBox').hidden = !fp.length;
+  $('fpList').replaceChildren(...fp.slice(0, 8).map(f => el('div', { class: 'row' },
+    el('span', { class: 'chip cat-t' }, data.settings.antiFingerprint ? t('fpProtected') : t('fpDetectedOnly')),
+    el('span', { class: 'd' }, f.script),
+    el('span', { class: 'muted' }, f.apis.map(a => t('api_' + a)).join(' · ')))));
+
   const box = $('trackers');
   box.replaceChildren();
   const list = data.summary.domains.slice(0, 60);
@@ -72,6 +79,9 @@ $('pause').onclick = async () => {
   await send({ type: 'site:pause', host: data.host, minutes: data.pausedUntil ? 0 : 30, tabId: tab.id });
   await load();
 };
+$('brBasic').onclick = async () => { await send({ type: 'site:setMode', host: data.host, mode: 'basic', tabId: tab.id }); chrome.tabs.reload(tab.id); await load(); };
+$('brOff').onclick = async () => { await send({ type: 'site:setMode', host: data.host, mode: 'off', tabId: tab.id }); chrome.tabs.reload(tab.id); await load(); };
+$('brReport').onclick = async () => { await send({ type: 'site:report', tabId: tab.id }); window.close(); };
 $('pick').onclick = async () => { await send({ type: 'picker:start', tabId: tab.id, mode: 'pick' }); window.close(); };
 $('zap').onclick = async () => { await send({ type: 'picker:start', tabId: tab.id, mode: 'zap' }); window.close(); };
 $('openDash').onclick = () => { chrome.runtime.openOptionsPage(); window.close(); };

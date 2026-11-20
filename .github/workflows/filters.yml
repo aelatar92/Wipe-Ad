@@ -1,9 +1,9 @@
-# Publishes live rule updates every day: new upstream filters reach users within hours,
+# Publishes live rule updates every hour: new upstream filters and YouTube fixes reach users quickly,
 # without a new extension release (the extension polls updates/filters/manifest.json).
 name: Live filter updates
 on:
   schedule:
-    - cron: '17 */6 * * *'
+    - cron: '17 * * * *'
   workflow_dispatch:
 permissions:
   contents: write

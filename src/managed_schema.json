@@ -1,0 +1,31 @@
+{
+  "type": "object",
+  "properties": {
+    "lockedSettings": {
+      "title": "Locked settings",
+      "description": "Wipe Ad settings forced by the administrator (same keys as a settings backup), e.g. {\"enabled\": true, \"gpc\": true, \"safeMode\": true}.",
+      "type": "object"
+    },
+    "allowlist": {
+      "title": "Allowed sites",
+      "description": "Domains where Wipe Ad is always disabled (added to the user's list, cannot be removed).",
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "forcedRulesets": {
+      "title": "Forced filter lists",
+      "description": "Filter list ids that are always enabled (e.g. \"adult\", \"annoyances\").",
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "disableUserFilters": {
+      "title": "Disable custom filters",
+      "description": "Prevents users from adding their own filters and element-picker rules.",
+      "type": "boolean"
+    },
+    "disableAI": {
+      "title": "Disable the AI filter assistant",
+      "type": "boolean"
+    }
+  }
+}
