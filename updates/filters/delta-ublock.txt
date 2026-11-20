@@ -1,0 +1,5 @@
+||sy.ameblo.jp^$badfilter
+||sy.ameba.jp^$badfilter
+||sy.amebame.com^$badfilter
+www.youtube.com##+js(rmnt, script, 'window,"fetch"')
+socialxup.com##a[data-track="related_click"]:not(:has-text(フォロワー))

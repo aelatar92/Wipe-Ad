@@ -1,0 +1,17 @@
+pikabu.ru#%#//scriptlet('remove-node-text', 'script', '/xhr\.setRequestHeader[\s\S]*http-check-headers\.yandex\.ru|\(\)[\s\S]*A_D/')
+translate.yandex.ru##.side-block > div[id]:not([class]):has(> div[class]:not([id]) button[aria-label="Скрыть рекламу"])
+kudago.com,porno666.link,thebell.io,nhike.ru,bankinform.ru,championat.ru,prufy.ru,kostroma.today,fnvolga.ru,menunedeli.ru,sfera.fm,frankmedia.ru,cisoclub.ru,trafficcardinal.com,kursiv.media,moskvichmag.ru,netex.co.il,in-scale.ru,ukraina.ru,mipped.com,diapazon.kz,bloknot.ru##.banner
+||travelpayouts.com/content?$domain=spbmuzei.ru
+||sputnik8.com/w/v2_tours_box?
+spbmuzei.ru##.reserve-excursion
+spbmuzei.ru###powered_by_1500_1
+spbmuzei.ru##.post-content > div.su-note:has(p > a:is([href^="https://www.spbmuzei.ru/go/"], [href^="/go/"]))
+spbmuzei.ru##.post-content > div.button-by
+spbmuzei.ru#?#.post-content > div[style="text-align: right;"]:contains(Реклама)
+spbmuzei.ru#?#.post-content > p.has-text-align-right:contains(Реклама)
+kudago.com##.okko-abv
+||media.kudago.com/images/advert/
+my.cdek.ru##.mt-4 > div.mt-0:has(> div.mb-3 > span[data-pr-tooltip^="Реклама:"])
+||tenchat.ru/tenchat-ads/
+yummyani.me,amd.online,anime-bit.ru,animego.me,marvel-online.ru,kadikama.com#%#//scriptlet('json-prune', 'ads.vast.prerolls.* ads.vast.pauserolls.* vast.prerolls.* vast.pauserolls.*')
+kudago.com,sakhalinmedia.ru,shedevrum.ai,eaomedia.ru,amurmedia.ru,stavropol.media,ulanmedia.ru,nakhodka.media,ussurmedia.ru,sevastopolmedia.ru,footballua.tv,dp.ru,vctr.media,buro247.ru,afisha.ngs.ru,newsvl.ru##.banner-container

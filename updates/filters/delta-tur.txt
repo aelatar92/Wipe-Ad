@@ -1,0 +1,3 @@
+evrimagaci.org##div[data-ad-type]
+teknoblog.com##.e-con-boxed:has(> .e-con-inner > .elementor-widget-shortcode > .elementor-shortcode > .tb-ad-placement)
+teknoblog.com##.tbn-rail-ad

@@ -1,0 +1,10 @@
+||event-ingestion.yazio-analytics.com^
+||a.menards.com^
+||seznam.cz/*/hit|
+||seznam.cz/*/imp?k=
+||fls-eu.amazon.de/*batch/*uedata*Gateway
+||ev.chitchat.tv/e/
+||ev.chitchat.tv/i/*/e/
+kick.com#%#//scriptlet('prevent-fetch', 'litix.io')
+kick.com#%#//scriptlet('prevent-setTimeout', 'startBeaconSending')
+||lidsmarket.com^

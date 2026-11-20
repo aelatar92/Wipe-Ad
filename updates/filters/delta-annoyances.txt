@@ -1,0 +1,13 @@
+ecohustler.com##.zine-cta
+ecohustler.com##.zine-grid-cta
+ecohustler.com##.zine-mid-article-cta
+ecohustler.com##.zine-post-article-cta
+bismarcktribune.com,chippewa.com,columbustelegram.com,journalstar.com,pantagraph.com,qctimes.com,siouxcityjournal.com,wcfcourier.com###preferredSource
+techpartner.news##.badge-light
+whispersinthecorridors.in##.wh-share
+ecohustler.com##.zine-share-sidebar
+##.mod_cms_accept_tags
+##cms-accept-tags
+collaboraonline.com##[consent-skip-blocker]
+whispersinthecorridors.in##.wh-share-box
+whispersinthecorridors.in#?#div.wh-widget:has-text(Stay informed)

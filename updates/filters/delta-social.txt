@@ -1,0 +1,5 @@
+ccn.com,tanjug.rs,iflscience.com,croxyproxy.app,natgeomedia.com,akhbarelyom.com,blogs.opera.com,hugogloss.uol.com.br,lsm.lv,paradergi.com.tr,czasfinansow.pl,attacomsian.com,meme-arsenal.com,merriam-webster.com,embed.ustudio.com,marketwatch.com,blog.1password.com##.share-icons
+gamingonlinux.com##.gol-right-article-meta
+symbaloo.com##div[aria-label="Webmix Details"] button:not([id]):has(> span > i.mdi-share-variant)
+menards.com###pdpSharing
+livecombs.com,media-polesye.com,samsungsvc.co.kr,eclipse.imperialsaga.jp,dogatch.jp,myfxbook.com,videacesky.cz###shareBtn
