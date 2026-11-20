@@ -1,8 +1,10 @@
+||huavod.net/static/js/ntc.js
 ||huavod.com/static/js/ntc.js
-huavod.com#$#.ec-ad { position: fixed !important; left: -99999px !important; top: -99999px !important; width: 1px !important; height: 1px !important; opacity: 0.01 !important; visibility: visible !important; }
-huavod.com#$#.hr-banner-stack { position: fixed !important; left: -99999px !important; top: -99999px !important; width: 1px !important; height: 1px !important; opacity: 0.01 !important; visibility: visible !important; }
+huavod.net,huavod.com#$#.ec-ad { position: fixed !important; left: -99999px !important; top: -99999px !important; width: 1px !important; height: 1px !important; opacity: 0.01 !important; visibility: visible !important; }
+huavod.net,huavod.com#$#.hr-banner-stack { position: fixed !important; left: -99999px !important; top: -99999px !important; width: 1px !important; height: 1px !important; opacity: 0.01 !important; visibility: visible !important; }
 pa1151.top##a[href="https://dagexxx.com"]
 pa1151.top##a[href="https://dage.top/"]
+huavod.com,huavod.net##div[style="margin:2px 0;"] > a.item > img[src^="https://static.okokserver.com/uploads/"]
 ||6uw4lcf0qu.com^
 ||chxzsq0cu1.com^
 ||pa4u6c6lqv.com^

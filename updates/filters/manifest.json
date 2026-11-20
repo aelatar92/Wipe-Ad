@@ -1,14 +1,14 @@
 {
- "version": "202611201700",
- "generated": "2026-11-20T17:00:20.527Z",
+ "version": "202611202307",
+ "generated": "2026-11-20T23:07:46.157Z",
  "baselineVersion": "1.1.1",
  "lists": [
   {
    "id": "easylist",
    "ruleset": "easylist",
    "url": "delta-easylist.txt",
-   "sha256": "7f237078d37b6a08c48bced6983d24d84bba8b08fa6465f6cabc816fba00af09",
-   "lines": 268
+   "sha256": "57f6ab280e915692896d626e1b8c1a3ed8dd4fa9b8b2cbe699377b6d1fde47d1",
+   "lines": 360
   },
   {
    "id": "ublock",
@@ -21,8 +21,8 @@
    "id": "adguard-base",
    "ruleset": "adguard-base",
    "url": "delta-adguard-base.txt",
-   "sha256": "580f48ce555b080985c2df048e73185f5de29c1f108db04e70550ed73ff9aefb",
-   "lines": 281
+   "sha256": "5fd7970ad1b0c6b46e4dc6831a56fdb2e4f96e8a3e7d4e6d3d1319607d05a876",
+   "lines": 353
   },
   {
    "id": "pgl",
@@ -35,15 +35,15 @@
    "id": "easyprivacy",
    "ruleset": "easyprivacy",
    "url": "delta-easyprivacy.txt",
-   "sha256": "6c4eb7c514c6da2f22eecfc2e55eed45101c78438f0696e006bd61ed59228e88",
-   "lines": 13
+   "sha256": "24526b6c6ac77054d65d4b342b50cd054ada6609bef1c0d53ad766c2dac9f7e8",
+   "lines": 16
   },
   {
    "id": "adguard-tracking",
    "ruleset": "adguard-tracking",
    "url": "delta-adguard-tracking.txt",
-   "sha256": "abbd25210684f2ab045957269e0e7c0d59852ccdd1bb68ca08fcbabf64a19e7a",
-   "lines": 10
+   "sha256": "3066f6692ef5c3a9ae6f9086a1d89ee544df88326e61024d83402566ea9e203d",
+   "lines": 13
   },
   {
    "id": "urlhaus",
@@ -91,8 +91,15 @@
    "id": "tur",
    "ruleset": "tur",
    "url": "delta-tur.txt",
-   "sha256": "b5744dad587c2f41c9e9289e4b5336b812159c77275dbf057499607c1376ee97",
-   "lines": 3
+   "sha256": "53ed779cd61d708ba39b24df8aadeccb288b4e6f120c194ae4bde2fef88672e6",
+   "lines": 5
+  },
+  {
+   "id": "deu",
+   "ruleset": "deu",
+   "url": "delta-deu.txt",
+   "sha256": "96d80c5bb19c7b8a7b8f1e42bb2838035939565a98e9554c710aa7a6ab169bf8",
+   "lines": 5
   },
   {
    "id": "rus",
@@ -105,8 +112,8 @@
    "id": "chn",
    "ruleset": "chn",
    "url": "delta-chn.txt",
-   "sha256": "c947ef4d9425575d1b108e06ef70559f5f83e4a7d97d88a686736cc2fd94e1d3",
-   "lines": 13
+   "sha256": "9fb152743f8cdfdd58cdfc700a82069f93d8bf10663368755486b4894da08743",
+   "lines": 15
   },
   {
    "id": "wipead-fixes",

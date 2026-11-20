@@ -8,3 +8,6 @@
 kick.com#%#//scriptlet('prevent-fetch', 'litix.io')
 kick.com#%#//scriptlet('prevent-setTimeout', 'startBeaconSending')
 ||lidsmarket.com^
+||masondown.com^
+||ordinalzero.com^
+||rapidscraper.com^

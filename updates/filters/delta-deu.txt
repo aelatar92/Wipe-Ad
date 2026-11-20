@@ -1,0 +1,5 @@
+||fupa.net/ads/
+kleinanzeigen.de##div[data-liberty-position-name]
+kleinanzeigen.de##div[data-liberty-subarea]
+fupa.net##div[data-sentry-component="AdSlotContainer"]
+der-farang.com##div:has(> a[rel~="nofollow"][target="_blank"]:not([href*="der-farang.com"]) img)

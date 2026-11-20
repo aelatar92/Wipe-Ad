@@ -5,7 +5,10 @@
 ||cdn.x7k9m2q4z8r1.com^
 ||connext-fd-gnbrate4fjhjb3f7.z01.azurefd.net^
 ||g2insights-fd-a0gpgwa4fycxd9d4.z01.azurefd.net^
+||colorfilter.net^
 ||lidsmarket.com^
+||masondown.com^
+||ordinalzero.com^
 ||rapidscraper.com^
 ||feliz.data.tm-awx.com/netro-web/batch
 ||view.publitas.com/ecommTracker.js
