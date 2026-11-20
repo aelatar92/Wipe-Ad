@@ -37,6 +37,8 @@ function ready() {
     const s = await getSettings();
     configureLearning(s);
     configureCname(s, { categoryOf, learned: learnedTrackers });
+    // AI assistant switched off: never keep an API key around
+    if (!aiAvailable() && s.aiApiKey) await setSettings({ aiApiKey: '' });
     setBadgeEnabled(s.showBadge);
     await refreshCosmeticIndex(s);
   })().catch(e => { console.error('[WipeAd] init failed', e); readyPromise = null; });
@@ -327,7 +329,7 @@ const handlers = {
   },
   async 'ai:selector'({ description, outline, host }) {
     const s = await getSettings();
-    if ((await getPolicy()).disableAI) return { error: 'DISABLED' };
+    if (!aiAvailable() || (await getPolicy()).disableAI) return { error: 'DISABLED' };
     const lang = s.language === 'auto' ? ((chrome.i18n.getUILanguage() || '').startsWith('ar') ? 'ar' : 'en') : s.language;
     try {
       return await suggestSelector({ apiKey: s.aiApiKey, description: String(description).slice(0, 500), outline: String(outline).slice(0, 60000), host, lang });

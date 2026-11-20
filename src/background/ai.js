@@ -27,10 +27,10 @@ Rules for the selector:
 - Choose the outermost container of the unwanted block so no empty frame is left behind.
 - If the description is ambiguous, pick the most likely match and set confidence to "low".`;
 
-export const aiAvailable = () => typeof Anthropic === 'function';
+export const aiAvailable = () => CONFIG.AI_ENABLED === true && typeof Anthropic === 'function';
 
 export async function suggestSelector({ apiKey, description, outline, host, lang }) {
-  if (!aiAvailable()) throw new Error('AI assistant is not included in this build');
+  if (!aiAvailable()) throw new Error('DISABLED');
   if (!apiKey) throw new Error('NO_KEY');
   const client = new Anthropic({ apiKey, dangerouslyAllowBrowser: true, maxRetries: 1, timeout: 90 * 1000 });
   try {

@@ -212,6 +212,7 @@ async function main() {
 
   // bundle the official Anthropic SDK for the AI filter assistant (dev dependency, bundled locally)
   try {
+    if (!CONFIG.AI_ENABLED) throw new Error('AI_ENABLED is false in src/shared/config.js');
     const { build } = await import('esbuild');
     await build({ entryPoints: [join(ROOT, 'tools', 'anthropic-entry.mjs')], bundle: true, format: 'esm', platform: 'browser',
       minify: true, legalComments: 'none', outfile: join(BUILD, 'vendor', 'anthropic.mjs'), logLevel: 'error' });
@@ -220,7 +221,8 @@ async function main() {
     // the service worker imports this file statically, so always provide it
     mkdirSync(join(BUILD, 'vendor'), { recursive: true });
     writeFileSync(join(BUILD, 'vendor', 'anthropic.mjs'), 'export const Anthropic = null;\n');
-    console.warn(`  ! AI assistant disabled — cannot bundle @anthropic-ai/sdk (${e.message}). Run npm install.`);
+    if (!CONFIG.AI_ENABLED) console.log('  vendor: AI assistant disabled (AI_ENABLED=false) — Anthropic SDK not bundled');
+    else console.warn(`  ! AI assistant disabled — cannot bundle @anthropic-ai/sdk (${e.message}). Run npm install.`);
   }
 
   // assemble targets

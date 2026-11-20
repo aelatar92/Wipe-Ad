@@ -9,7 +9,9 @@ export const CONFIG = {
   // How often the extension checks for new versions (minutes); rules are checked hourly
   UPDATE_INTERVAL_MIN: 360,
   FILTER_INTERVAL_MIN: 60,
-  // AI filter assistant
+  // AI filter assistant (Anthropic API). Disabled: the SDK is not bundled, the UI is hidden
+  // and no request can be made. Set to true and rebuild to bring it back.
+  AI_ENABLED: false,
   AI_MODEL: 'claude-opus-5-5',
   // Privacy-Badger-style learning
   TRACKING_THRESHOLD: 3,

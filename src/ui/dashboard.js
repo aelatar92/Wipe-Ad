@@ -247,6 +247,8 @@ async function renderSync() {
 $('syncNow').onclick = async () => { await send({ type: 'sync:now' }); settings = await send({ type: 'settings:get' }); renderSync(); };
 async function renderAI() {
   const st = await send({ type: 'ai:status' });
+  $('aiCardTitle').closest('.card').hidden = !st.available;
+  if (!st.available) return;
   $('aiKey').value = settings.aiApiKey ? '••••••••••••' + settings.aiApiKey.slice(-4) : '';
   $('aiKey').disabled = $('aiSave').disabled = !st.available || st.disabled;
   $('aiMsg').textContent = !st.available ? t('aiUnavailable') : st.hasKey ? `${t('aiKeySaved')} · ${st.model}` : '';

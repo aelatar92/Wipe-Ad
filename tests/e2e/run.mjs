@@ -224,9 +224,9 @@ async function main() {
       const rep = await msg({ type: 'report:weekly' });
       check('weekly report has 7 days of data', rep.days.length === 7 && rep.blocked > 0, `blocked=${rep.blocked}`);
       const ai = await msg({ type: 'ai:status' });
-      check('AI assistant bundled (official SDK)', ai.available === true, JSON.stringify(ai));
+      check('AI assistant disabled (no SDK bundled)', ai.available === false, JSON.stringify(ai));
       const aiNoKey = await msg({ type: 'ai:selector', description: 'the banner', outline: 'body', host: 'localhost' });
-      check('AI assistant asks for a key first', aiNoKey.error === 'NO_KEY', JSON.stringify(aiNoKey));
+      check('AI requests refused while disabled', aiNoKey.error === 'DISABLED', JSON.stringify(aiNoKey));
       await msg({ type: 'settings:set', patch: { syncEnabled: true } });
       await sleep(5000);
       const ss = await msg({ type: 'sync:status' });
