@@ -1,6 +1,6 @@
 {
   "name": "wipe-ad",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Wipe Ad — all-in-one ad blocker, tracker blocker and privacy guard (MV3, Chromium + Firefox)",
   "private": true,
   "type": "module",
