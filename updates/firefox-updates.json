@@ -10,6 +10,15 @@
               "strict_min_version": "128.0"
             }
           }
+        },
+        {
+          "version": "1.1.0",
+          "update_link": "https://github.com/aelatar92/Wipe-Ad/releases/download/v1.1.0/wipe-ad-1.1.0-firefox.xpi",
+          "applications": {
+            "gecko": {
+              "strict_min_version": "128.0"
+            }
+          }
         }
       ]
     }

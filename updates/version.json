@@ -1,13 +1,13 @@
 {
-  "version": "1.0.0",
-  "released": "2026-11-19T23:00:31.124Z",
-  "page": "https://github.com/aelatar92/Wipe-Ad/releases/tag/v1.0.0",
+  "version": "1.1.0",
+  "released": "2026-11-20T00:13:53.557Z",
+  "page": "https://github.com/aelatar92/Wipe-Ad/releases/tag/v1.1.0",
   "notes": {
-    "en": "First release of Wipe Ad",
-    "ar": "الإصدار الأول من Wipe Ad"
+    "en": "New: YouTube ad blocking, fingerprinting protection, tracking-link skipping, weekly report, focus & family modes, settings sync, AI filter assistant, and more.",
+    "ar": "جديد: حجب إعلانات يوتيوب، حماية بصمة المتصفح، تخطي روابط التتبع، تقرير أسبوعي، وضع التركيز والأمان العائلي، المزامنة، مساعد الفلاتر بالذكاء الاصطناعي، والمزيد."
   },
   "download": {
-    "chromium": "https://github.com/aelatar92/Wipe-Ad/releases/download/v1.0.0/wipe-ad-1.0.0-chromium.zip",
-    "firefox": "https://github.com/aelatar92/Wipe-Ad/releases/download/v1.0.0/wipe-ad-1.0.0-firefox.zip"
+    "chromium": "https://github.com/aelatar92/Wipe-Ad/releases/download/v1.1.0/wipe-ad-1.1.0-chromium.zip",
+    "firefox": "https://github.com/aelatar92/Wipe-Ad/releases/download/v1.1.0/wipe-ad-1.1.0-firefox.zip"
   }
 }

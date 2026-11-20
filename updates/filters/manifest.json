@@ -1,21 +1,21 @@
 {
- "version": "202611192312",
- "generated": "2026-11-19T23:12:17.473Z",
- "baselineVersion": "1.0.0",
+ "version": "1.1.0-0",
+ "generated": "2026-11-20T00:13:53.557Z",
+ "baselineVersion": "1.1.0",
  "lists": [
-  {
-   "id": "easylist",
-   "ruleset": "easylist",
-   "url": "delta-easylist.txt",
-   "sha256": "a53875e87af3f1508a9a4f2606ba99798db504e55b7da63f2864effc00df1bcd",
-   "lines": 2
-  },
   {
    "id": "wipead-fixes",
    "ruleset": null,
    "url": "wipead-fixes.txt",
    "sha256": "9b4ea991f427e1181a70b8fc2ab5e4f5c98004f519b2f25897f24a6944b6e951",
    "lines": 3
+  },
+  {
+   "id": "wipead-youtube",
+   "ruleset": null,
+   "url": "youtube.txt",
+   "sha256": "397071dc7e9db639595a60f851432c087a40ff4ae99192e3a0943bc7aa4965bf",
+   "lines": 43
   }
  ],
  "yellowlist": [],
