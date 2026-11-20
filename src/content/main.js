@@ -11,6 +11,14 @@
   const send = (msg) => new Promise(res => {
     try { api.runtime.sendMessage(msg, r => { void api.runtime.lastError; res(r); }); } catch { res(null); }
   });
+  // page health counters, reported once per page for diagnostics
+  const H = { tokens: 0, genericMatched: 0, proceduralHits: 0, consent: null, pageErrors: 0, initMs: null };
+  let errorsSent = 0;
+  const reportError = (where, e) => {
+    if (errorsSent++ > 5) return;
+    send({ type: 'diag:error', where, message: String(e?.message || e), stack: String(e?.stack || '') });
+  };
+  if (window === window.top) window.addEventListener('error', () => { H.pageErrors++; }, true);
 
   // -------------------------------------------------------------------------
   // Generic cosmetic: token collection
@@ -41,7 +49,8 @@
     if (!pending.size) return;
     const tokens = [...pending];
     pending = new Set();
-    send({ type: 'cosmetic:tokens', url: location.href, tokens });
+    H.tokens += tokens.length;
+    send({ type: 'cosmetic:tokens', url: location.href, tokens }).then(r => { H.genericMatched += r?.count || 0; });
   }
 
   // -------------------------------------------------------------------------
@@ -99,6 +108,7 @@
         case 'others': case 'watch-attr': case 'matches-media': break;
       }
     }
+    H.proceduralHits += nodes.length;
     for (const n of nodes) {
       if (action === 'remove') n.remove();
       else if (action === 'style' && style) n.setAttribute('style', (n.getAttribute('style') || '') + ';' + style.replace(/;?\s*$/, '').split(';').map(d => d + ' !important').join(';'));
@@ -111,7 +121,7 @@
   let procTimer = null;
   function runAllProcedural() {
     procTimer = null;
-    for (const p of procedural) { try { runProcedural(p); } catch { /* ignore */ } }
+    for (const p of procedural) { try { runProcedural(p); } catch (e) { reportError("procedural", e); } }
   }
   function scheduleProcedural() { if (procedural.length && !procTimer) procTimer = setTimeout(runAllProcedural, 100); }
 
@@ -159,7 +169,7 @@
         try { btn = root.querySelector(sel); } catch { /* ignore */ }
         // known CMP buttons are clicked even when our cosmetic filters already hid the banner
         if (btn && !btn.disabled) {
-          btn.click(); consentDone = true;
+          btn.click(); consentDone = true; H.consent = r.name;
           send({ type: 'consent:handled', cmp: r.name });
           setTimeout(() => { try { document.querySelectorAll(r.hide).forEach(e => e.remove()); } catch { /* ignore */ } restoreScroll(); }, 800);
           return;
@@ -174,7 +184,7 @@
       for (const b of c.querySelectorAll('button,a[role="button"],[role="button"],input[type="button"]')) {
         const label = (b.innerText || b.value || b.getAttribute('aria-label') || '').trim().replace(/\s+/g, ' ');
         if (label.length < 40 && REJECT_WORDS.test(label) && clickable(b)) {
-          b.click(); consentDone = true; send({ type: 'consent:handled', cmp: 'heuristic' }); restoreScroll(); return;
+          b.click(); consentDone = true; H.consent = "heuristic"; send({ type: 'consent:handled', cmp: 'heuristic' }); restoreScroll(); return;
         }
       }
     }
@@ -250,9 +260,33 @@
   // -------------------------------------------------------------------------
   // Boot
   // -------------------------------------------------------------------------
+  // Health report for the top frame, a few seconds after load: timings, matches and a
+  // check for "over-blocking" (main page containers hidden by a filter).
+  function healthReport(cfg) {
+    if (window !== window.top) return;
+    const fire = () => setTimeout(() => {
+      let hiddenLarge = 0; const largeSamples = [];
+      for (const el of document.querySelectorAll('main, article, [role="main"], #content, #main, #app, #root, #__next, body > div')) {
+        if ((el.textContent || '').length < 600) continue;
+        if (getComputedStyle(el).display === 'none' && el.offsetParent === null) {
+          hiddenLarge++;
+          if (largeSamples.length < 3) largeSamples.push(el.localName + (el.id ? '#' + el.id : '') + [...el.classList].slice(0, 3).map(c => '.' + c).join(''));
+        }
+      }
+      if (document.body && getComputedStyle(document.body).display === 'none') { hiddenLarge++; largeSamples.push('body'); }
+      const nav = performance.getEntriesByType('navigation')[0];
+      send({ type: 'diag:page', mode: cfg.mode, procedural: procedural.length, hiddenLarge, largeSamples,
+        loadMs: nav ? Math.round(nav.loadEventEnd || nav.domContentLoadedEventEnd) : null, ...H });
+    }, 4000);
+    if (document.readyState === 'complete') fire(); else window.addEventListener('load', fire, { once: true });
+  }
+
+  const tInit = performance.now();
   send({ type: 'frame:init', url: location.href }).then(async cfg => {
+    H.initMs = Math.round(performance.now() - tInit);
     if (!cfg || cfg.mode === 'off') return;
-    if (cfg.serpBadges && window === window.top) serpBadges(cfg.lang === 'ar');
+    try { healthReport(cfg); } catch (e) { reportError('health', e); }
+    if (cfg.serpBadges && window === window.top) { try { serpBadges(cfg.lang === 'ar'); } catch (e) { reportError('serp', e); } }
     if (cfg.mode !== 'basic' && cfg.cosmetic) {
       procedural = (cfg.procedural || []).map(parseProcedural);
       const observer = new MutationObserver(muts => {
@@ -274,7 +308,7 @@
     if (cfg.autoConsent && window === window.top) {
       let extra = [];
       try { const { remoteExtras } = await api.storage.local.get('remoteExtras'); extra = remoteExtras?.consentRules || []; } catch { /* ignore */ }
-      const run = () => tryConsent(extra);
+      const run = () => { try { tryConsent(extra); } catch (e) { reportError('consent', e); } };
       const iv = setInterval(() => { run(); if (consentDone || consentTries > 40) clearInterval(iv); }, 500);
       setTimeout(() => clearInterval(iv), 20000);
     }

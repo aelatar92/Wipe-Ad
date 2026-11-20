@@ -50,6 +50,7 @@ export const STRINGS = {
     shortcuts: 'Keyboard shortcuts', aboutBody: 'Wipe Ad combines the best ideas of uBlock Origin, AdGuard, Privacy Badger and Ghostery in one lightweight Manifest V3 extension. Filter lists are maintained by their respective authors.',
     credits: 'Filter lists used', confirmSubscribe: 'Subscribe to this filter list?', subscribe: 'Subscribe', cancel: 'Cancel',
     // v1.1
+    navDiagnostics: 'Diagnostics', diagHint: 'Errors, slow operations and possible over-blocking detected by Wipe Ad. Export this file when reporting a problem.',
     navReport: 'Weekly report', navFocus: 'Focus & family', fpDetected: 'Fingerprinting attempts on this page', fpProtected: 'blurred', fpDetectedOnly: 'detected',
     api_canvas: 'Canvas', api_webgl: 'WebGL', api_audio: 'Audio', api_fonts: 'Fonts',
     siteBroken: 'Site not working?', brokenBasic: 'Switch to Basic mode', brokenOff: 'Turn off on this site', brokenReport: 'Report to developers',
@@ -125,6 +126,7 @@ export const STRINGS = {
     backup: 'النسخ الاحتياطي والاستعادة', exportBtn: 'تصدير الإعدادات', importBtn: 'استيراد الإعدادات', imported: 'تم الاستيراد ✓',
     shortcuts: 'اختصارات لوحة المفاتيح', aboutBody: 'يجمع Wipe Ad أفضل أفكار uBlock Origin و AdGuard و Privacy Badger و Ghostery في إضافة واحدة خفيفة بنظام Manifest V3. قوائم الفلاتر يحافظ عليها مؤلفوها.',
     credits: 'قوائم الفلاتر المستخدمة', confirmSubscribe: 'هل تريد الاشتراك في قائمة الفلاتر هذه؟', subscribe: 'اشتراك', cancel: 'إلغاء',
+    navDiagnostics: 'التشخيص', diagHint: 'الأخطاء والعمليات البطيئة وحالات الحجب الزائد المحتملة التي رصدها Wipe Ad. صدّر هذا الملف عند الإبلاغ عن مشكلة.',
     navReport: 'التقرير الأسبوعي', navFocus: 'التركيز والعائلة', fpDetected: 'محاولات أخذ بصمة المتصفح في هذه الصفحة', fpProtected: 'تم تشويشها', fpDetectedOnly: 'تم رصدها',
     api_canvas: 'Canvas', api_webgl: 'WebGL', api_audio: 'الصوت', api_fonts: 'الخطوط',
     siteBroken: 'الموقع لا يعمل؟', brokenBasic: 'التحويل للوضع الأساسي', brokenOff: 'إيقاف على هذا الموقع', brokenReport: 'إبلاغ المطورين',

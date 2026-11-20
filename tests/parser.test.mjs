@@ -114,3 +114,10 @@ test('new scriptlets are recognised', () => {
   assert.deepEqual(cosmetic.scriptlets['youtube.com'][0], ['json-prune-fetch-response', 'playerAds adPlacements', '', 'propsToMatch', '/player/']);
   assert.deepEqual(cosmetic.scriptlets['youtube.com'][1], ['wipead-youtube']);
 });
+
+test('strict mode keeps a site\'s own CDNs', async () => {
+  const { entityDomains } = await import('../src/shared/domain.js');
+  assert.ok(entityDomains('facebook.com').includes('fbcdn.net'));
+  assert.ok(entityDomains('youtube.com').includes('googlevideo.com'));
+  assert.deepEqual(entityDomains('example.com'), ['example.com']);
+});

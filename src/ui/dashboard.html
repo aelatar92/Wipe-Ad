@@ -24,6 +24,7 @@
       <a data-sec="log">📜 <span data-i18n="navLog"></span></a>
       <a data-sec="updates">⬆️ <span data-i18n="navUpdates"></span><i id="updDot" class="dot" hidden></i></a>
       <a data-sec="settings">⚙️ <span data-i18n="navSettings"></span></a>
+      <a data-sec="diagnostics">🩺 <span data-i18n="navDiagnostics"></span></a>
       <a data-sec="about">ℹ️ <span data-i18n="navAbout"></span></a>
     </nav>
   </aside>
@@ -208,6 +209,12 @@
         <h3 data-i18n="shortcuts"></h3>
         <div class="muted small">Alt+Shift+P — <span data-i18n="picker"></span><br>Alt+Shift+Z — <span data-i18n="zapper"></span></div>
       </div>
+    </section>
+
+    <!-- DIAGNOSTICS -->
+    <section id="sec-diagnostics" hidden>
+      <div class="card row wrap"><span class="muted small" data-i18n="diagHint"></span><span class="spacer"></span><button id="diagExport" data-i18n="exportBtn"></button><button id="diagClear" class="danger" data-i18n="clear"></button></div>
+      <div class="card logwrap"><table class="log"><thead><tr><th data-i18n="time"></th><th data-i18n="status"></th><th data-i18n="type"></th><th></th></tr></thead><tbody id="diagBody"></tbody></table></div>
     </section>
 
     <!-- ABOUT -->

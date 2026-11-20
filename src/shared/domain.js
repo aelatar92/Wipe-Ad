@@ -94,6 +94,12 @@ const ENTITY_GROUPS = [
 const ENTITY_MAP = new Map();
 ENTITY_GROUPS.forEach((g, i) => g.forEach(d => ENTITY_MAP.set(d, i)));
 
+/** All registrable domains owned by the same organisation as `base` (including itself). */
+export function entityDomains(base) {
+  const i = ENTITY_MAP.get(base);
+  return i === undefined ? [base] : [...ENTITY_GROUPS[i]];
+}
+
 export function sameEntity(baseA, baseB) {
   if (baseA === baseB) return true;
   const a = ENTITY_MAP.get(baseA), b = ENTITY_MAP.get(baseB);

@@ -379,6 +379,25 @@ $('importFile').onchange = async () => {
 };
 
 // ---------------------------------------------------------------------------
+// Diagnostics
+// ---------------------------------------------------------------------------
+let diagRows = [];
+loaders.diagnostics = async () => {
+  diagRows = await send({ type: 'diag:list' });
+  $('diagBody').replaceChildren(...(diagRows.length ? diagRows.map(e => {
+    const { t: time, level, kind, v, ...rest } = e;
+    return el('tr', { class: level === 'error' ? 's-blocked' : 's-redirected' },
+      el('td', {}, new Date(time).toLocaleString()), el('td', {}, level), el('td', {}, kind),
+      el('td', { class: 'u' }, JSON.stringify(rest).slice(0, 600)));
+  }) : [el('tr', {}, el('td', { colspan: 4, class: 'muted small' }, t('noData')))]));
+};
+$('diagExport').onclick = () => {
+  const a = el('a', { href: URL.createObjectURL(new Blob([JSON.stringify({ version: chrome.runtime.getManifest().version, ua: navigator.userAgent, events: diagRows }, null, 2)], { type: 'application/json' })), download: `wipe-ad-diagnostics-${Date.now()}.json` });
+  a.click();
+};
+$('diagClear').onclick = async () => { await send({ type: 'diag:clear' }); loaders.diagnostics(); };
+
+// ---------------------------------------------------------------------------
 // About
 // ---------------------------------------------------------------------------
 loaders.about = async () => {

@@ -14,6 +14,9 @@ import { applyMainWorldScripts, applyFeatureRules, applyFocus, applyScriptletScr
 import { configureCname, observeRequest as cnameObserve, applyCnameRules, cnameState, resetCname } from './cname.js';
 import { schedulePush, pull as syncPull, onRemoteChange, syncStatus } from './sync.js';
 import { suggestSelector, aiAvailable } from './ai.js';
+import { diag, timed, installGlobalHandlers, getDiag, clearDiag } from './diag.js';
+
+installGlobalHandlers();
 import { startCosmetic, onFrameInit, onTokens, applySelectorNow } from './cosmetic.js';
 import { getUserFilters, setUserFilters, addUserFilter, getUserCosmetic, getRemoteCosmetic, refreshCustomLists, customListsStatus, clearRemote } from './filters.js';
 import { ALARM, scheduleUpdates, runScheduledUpdate, checkExtensionUpdate, checkFilterUpdates, getUpdateStatus, onNotificationClicked, handleUpdateAvailable } from './updater.js';
@@ -44,18 +47,18 @@ async function refreshCosmeticIndex(s) {
   s ||= await getSettings();
   const ids = await enabledRulesetIds(s);
   const extra = [await getRemoteCosmetic(), await getUserCosmetic()].filter(Boolean);
-  await rebuildCosmetic(ids, extra);
+  await timed('cosmetic-index', () => rebuildCosmetic(ids, extra), 1500, { lists: ids.length });
 }
 
 async function applyAll() {
   const s = await getSettings();
-  await syncStaticRulesets(s);
+  await timed('apply:static', () => syncStaticRulesets(s), 1000);
   await applySiteRules(s);
   await applyStealth(s);
   configureLearning(s);
   await applyLearnedRules();
-  await applyMainWorldScripts(s);
-  await applyScriptletScripts(s);
+  await timed('apply:main-world', () => applyMainWorldScripts(s), 1000);
+  await timed('apply:scriptlets', () => applyScriptletScripts(s), 3000);
   await applyFeatureRules(s);
   configureCname(s, { categoryOf, learned: learnedTrackers });
   await applyCnameRules();
@@ -140,7 +143,19 @@ startCosmetic();
 ready();
 chrome.webRequest.onCompleted.addListener(d => { cnameObserve(d); }, { urls: ['http://*/*', 'https://*/*'] });
 
+// periodic health snapshot (rule budget, registered scripts) for diagnostics
+async function snapshot() {
+  try {
+    const counts = await ruleCounts();
+    const scripts = (await chrome.scripting.getRegisteredContentScripts()).length;
+    const errs = (await chrome.declarativeNetRequest.getEnabledRulesets()).length;
+    diag('info', 'snapshot', { counts, scripts, enabledRulesets: errs });
+  } catch (e) { diag('error', 'snapshot', { message: String(e.message || e) }); }
+}
+ready().then(snapshot);
+
 onMainFrameBlocked(async d => {
+  diag('info', 'main-frame-blocked', { host: hostnameOf(d.url) });
   const s = await getSettings();
   if (!s.malwareWarning) return;
   const cat = await categoryOf(hostnameOf(d.url));
@@ -157,6 +172,7 @@ chrome.alarms.onAlarm.addListener(async alarm => {
     const s = await getSettings();
     await runScheduledUpdate(() => refreshCosmeticIndex(s), await enabledRulesetIds(s));
   } else if (alarm.name === COOKIE_ALARM) {
+    snapshot();
     await deleteTrackerCookies();
   } else if (alarm.name === UNPAUSE_ALARM) {
     const paused = await getPaused();
@@ -286,6 +302,21 @@ const handlers = {
   'consent:handled': () => countCookieBanner().then(() => ({ ok: true })),
   async 'fp:report'({ api, script }, sender) { if (sender.tab?.id !== undefined) await recordFingerprint(sender.tab.id, api, script); return { ok: true }; },
   async 'stats:skipped'() { await countSkipped(); return { ok: true }; },
+  async 'diag:page'(m, sender) {
+    // per-page health, reported by content/main.js a few seconds after load (top frame only)
+    const tabId = sender.tab?.id;
+    const sum = tabId !== undefined ? await tabSummary(tabId) : { blocked: 0, domains: [], fingerprinting: [] };
+    const host = hostnameOf(sender.url || '');
+    const ev = { host, mode: m.mode, initMs: m.initMs, tokens: m.tokens, genericMatched: m.genericMatched, procedural: m.procedural,
+      proceduralHits: m.proceduralHits, consent: m.consent, blocked: sum.blocked, thirdParties: sum.domains.length,
+      fingerprinting: sum.fingerprinting.length, pageErrors: m.pageErrors, hiddenLarge: m.hiddenLarge, loadMs: m.loadMs };
+    diag(m.initMs > 800 ? 'warn' : 'info', m.initMs > 800 ? 'slow:page-init' : 'page', ev);
+    if (m.hiddenLarge > 0) diag('warn', 'possible-overblock', { host, hiddenLarge: m.hiddenLarge, samples: m.largeSamples });
+    return { ok: true };
+  },
+  async 'diag:error'(m, sender) { diag('error', 'content:' + (m.where || 'error'), { host: hostnameOf(sender.url || ''), message: String(m.message).slice(0, 800), stack: String(m.stack || '').slice(0, 1500) }); return { ok: true }; },
+  'diag:list': () => getDiag(),
+  async 'diag:clear'() { await clearDiag(); return { ok: true }; },
   async 'serp:check'({ hosts }) {
     const list = (hosts || []).slice(0, 60);
     const bases = list.map(h => getBaseDomain(h));
@@ -458,7 +489,7 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
   if (!h) return false;
   // content scripts may only call the content-facing handlers
   const fromExtension = sender.url?.startsWith(chrome.runtime.getURL(''));
-  const contentAllowed = ['frame:init', 'cosmetic:tokens', 'consent:handled', 'picker:create', 'subscribe:add', 'fp:report', 'serp:check', 'ai:selector', 'ai:status'];
+  const contentAllowed = ['frame:init', 'cosmetic:tokens', 'consent:handled', 'picker:create', 'subscribe:add', 'fp:report', 'serp:check', 'ai:selector', 'ai:status', 'diag:page', 'diag:error'];
   if (!fromExtension && !contentAllowed.includes(msg.type)) { sendResponse({ error: 'forbidden' }); return false; }
   if (msg.type === 'subscribe:add' && !fromExtension) {
     // a web page asked to subscribe: open the dashboard so the user confirms
@@ -466,7 +497,15 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
     sendResponse({ ok: true, pending: true });
     return false;
   }
-  ready().then(() => h(msg, sender)).then(sendResponse, e => sendResponse({ error: String(e?.message || e) }));
+  const t0 = performance.now();
+  ready().then(() => h(msg, sender)).then(res => {
+    const ms = Math.round(performance.now() - t0);
+    if (ms > 500 && !['update:checkNow', 'ai:selector', 'sync:now', 'cookies:cleanNow', 'backup:import', 'subscribe:add'].includes(msg.type)) diag('warn', 'slow:message', { type: msg.type, ms, host: hostnameOf(sender.url || '') });
+    sendResponse(res);
+  }, e => {
+    diag('error', 'message-failed', { type: msg.type, message: String(e?.message || e), stack: String(e?.stack || '').slice(0, 1500) });
+    sendResponse({ error: String(e?.message || e) });
+  });
   return true;
 });
 

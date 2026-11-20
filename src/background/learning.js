@@ -5,6 +5,7 @@
 import { CONFIG, RULE_IDS, PRIORITY } from '../shared/config.js';
 import { getBaseDomain, hostnameOf, sameEntity } from '../shared/domain.js';
 import { replaceDynamicRange } from './rules.js';
+import { diag } from './diag.js';
 
 // Domains that are often required for sites to work: cookies are stripped instead of blocking.
 const YELLOWLIST = new Set([
@@ -87,6 +88,7 @@ async function observe(details, headers) {
   if (sites.length > 20) sites.splice(0, sites.length - 20);
   if (sites.length >= threshold && !state.actions[reqBase]) {
     state.actions[reqBase] = YELLOWLIST.has(reqBase) ? 'cookieblock' : 'block';
+    diag('info', 'learn:' + state.actions[reqBase], { domain: reqBase, sites: sites.slice(-5) });
     scheduleApply();
   }
   scheduleSave();

@@ -2,6 +2,7 @@
 
 import { RULE_IDS, PRIORITY, SESSION_IDS } from '../shared/config.js';
 import { getCatalog } from './data.js';
+import { getBaseDomain, entityDomains } from '../shared/domain.js';
 
 const DNR = chrome.declarativeNetRequest;
 
@@ -72,10 +73,13 @@ export async function applySiteRules(settings) {
   }
   const strict = Object.entries(settings.siteModes || {}).filter(([, m]) => m === 'strict').map(([h]) => h);
   if (strict.length && settings.enabled) {
-    rules.push({ priority: PRIORITY.STRICT, action: { type: 'block' },
-      condition: { initiatorDomains: strict, domainType: 'thirdParty', resourceTypes: ['script', 'sub_frame', 'object'] } });
-    rules.push({ priority: PRIORITY.STRICT, action: { type: 'block' },
-      condition: { initiatorDomains: strict, domainType: 'thirdParty', resourceTypes: ['font', 'ping', 'websocket'] } });
+    // one rule per site so the site's own CDNs (fbcdn.net for facebook.com, ytimg.com /
+    // googlevideo.com for youtube.com …) are not treated as third parties
+    for (const site of strict.slice(0, 140)) {
+      const own = entityDomains(getBaseDomain(site));
+      rules.push({ priority: PRIORITY.STRICT, action: { type: 'block' },
+        condition: { initiatorDomains: [site], excludedRequestDomains: own, domainType: 'thirdParty', resourceTypes: ['script', 'sub_frame', 'object', 'font', 'ping', 'websocket'] } });
+    }
   }
   return replaceDynamicRange(RULE_IDS.SITES_START, RULE_IDS.SITES_END, rules);
 }
