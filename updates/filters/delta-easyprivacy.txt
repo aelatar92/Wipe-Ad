@@ -6,11 +6,14 @@
 ||connext-fd-gnbrate4fjhjb3f7.z01.azurefd.net^
 ||g2insights-fd-a0gpgwa4fycxd9d4.z01.azurefd.net^
 ||colorfilter.net^
+||housewheels.com^
 ||lidsmarket.com^
 ||masondown.com^
+||nitrojiveband.com^
 ||ordinalzero.com^
 ||rapidscraper.com^
 ||feliz.data.tm-awx.com/netro-web/batch
 ||view.publitas.com/ecommTracker.js
 ||view.publitas.com/javascripts/vendors/publitas-stats.js
+||thedailybeast.com/metrics/
 ||whispersinthecorridors.in/public/js/analytics.js

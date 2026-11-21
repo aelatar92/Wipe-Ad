@@ -7,7 +7,9 @@
 ||ev.chitchat.tv/i/*/e/
 kick.com#%#//scriptlet('prevent-fetch', 'litix.io')
 kick.com#%#//scriptlet('prevent-setTimeout', 'startBeaconSending')
+||colorfilter.net^
 ||lidsmarket.com^
 ||masondown.com^
+||nitrojiveband.com^
 ||ordinalzero.com^
 ||rapidscraper.com^
