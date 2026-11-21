@@ -1,5 +1,6 @@
 ||event-ingestion.yazio-analytics.com^
 ||a.menards.com^
+||media-analytic.com/media.js
 ||seznam.cz/*/hit|
 ||seznam.cz/*/imp?k=
 ||fls-eu.amazon.de/*batch/*uedata*Gateway
@@ -8,6 +9,7 @@
 kick.com#%#//scriptlet('prevent-fetch', 'litix.io')
 kick.com#%#//scriptlet('prevent-setTimeout', 'startBeaconSending')
 ||colorfilter.net^
+||housewheels.com^
 ||lidsmarket.com^
 ||masondown.com^
 ||nitrojiveband.com^
