@@ -22,6 +22,11 @@ kick.com#%#//scriptlet('prevent-setTimeout', 'startBeaconSending')
 ||recessremote.com^
 ||redmaceta.com^
 ||reelboat.com^
+||sagemosaicart.com^
 ||sandshredder.com^
+||socialbackyard.com^
 ||stellarcoded.com^
 ||sweetbeat.net^
+||systemone.net^
+||tableheads.com^
+||tinybodega.com^

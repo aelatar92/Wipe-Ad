@@ -1,5 +1,6 @@
 /px/?rand=
 /track/?evt=
+/vendor/snowplow-
 ||cdn.a9f3k7z2m1.com^
 ||cdn.m2z7r9k4p1.com^
 ||cdn.q4x8n6b2t5.com^
@@ -21,9 +22,16 @@
 ||recessremote.com^
 ||redmaceta.com^
 ||reelboat.com^
+||sagemosaicart.com^
 ||sandshredder.com^
+||socialbackyard.com^
 ||stellarcoded.com^
 ||sweetbeat.net^
+||systemone.net^
+||tableheads.com^
+||tentpick.com^
+||tinybodega.com^
+||wrathsecrets.com^
 ||dev.visualwebsiteoptimizer.com/cdn/edrv/
 ||dev.visualwebsiteoptimizer.com/edrv/
 ||estuary-data.com/ga4-identify
@@ -32,7 +40,10 @@
 ||view.publitas.com/javascripts/vendors/publitas-stats.js
 ||adweek.com/vx39/
 ||bytes.adweek.com/vs.js
+||gpupartner.com/57df8107ae016629/script.js
+||media.audubon.org/js/aud_tracker.min.js
 ||s.pdfroom.com/api/event
+||s.yimg.com/cv/apiv2/cv/apiv2/trueanthem/$domain=yahoo.com
 ||sfchronicle.com/api/client-logs
 ||sink.archive.org^
 ||thedailybeast.com/metrics/

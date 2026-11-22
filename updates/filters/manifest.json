@@ -1,14 +1,14 @@
 {
- "version": "202611221620",
- "generated": "2026-11-22T16:20:56.542Z",
+ "version": "202611222229",
+ "generated": "2026-11-22T22:29:24.429Z",
  "baselineVersion": "1.1.1",
  "lists": [
   {
    "id": "easylist",
    "ruleset": "easylist",
    "url": "delta-easylist.txt",
-   "sha256": "fff83888e2066745b5ae468b87356bfb700473f0063877869e647ed3b12297d7",
-   "lines": 1002
+   "sha256": "de0b6be042a8c52065b753820f95e716f3d8f587cd2bf07888c94b01499c03e9",
+   "lines": 1088
   },
   {
    "id": "ublock",
@@ -21,8 +21,8 @@
    "id": "adguard-base",
    "ruleset": "adguard-base",
    "url": "delta-adguard-base.txt",
-   "sha256": "e6e88b5da6cf5042c412ee0113a6b11a7cf56372ce8caf9c8f2b87d270c25c3b",
-   "lines": 1023
+   "sha256": "c75629f3f793d6a48c629bd766abb218624a1519c17de7a37498de6f0c996276",
+   "lines": 1107
   },
   {
    "id": "pgl",
@@ -35,15 +35,22 @@
    "id": "easyprivacy",
    "ruleset": "easyprivacy",
    "url": "delta-easyprivacy.txt",
-   "sha256": "c2f5df1a264c90d65fabe9ae64685fda846116c8074dded37348e1aaa64b9fe4",
-   "lines": 40
+   "sha256": "441a442db9b91cb7257de9488b701359fbd0b88f1f85ec3a24c5fbbdb2f38595",
+   "lines": 51
   },
   {
    "id": "adguard-tracking",
    "ruleset": "adguard-tracking",
    "url": "delta-adguard-tracking.txt",
-   "sha256": "865febded9873481a7960f72f51adedfef79bf38416b41edef05dc90e422dddb",
-   "lines": 27
+   "sha256": "b5bcddddfca624406b198b325ab1463f49f28f5c63834c138628c760531ae8d6",
+   "lines": 32
+  },
+  {
+   "id": "badware",
+   "ruleset": "badware",
+   "url": "delta-badware.txt",
+   "sha256": "97b6aba294f98c3a380480550bfd1bcd41eacedd40295ad33910c16f419dcaf6",
+   "lines": 1
   },
   {
    "id": "urlhaus",
@@ -63,15 +70,15 @@
    "id": "cookies",
    "ruleset": "cookies",
    "url": "delta-cookies.txt",
-   "sha256": "4b45f87cdc0361ed9234e4a85c56893f55b88abfa499cb799b9604124bbcd2ae",
-   "lines": 4
+   "sha256": "127d0ff4243cba5e51b61e9889110ec8e2c44b6abfb854b56fe54c6736f59775",
+   "lines": 5
   },
   {
    "id": "annoyances",
    "ruleset": "annoyances",
    "url": "delta-annoyances.txt",
-   "sha256": "a1872fc85558c3179004b8de884edc171a4b17c6069803697c8a7bdb648de7a3",
-   "lines": 21
+   "sha256": "597751a3a73a256753668199b846b9b686d0b29e724e9d16771a1d5ae5abd4c9",
+   "lines": 24
   },
   {
    "id": "social",
@@ -112,8 +119,8 @@
    "id": "rus",
    "ruleset": "rus",
    "url": "delta-rus.txt",
-   "sha256": "b1d67214eed350a5192de12d72dd847ce939633911b4502d2539b0d30f268d29",
-   "lines": 17
+   "sha256": "2c6857e9a0543cbc8eb3981bcdb9ecf76cb79aa7742e00525efe6e5307e373b2",
+   "lines": 19
   },
   {
    "id": "chn",

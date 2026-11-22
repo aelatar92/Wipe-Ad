@@ -15,6 +15,8 @@ zeenews.com,zee24taas.com##div[class$="ads_box_300_250"]
 zeenews.com,zee24taas.com##div[class*="_topBanner"]
 zeenews.com,zee24taas.com##div[class$="_adsRow"]
 cobephim.wiki##.sspp-area
+hianimes.se,vidstuck.xyz,komiku.org,kaliscan.com,moviesapi.to,watchluna.to,kagane.to,vidnest.fun,kora-sia.com,animeidhentai.com,nhplayer.com,tk2dl.com,miruro.tv,goplay.ml,goplay.su,animepahe.*,dopebox.to,flickystream.net,hivecomic.com,9xplayer.com,tempatwisata.pro,kuyhaa-me.site,igg-games.com,urlbluemedia.shop,kuyhaa.me,cosmic1.co,lodynet.link,pelismax.one,stbturbo.xyz,y2mate.*,gogoanimes.fi,vdbtm.shop,hdfilme.plus,get-to.link,zoro.se,moviekhhd.biz,drivemoe.com,watchsomuch.to,faselhd-embed.scdns.io,nxbrew.net,toonily.me,limetorrents.lol,pelisflix2.green,185.217.95.44,moviesjoyhd.to,faselhd.*,5.45.95.74,kissasian.*,opensubtitles.org,1337xx.to,lookmovie2.to,1l1l.to,file-upload.org,meetdownload.com,hentaiasmr.moe,witanime.org,yugenanime.tv,kissanimefree.cc,animeyt.es,anichin.top,monoschinos2.com,ssrmovies.singles,tuktukcinema.*,rule34hentai.net,animepahe.ru,vidsrc.*,123movies-hd.online,dramacool.*,123movies.*,jujmanga.com,srsone.top,phimgiz.net,holymanga.net,strims.*,kissanime.*,xmovies8.pw,moviesjoy.*,1337x.*,0gomovies.*,vipbox.ga,semawur.com,tamilblasters.unblockit.dev,shingekinokyojinepisodes.com,ekinomaniak.net,rexdlfile.com,downloadhub.ink,cuturl.in,123movie.date,hblinks.pro,akwams.*,desiupload.co,leechall.com,allcalidad.la,disasterscans.com,masteranime.es,savesubs.com,gdtot.*,mkvcinemas.*,akwam.*,mirrored.to,desustream.me,brbushare.com#%#//scriptlet("json-prune", "*", "pop_type")
+hianimes.se,vidstuck.xyz,komiku.org,kaliscan.com,moviesapi.to,watchluna.to,kagane.to,vidnest.fun,kora-sia.com,animeidhentai.com,nhplayer.com,tk2dl.com,miruro.tv,goplay.ml,goplay.su,animepahe.*,dopebox.to,flickystream.net,hivecomic.com,9xplayer.com,tempatwisata.pro,kuyhaa-me.site,igg-games.com,urlbluemedia.shop,kuyhaa.me,cosmic1.co,lodynet.link,pelismax.one,stbturbo.xyz,y2mate.*,gogoanimes.fi,vdbtm.shop,hdfilme.plus,get-to.link,zoro.se,moviekhhd.biz,drivemoe.com,watchsomuch.to,faselhd-embed.scdns.io,nxbrew.net,toonily.me,limetorrents.lol,pelisflix2.green,185.217.95.44,moviesjoyhd.to,faselhd.*,5.45.95.74,kissasian.*,opensubtitles.org,1337xx.to,lookmovie2.to,1l1l.to,file-upload.org,meetdownload.com,hentaiasmr.moe,witanime.org,yugenanime.tv,kissanimefree.cc,animeyt.es,anichin.top,monoschinos2.com,ssrmovies.singles,tuktukcinema.*,rule34hentai.net,animepahe.ru,vidsrc.*,123movies-hd.online,dramacool.*,123movies.*,jujmanga.com,otakufr.co,srsone.top,phimgiz.net,holymanga.net,strims.*,kissanime.*,xmovies8.pw,moviesjoy.*,1337x.*,0gomovies.*,vipbox.ga,semawur.com,tamilblasters.unblockit.dev,shingekinokyojinepisodes.com,ekinomaniak.net,rexdlfile.com,downloadhub.ink,cuturl.in,123movie.date,hblinks.pro,akwams.*,desiupload.co,leechall.com,allcalidad.la,disasterscans.com,masteranime.es,savesubs.com,gdtot.*,mkvcinemas.*,akwam.*,mirrored.to#%#//scriptlet("json-prune", "*", "rot_url")
 motogpstream.me,tennisonline.im,tennisonline.*,mmabox.me,mmabox.*,sportfusion.me,nbabox.*,nbabox.im,f1live.me,f1live.*,rugbybox.me,rugbybox.*,dartsstreams.me,fbstream.is,fbstream.*,nflbox.sx,nflbox.*,boxingbox.im,boxingbox.*,cracked-games.org,multiup.io,mzansixporn.co.za,pahe.ink,pahe.*,vik1ngfile.site,romsdroid.com,game-repack.site,sterham.net,strikeout.im,strikeout.*,buffsports.io,crystal-launcher.pl,gamespack.net,worldsports.si,worldsports.*,cutynow.com,exnion.com,vikingf1le.us.to,exe-urls.com,evernia.site,vidsrc2.*,www.viprow.lc,viprow.*,ijvam.com,olympiclive.me,olympicweb.*,uploadhaven.com,arcjav.com,mc-hacks.net,mycivillinks.com,wonderapk.com,megaup.net,exeo.app,vidsrc.*,cricwatch.io,cricwatch.*,vipleague.li,vipleague.*,soccerbox.st,soccerbox.*,igg-games.co,cracktv.me,cracktv.*,torrentmac.net,vipboxtv.*,vipbox.ga,vipbox.*,userscloud.com,game3rb.com,soap2day.*,soccerworldcup.me,igg-games.com,miraculous.to,coloredmanga.com,hentaispark.com,send.cm#%#//scriptlet("abort-current-inline-script", "navigator", "FingerprintJS")
 caseyseemavoid.com,claireguessthousand.com,rebeccasciencestreet.com,nicholasbreakplan.com,benjaminreducecommunity.com,maryspecialwatch.com,brittanyaheadnew.com,charlessheimprove.com,richardquestionbuilding.com,timmaybealready.com,charlestoughrace.com,ianrequireadult.com,marissasharecareer.com,jessicaclearout.com,jefferycontrolmodel.com,dianaavoidthey.com,lancewhosedifficult.com,lauradaydo.com,crystaltreatmenteast.com,walterprettytheir.com,christopheruntilpoint.com,mikaylaarealike.com,lukesitturn.com,jilliandescribecompany.com,kellywhatcould.com,johnalwayssame.com,mariatheserepublican.com,jonathansociallike.com,diananatureforeign.com,sarahnewspaperbeat.com,richardsignfish.com,jennifercertaindevelopment.com,nathanfromsubject.com,adrianmissionminute.com,kristiesoundsimply.com,heatherwholeinvolve.com,alejandrocenturyoil.com,maxfinishseveral.com,robertordercharacter.com,sandratableother.com,brittneystandardwestern.com,jamessoundcost.com,toddpartneranimal.com,kimberlyonlocal.com,richardstorehalf.com,zacharycollectionmight.com,thomasalthoughhear.com,susanhavekeep.com,lorimuchbenefit.com,evelynthankregion.com,jessicaglassauthor.com,lisatrialidea.com,bethshouldercan.com,donaldlineelse.com,josephseveralconcern.com,alleneconomicmatter.com,robertplacespace.com,heatherdiscussionwhen.com,jayservicestuff.com,morganoperationface.com,johntryopen.com,jamiesamewalk.com,kennethofficialitem.com,lukecomparetwo.com,edwardarriveoften.com,paulkitchendark.com,kathleenmemberhistory.com,phenomenalityuniform.com,urochsunloath.com,35volitantplimsoles5.com,antecoxalbobbing1010.com,cyamidpulverulence530.com,guidon40hyporadius9.com,housecardsummerbutton.com,un-block-voe.net,voeunblk.com,voeunbl0ck.com,voeunblock2.com,voeunblock.com,voe-unblock.*,voe.sx#%#//scriptlet("abort-current-inline-script", "encodeURIComponent", "break;case")
 caseyseemavoid.com,claireguessthousand.com,rebeccasciencestreet.com,nicholasbreakplan.com,benjaminreducecommunity.com,maryspecialwatch.com,brittanyaheadnew.com,charlessheimprove.com,richardquestionbuilding.com,timmaybealready.com,charlestoughrace.com,ianrequireadult.com,marissasharecareer.com,jessicaclearout.com,nlcosplay.com,jefferycontrolmodel.com,dianaavoidthey.com,lancewhosedifficult.com,lauradaydo.com,crystaltreatmenteast.com,hentaianimezone.com,cdn1.site,walterprettytheir.com,christopheruntilpoint.com,doujinantena.top,kimochi.info,sxyprn.net,sxyprn.com,mikaylaarealike.com,lukesitturn.com,jilliandescribecompany.com,kellywhatcould.com,johnalwayssame.com,mariatheserepublican.com,jonathansociallike.com,diananatureforeign.com,sarahnewspaperbeat.com,richardsignfish.com,jennifercertaindevelopment.com,nathanfromsubject.com,adrianmissionminute.com,kristiesoundsimply.com#%#//scriptlet('abort-current-inline-script', 'WebAssembly', 'atob')
@@ -59,6 +61,7 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||8zyw4o9hwxbm8v.cfd^
 ||9br5llkimoxjcj.cfd^
 ||aablubxglrvvc.site^
+||abandonedfood.pro^
 ||abdeurqce.com^
 ||abjointmedea.rest^
 ||ablendcoelin.cfd^
@@ -130,11 +133,13 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||bdwahasy.com^
 ||betterviolet.org^
 ||beworrybellis.com^
+||bezhaicqxqaku.online^
 ||bgijshqfhaqsx.website^
 ||bgnejjmqennoj.site^
 ||bgpgfkaz.com^
 ||bhpobyrxozcod.site^
 ||bhstuwcljiapv.space^
+||bhzpqpxidbsho.site^
 ||bicqgspcmlawd.space^
 ||biffingrounder.click^
 ||bijoussolum.com^
@@ -145,6 +150,7 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||bkpebarwjzavg.website^
 ||blackandwhite-language.pro^
 ||blinkeddirtier.cyou^
+||blownshortia.com^
 ||blyrcarsysnux.site^
 ||bmblhpkrasrmu.space^
 ||bmefkyuauinps.space^
@@ -155,6 +161,7 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||bokoseosate.com^
 ||boninsvipzgoc.site^
 ||bonjoursizers.cyou^
+||borslaves.cfd^
 ||bouncymango.com^
 ||boyangservedketting.cfd^
 ||bpjqdogqeiesv.website^
@@ -184,17 +191,20 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||canabaelulls.com^
 ||carcassarnadistrix.cyou^
 ||casualcitrus.biz^
+||cdmvwwwusfbrq.website^
 ||ceoxl3115ih9j1p4kg39.cfd^
 ||cfcnirllfjjai.space^
 ||charmingarea.com^
 ||charmingkite.com^
 ||chawancaptate.com^
+||chutvenus.com^
 ||chzukqyxheldq.website^
 ||ciehqtjmixqnz.site^
 ||cijvlyemmkxrp.com^
 ||cinuranhansel.com^
 ||cistronboatly.qpon^
 ||cistusetnean.com^
+||ciyxsrdlcmnrg.site^
 ||cizegfgxpavpz.site^
 ||cjakqrpjmodet.online^
 ||clerusotiose.click^
@@ -221,6 +231,7 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||crotaltendrac.com^
 ||crystalgrass.com^
 ||csegfocgjhjon.space^
+||csuhhkjxvlaub.space^
 ||ctnwuswpxgr.com^
 ||cuissenwardage.rest^
 ||cuneonfzyoudf.website^
@@ -236,6 +247,7 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||dbwnavacspyxc.space^
 ||dcfxujucjmgun.site^
 ||dcuyufdhlfhza.online^
+||ddnamegymnic.com^
 ||deepoceandrop.biz^
 ||densitymacaws.cfd^
 ||deployskind.com^
@@ -248,6 +260,7 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||dightereparchs.cfd^
 ||digmarvnewxvz.online^
 ||dignecashews.com^
+||dinkiesdauded.rest^
 ||dinzzqoitqmeo.online^
 ||dipcdzuixfaot.website^
 ||dipletemenos.rest^
@@ -263,6 +276,7 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||downlieunmount.click^
 ||dpsjicvnvoziq.online^
 ||dpuosgahj.in^
+||dqkmqfecjcjcm.site^
 ||dqnweahtdbwti.space^
 ||dreckbonitoscueva.cfd^
 ||drpjdalnmrqkl.website^
@@ -301,6 +315,7 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||excellentwave.me^
 ||excuseschewerspokers.cfd^
 ||f4d927ca35.com^
+||f8t61ilbfcyi4ntnkm4.rest^
 ||fabulousclover.com^
 ||fangassneesttrothed.cfd^
 ||fardageproverb.rest^
@@ -309,10 +324,13 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||fbpqqxhfnryaf.website^
 ||fbwjqosoobucy.website^
 ||fbznfpsgoyztx.space^
+||fcgtrj.com^
+||fcvtezfmexnfw8im66btwx.cfd^
 ||febres.xyz^
 ||fegbzyfhjrthb.space^
 ||feisoutsulk.cfd^
 ||felledpasillo.com^
+||fellowunsulkysud.cyou^
 ||ferrelstremble.cfd^
 ||feuedmuphrid.rest^
 ||fexcqteftltcp.space^
@@ -335,6 +353,7 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||furahcnf.in^
 ||furthyaniseed.click^
 ||g3uwejphkq7x1hy4tw8.rest^
+||gafsjogoxeepk.online^
 ||gallachwowwows.rest^
 ||gapgwfmsaibho.online^
 ||gaxzzsjvrwidx.space^
@@ -346,12 +365,14 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||geicdowress.com^
 ||gfgayfvin.com^
 ||ggceomkffyyhu.website^
+||gggblvs.com^
 ||ggwlsmnaidwbj.space^
 ||giftcalyon.com^
 ||gigasbeparchsaucers.cfd^
 ||giglotakenesdepucel.cfd^
 ||gjhmictjgixhj.space^
 ||gkxrdprnfzcxz.website^
+||gltzwkfiddrxc.site^
 ||gnpqqrcdkzefx.website^
 ||gntayeyzcryrn.website^
 ||googlylaconic.rest^
@@ -373,21 +394,27 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||gzomoucymjcfy.space^
 ||hacticralsvkl.space^
 ||hagglycrappy.com^
+||halxkyhulju.in^
+||hamiticquinspasms.cyou^
 ||hammingpannam.rest^
 ||hanoemimcoins.cyou^
+||haowvoqhhouer.site^
 ||hardiesguardedascus.cfd^
 ||hardilybrowny.com^
 ||hb7fo8o4hy81viw.cfd^
 ||hbaxgaeeefobq.site^
 ||hbpfqkq4c38it4.cfd^
 ||hcgkcebafqgqm.site^
+||hdksdknlgcnax.online^
 ||heafquinze.click^
 ||hedyirthpalar.cfd^
 ||heiyaffle.click^
 ||helpfulgate.com^
 ||heqwjmewurngy.space^
+||hihhcbemcpeaq.space^
 ||hlfdmicon.com^
 ||hlggpgruglizv.website^
+||hncotgjzlxzze.website^
 ||hnotcyv.com^
 ||hoasttamiseleonist.cfd^
 ||hodderracemedebunk.cfd^
@@ -395,8 +422,10 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||honkeybatavi.cfd^
 ||hstvlfnnrjgll.space^
 ||htckatjemsbzq.online^
+||htl6hgbj3k4zbq9p4q7pcfffh4bf8.cfd^
 ||hvqxxesmroali.website^
 ||hvshjieaj.com^
+||hwjdnbflipxpz.website^
 ||hxdswx.com^
 ||hykrgpxkuhgnm.site^
 ||i1337yreugulr499qp6r58.rest^
@@ -420,6 +449,7 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||inwardsscamped.click^
 ||inyofzebtuavx.space^
 ||iqbrephakndpv.online^
+||irruptstarsus.click^
 ||isoflorcowponydrawees.cfd^
 ||ispuxelmvitav.space^
 ||istjmvigsaaij.online^
@@ -432,6 +462,7 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||iwp5zv6wzp2z27w9n66u7y.cfd^
 ||ixfbyzmamkeol.space^
 ||iylmrcqrhbzhu.site^
+||iyrvomabqnqdo.online^
 ||iywkdmptymjja.space^
 ||jbsotkpqajdfm.website^
 ||jcsqmedeywtly.site^
@@ -451,6 +482,7 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||jqigbwwsqscnl.online^
 ||jqwprcbgiohuf.site^
 ||jrrswcrteqcdu.website^
+||jrrxbicxeekny.online^
 ||jsjupretsjsmc.site^
 ||jtkkccxrsnskg.space^
 ||jtzgictlcvnoi.site^
@@ -459,11 +491,13 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||juexsoowv.com^
 ||jugalehelly.rest^
 ||jurymanloretin.click^
+||jvudxbiqnwnez.website^
 ||jwbhbtdwfdekt.website^
 ||jwestzlioaqo.com^
 ||jwnzidarvaypg.online^
 ||jypgjzagcphbd.website^
 ||jyquvlixevczl.site^
+||kallegereland.rest^
 ||kdfmxpdsstyfo.online^
 ||kdytfirkumelw.space^
 ||kelewverfsrbr.online^
@@ -477,8 +511,10 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||kntlfthwgqsbqv.com^
 ||kofeprlolftwb.online^
 ||kojimanarcous.cfd^
+||krkqqmpvemkui.website^
 ||ksyibwnigfijv.space^
 ||ktxajexoooiso.space^
+||ktzfqdhougpnh.online^
 ||kunjtzraknlvc.online^
 ||kwtflfslfpzku.site^
 ||kxhewlmedyzqe.online^
@@ -486,6 +522,7 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||lacsguilds.com^
 ||landmilbonzery.com^
 ||lappetsjun.rest^
+||lastjobporkmanscalper.cyou^
 ||lbeato.store^
 ||lboswndciku.com^
 ||lbpusudllcoes.site^
@@ -493,6 +530,7 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||lcdsdwehypscu.space^
 ||leesealish.rest^
 ||letticearbotacyborgs.cfd^
+||leukomaplanishredroop.cfd^
 ||lgkfaoimorhkc.site^
 ||lhjitzjduxihz.online^
 ||limbatalonsobud.cyou^
@@ -513,6 +551,7 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||lufurfkbeplol.site^
 ||luvttuhc.in^
 ||lvbviraopkjr.com^
+||lzphninlofxbf.online^
 ||madnqdujgqcwj.website^
 ||mantelsignore.com^
 ||mantletpirojki.com^
@@ -524,6 +563,7 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||mdxvgmadrafxe.website^
 ||mercu-wgp.com^
 ||metalerduvet.com^
+||metepasreedily.rest^
 ||mfuqmubyjlktg.space^
 ||mfxvjgzyyefdp.space^
 ||mhqvu3rrbec9qq.rest^
@@ -548,6 +588,7 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||motvwjndhitos.online^
 ||mtagnpuxbkhon.site^
 ||multicoloredprofessor.pro^
+||munitetakahes.click^
 ||mvbrtfcn.com^
 ||mwbowrybfgbcx.space^
 ||mwsgvnkhfrlah.space^
@@ -563,22 +604,29 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||nddlfmvbww.com^
 ||ngcufsbnyq.com^
 ||nhvwznuygysno.site^
+||nhzwttjyknyc.com^
 ||niqcdzpghwcvj.space^
 ||nirxfdbvj.com^
 ||niyogazinebs.rest^
 ||nojoxonlxcmyg.online^
 ||nonfactbrooder.rest^
+||npisnnnjhiymy.site^
+||nrrlbysowstqt.website^
 ||ntchvggaalbmv.space^
+||ntjzyxcbsp.com^
+||ntunwcfkynwjr.space^
 ||nutcakesinking.click^
 ||nvremngibpsll.space^
 ||nvugdinizbuls.website^
 ||nvxgxuthh.com^
 ||nxvltwjabgxaf.online^
+||nxxgjgwzehceq.online^
 ||nzjhxvelasrcy.site^
 ||nzlvnypmdkjsd.online^
 ||oblh5vnhybtiwbbzi77bzqk6987lp.rest^
 ||obyzyxkayqcij.online^
 ||ocracyaftmost.cfd^
+||ocrhpbwqhmoxw.space^
 ||odbyrzbelsqwl.online^
 ||oeqbyhhzlsdvh.site^
 ||oftoggsfu.in^
@@ -589,6 +637,7 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||oiitisdcarhwh.space^
 ||oililyjennet.click^
 ||oipiiyeigycmo.online^
+||ojaoaqtmzkyqm.website^
 ||okytaettnknsv.site^
 ||onbdwuzu.in^
 ||oowuqiqdmlfkh.website^
@@ -613,9 +662,12 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||parpalhaunchy.cfd^
 ||patencyviddhal.com^
 ||paulacaudataserfism.cfd^
+||pbbfngznkifdz.online^
 ||pbqtdprvlotta.online^
 ||pcaqedtlygwlt.website^
 ||pcuhsvrytqd.com^
+||pdzmkymbyhqsu.website^
+||pezpewcygkkbw.com^
 ||phasqwoicmiwv.site^
 ||pigherdkuttar.com^
 ||pihatggmav.in^
@@ -623,6 +675,7 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||pinnetdor.cfd^
 ||pinusproviso.click^
 ||pizivuvawntzl.online^
+||pkfgxpgftniet.online^
 ||pkmpjqpkjvpyp.website^
 ||pktugilvkvpjk.online^
 ||plainsphere.pro^
@@ -655,6 +708,7 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||pxlxgtktpfpap.online^
 ||pzzkyiyiwhfkm.space^
 ||qaqmhckwsblmy.space^
+||qenfyrdmlplnq.online^
 ||qenxaznflsysp.space^
 ||qflepbrtavycb.space^
 ||qgawrrjkkqepx.site^
@@ -686,23 +740,27 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||rescuerbrowsthonzo.cfd^
 ||reshootsoget.rest^
 ||retestskiranti.click^
+||rfo6wiwjn6z7w7f.rest^
 ||rfsryzpywmtig.website^
 ||rgefifgiyepcz.online^
 ||rgzxscibgg.com^
 ||rimpleoopak.com^
 ||rjfxxciv.com^
 ||rjgfvejdujegg.site^
+||rjzkpjycwcmuh.space^
 ||rkhddfalgwcmr.online^
 ||rkvlgtxzkxwdu.site^
 ||rlgsfmogis.com^
 ||rmfarcgzhwylf.online^
 ||rmveddje.com^
 ||rndmlcjxoaopd.space^
+||rnmodtaeuegne.space^
 ||rogzovrknnqul.website^
 ||rosilloipomoea.cyou^
 ||rotxggpqnbeqp.online^
 ||roupedgyttjacaninal.cfd^
 ||rpcnimwhqaduc.online^
+||rpxrrkmujxbhr.website^
 ||rubianmyopes.com^
 ||runyqozdowoed.online^
 ||rvcr3ftmrku5vhlnp1.rest^
@@ -715,22 +773,28 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||scarevapidly.com^
 ||scowmenbemoans.cfd^
 ||scrollnovela.click^
+||scupfulrespond.cyou^
+||sdplzkixuivrv.site^
+||searbgbbmeixj.online^
 ||seenitro.com^
 ||seginusnervier.click^
 ||serranogossans.cyou^
 ||sgayasecxjkww.website^
 ||shacreyysietg.website^
+||shealsunrow.com^
 ||shfseppelta.cyou^
 ||shinyalto.me^
 ||shinyalto.mobi^
 ||silkmenrattles.com^
 ||sjrdlqpvpzcay.online^
+||skdkvwchzjkfk.site^
 ||skeansunframe.com^
 ||skydovemanit.com^
 ||sleckeeyuchredout.cyou^
 ||sleechycreta.com^
 ||slifpzvyfomsp.website^
 ||smokoscobb.cfd^
+||smyalsonxlif.in^
 ||snarksovert.cfd^
 ||snobismlowman.click^
 ||snsmkchmtzcxx.website^
@@ -747,14 +811,17 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||spungehowes.com^
 ||srjgxxazkopdh.space^
 ||srmcychtzaeny.online^
+||stealerhaulier.click^
 ||stealycubica.cfd^
 ||steedlentor.com^
 ||steenthbenumbs.cyou^
+||stgeflortryout.cfd^
 ||stonenleprid.click^
 ||subaridanurias.click^
 ||sulafatmortals.com^
 ||sumpterrenin.com^
 ||sweetradish.biz^
+||swiftmidsmeratia.cyou^
 ||sxgbnjmbqacpw.space^
 ||sxzrwvidonkqe.space^
 ||syceesamekhsalumnae.cfd^
@@ -778,6 +845,7 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||tfattckoquolz.website^
 ||tgigyxgmpd.com^
 ||tgiikkhuxtmqc.website^
+||tgnjbpvcdrwfu.website^
 ||thzkhgy16zfo5fkom5g.cfd^
 ||tipsripstop.com^
 ||tissualbulanda.cyou^
@@ -797,6 +865,7 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||tritonnidusbegoud.cyou^
 ||truongpyrgom.cfd^
 ||tsbusifxcmbpn.site^
+||tulsjfvn.com^
 ||tumefywulder.cyou^
 ||tuttedoolemma.com^
 ||tuwgqqcfszwfp.site^
@@ -808,9 +877,11 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||uaemmecrxspgy.online^
 ||uahiuqocrhwey.site^
 ||ucdeyqaaexbqd.online^
+||ucdpawrzcucoz.site^
 ||ucheaninhell.cyou^
 ||udtpazbzuxgvw.website^
 ||udvjfomfikxim.site^
+||ueavzmpxbrtgt.site^
 ||ufuwxpnwgjwka.space^
 ||uhfydnwcpafcs.space^
 ||uhijbypctseox.space^
@@ -818,9 +889,12 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||ujlolbxhbczbh.online^
 ||ulkwsxqatkgzq.site^
 ||umhhodwadqeo.com^
+||umhywwaktzkyy.space^
 ||umiacksporule.com^
 ||umvgtzcfnbbmv.space^
 ||unawneddabbled.cyou^
+||unfamedupside.cfd^
+||ungswaeprgvpj.site^
 ||unguisregaltylorarii.cyou^
 ||unpleasant-aspect.pro^
 ||upaywxkviolqn.online^
@@ -828,11 +902,13 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||uraeusanisol.com^
 ||urzpapzx.com^
 ||utpispykiipyy.website^
+||utvrwtqhankis.website^
 ||uufujrlqchjie.space^
 ||uvrudfygblbsc.online^
 ||uvularsbrogue.com^
 ||uwudtptngvt.com^
 ||uxsyynwodf.com^
+||uzicoerpqqkou.site^
 ||vadgysytvtull.site^
 ||vannedrigsenbrave.cfd^
 ||vcctzvjrfzvrp.website^
@@ -861,6 +937,7 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||vubhsoczpqfoa.space^
 ||vudbctybnxdon.space^
 ||vvjffwrzebnic.website^
+||vzqnoqlpkxejy.website^
 ||wantfuleburin.com^
 ||wbpmkkjfspmyj.site^
 ||wbwwpaydmapju.website^
@@ -900,6 +977,7 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||wvhyqzwryckie.site^
 ||wvnlevictrlzd.site^
 ||wvrcgqytqgsco.space^
+||wweakefn.com^
 ||wwpiptrvhxuil.online^
 ||wwtdxeynydpsz.website^
 ||wxcurrpeywzyi.space^
@@ -926,8 +1004,10 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||yaupdizzy.com^
 ||ydheypen.com^
 ||yfczyarvhkfbw.website^
+||yhaxtkqkdgnmu.website^
 ||yhkribbwbtepp.website^
 ||yhwadexncyozg.website^
+||yifbkgyrogtxq.site^
 ||yjakwxjgjdweg.site^
 ||ykemtastozpwb.space^
 ||yllfhllvjucxe.website^
@@ -938,6 +1018,7 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||yozhekxlolayk.website^
 ||ypfiejdzjptll.website^
 ||ypikvlcskmorw.space^
+||yqhzzrmwbdgxo.online^
 ||yxhtecktslvuw.site^
 ||zafossbwimwu.in^
 ||zayvqbcqlwmpe.site^
@@ -1001,6 +1082,7 @@ whispersinthecorridors.in##.wh-rail-ad
 whispersinthecorridors.in##.wh-slider-banner-ad
 igorslab.de##[data-igorslab-trackid]
 videocardz.com##a[class][href^="https://www.amazon.com"][target]
+pexels.com##div[class^="AfterDownloadModal_adContainer"]
 igorslab.de##div[id^="advads_ad_widget-"]
 pinterest.*##[role="listitem"]:has(.rounding0_j.fullWidth_1f .subtle_1h.lineClamp_1q)
 pinterest.*##div[data-grid-item]:has([data-test-pin-id] [data-test-id^="one-tap-desktop"] > a[href^="http"][rel="nofollow"]):not(body > div)
@@ -1008,6 +1090,8 @@ igorslab.de###extras > #single-sticky + div:has(img)
 igorslab.de##.entry-content > a:has(> img):has(+ aside.ilab-ad-privacy-footer)
 gamepadla.com##.panel-container:has(img[src*="/upload/slider/"])
 igorslab.de##.widget_custom_html:has(> .widget-title + .textwidget:empty)
+pexels.com##[data-testid="cell"]:has(a[href*="/k/eyJ"])
+pexels.com##[data-testid="item"]:has(a[href*="utm_campaign=aigc_pexelscampaign"])
 x.com##[id^="urt"]>ul>li:has([class*="data-ad-disclosure"])
 igorslab.de##body > div:has(> [data-igorslab-trackid])
 indiatimes.com##div:has(> div[id^="div-gpt-ad-"][id*="-atf"])
