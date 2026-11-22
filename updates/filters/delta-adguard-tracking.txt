@@ -20,5 +20,7 @@ kick.com#%#//scriptlet('prevent-setTimeout', 'startBeaconSending')
 ||rapidscraper.com^
 ||rebatecircle.com^
 ||recessremote.com^
+||redmaceta.com^
 ||reelboat.com^
 ||sandshredder.com^
+||stellarcoded.com^

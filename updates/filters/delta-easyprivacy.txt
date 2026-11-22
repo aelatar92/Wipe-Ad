@@ -1,3 +1,5 @@
+/px/?rand=
+/track/?evt=
 ||cdn.a9f3k7z2m1.com^
 ||cdn.m2z7r9k4p1.com^
 ||cdn.q4x8n6b2t5.com^
@@ -20,10 +22,17 @@
 ||redmaceta.com^
 ||reelboat.com^
 ||sandshredder.com^
+||stellarcoded.com^
+||dev.visualwebsiteoptimizer.com/cdn/edrv/
+||dev.visualwebsiteoptimizer.com/edrv/
+||estuary-data.com/ga4-identify
 ||feliz.data.tm-awx.com/netro-web/batch
 ||view.publitas.com/ecommTracker.js
 ||view.publitas.com/javascripts/vendors/publitas-stats.js
+||adweek.com/vx39/
+||bytes.adweek.com/vs.js
 ||sfchronicle.com/api/client-logs
+||sink.archive.org^
 ||thedailybeast.com/metrics/
 ||whispersinthecorridors.in/public/js/analytics.js
 @@||scorecardresearch.com/plugins/streaming-jwplayer/$script,domain=newstak.in

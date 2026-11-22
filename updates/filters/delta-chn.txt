@@ -5,6 +5,11 @@ huavod.net,huavod.com#$#.hr-banner-stack { position: fixed !important; left: -99
 pa1151.top##a[href="https://dagexxx.com"]
 pa1151.top##a[href="https://dage.top/"]
 huavod.com,huavod.net##div[style="margin:2px 0;"] > a.item > img[src^="https://static.okokserver.com/uploads/"]
+||ambifpskje.com^
+||93cwt9hr8s.com^
+||dw3wytlo38.com^
+||tc7y2avdw2.com^
+||vfyz2jncwu.com^
 ||srqeavxrk.com^
 ||jpgupp8mi.com^
 ||id8zba92r.com^
