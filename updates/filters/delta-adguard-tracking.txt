@@ -10,8 +10,15 @@ kick.com#%#//scriptlet('prevent-fetch', 'litix.io')
 kick.com#%#//scriptlet('prevent-setTimeout', 'startBeaconSending')
 ||colorfilter.net^
 ||housewheels.com^
+||jackalsmovie.com^
 ||lidsmarket.com^
+||logomet.com^
 ||masondown.com^
 ||nitrojiveband.com^
 ||ordinalzero.com^
+||pitmanmusic.com^
 ||rapidscraper.com^
+||rebatecircle.com^
+||recessremote.com^
+||reelboat.com^
+||sandshredder.com^
