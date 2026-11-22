@@ -24,3 +24,4 @@ kick.com#%#//scriptlet('prevent-setTimeout', 'startBeaconSending')
 ||reelboat.com^
 ||sandshredder.com^
 ||stellarcoded.com^
+||sweetbeat.net^

@@ -1,28 +1,28 @@
 {
- "version": "202611220803",
- "generated": "2026-11-22T08:03:37.174Z",
+ "version": "202611221620",
+ "generated": "2026-11-22T16:20:56.542Z",
  "baselineVersion": "1.1.1",
  "lists": [
   {
    "id": "easylist",
    "ruleset": "easylist",
    "url": "delta-easylist.txt",
-   "sha256": "f2a2b5c945b85e3fac46f0810e9234479d116649abaf46527e88c221aa5ea03d",
-   "lines": 867
+   "sha256": "fff83888e2066745b5ae468b87356bfb700473f0063877869e647ed3b12297d7",
+   "lines": 1002
   },
   {
    "id": "ublock",
    "ruleset": "ublock",
    "url": "delta-ublock.txt",
-   "sha256": "f6cdaa9b07a4f27b9d5bc8de65975994ab3854573e3457e3ca128e9557b3e107",
-   "lines": 8
+   "sha256": "e93b509cfc19b5eee131ee8019ff4f6fa24822755f4f5d03319926fb9e302a10",
+   "lines": 14
   },
   {
    "id": "adguard-base",
    "ruleset": "adguard-base",
    "url": "delta-adguard-base.txt",
-   "sha256": "e9b551f39ff647074774d20a67af389bdc2a36388672c3473d49f11441082efe",
-   "lines": 895
+   "sha256": "e6e88b5da6cf5042c412ee0113a6b11a7cf56372ce8caf9c8f2b87d270c25c3b",
+   "lines": 1023
   },
   {
    "id": "pgl",
@@ -35,29 +35,29 @@
    "id": "easyprivacy",
    "ruleset": "easyprivacy",
    "url": "delta-easyprivacy.txt",
-   "sha256": "670a3c42c64eda3c63fa94a14eee477face359c8ad093167d6195d16b5fd422d",
-   "lines": 38
+   "sha256": "c2f5df1a264c90d65fabe9ae64685fda846116c8074dded37348e1aaa64b9fe4",
+   "lines": 40
   },
   {
    "id": "adguard-tracking",
    "ruleset": "adguard-tracking",
    "url": "delta-adguard-tracking.txt",
-   "sha256": "c4543fa5a64020c475af0775aafd927388093be316292d792e3de20652a7ad86",
-   "lines": 26
+   "sha256": "865febded9873481a7960f72f51adedfef79bf38416b41edef05dc90e422dddb",
+   "lines": 27
   },
   {
    "id": "urlhaus",
    "ruleset": "urlhaus",
    "url": "delta-urlhaus.txt",
-   "sha256": "be8246b4be6f90c8adf86427c0aa62480e60d7d3f1ebe7deac936cf76f0c8034",
-   "lines": 413
+   "sha256": "fde898069bf6c1ba61d35a4ed944c4a9f176b7028468357b10596f196280efb4",
+   "lines": 426
   },
   {
    "id": "phishing",
    "ruleset": "phishing",
    "url": "delta-phishing.txt",
-   "sha256": "477a045229616809fb707f5bb54a98535e6d375e74d11b8432400b27fc58594f",
-   "lines": 590
+   "sha256": "e1ead06011b519bbdb37e53757087e216415f7d4c0e66a1e6ae02bdc64380dee",
+   "lines": 652
   },
   {
    "id": "cookies",
@@ -95,6 +95,13 @@
    "lines": 7
   },
   {
+   "id": "fra",
+   "ruleset": "fra",
+   "url": "delta-fra.txt",
+   "sha256": "7c5831549382e3e89142f105da2b617366b066aad2776ae040e7c7c165e84d09",
+   "lines": 47
+  },
+  {
    "id": "deu",
    "ruleset": "deu",
    "url": "delta-deu.txt",
@@ -112,8 +119,8 @@
    "id": "chn",
    "ruleset": "chn",
    "url": "delta-chn.txt",
-   "sha256": "d5b3a083442e544e3003849d9f704755f108b5c03207e73e5eac3d93e287534f",
-   "lines": 29
+   "sha256": "6ce022748f2362f76583e02c02920c8a3c1686792e442b5da26fbc388b328d3a",
+   "lines": 33
   },
   {
    "id": "wipead-fixes",

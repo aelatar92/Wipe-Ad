@@ -4,5 +4,11 @@
 ||imasdk.googleapis.com/js/sdkloader/ima3.js$script,redirect=google-ima.js,domain=dashboard.videograph.ai,important
 ||scorecardresearch.com/plugins/streaming-jwplayer/$script,redirect=noopjs,domain=newstak.in
 www.youtube.com##+js(rmnt, script, 'window,"fetch"')
+||imasdk.googleapis.com/js/sdkloader/ima3.js$script,3p,redirect=google-ima.js,domain=caseyseemavoid.com,important
+caseyseemavoid.com##+js(nowoif)
+caseyseemavoid.com##+js(set, console.clear, undefined)
+caseyseemavoid.com##+js(acs, globalThis, break;case)
+caseyseemavoid.com##+js(acs, WebAssembly, atob)
+||caseyseemavoid.com^$badfilter
 socialxup.com##a[data-track="related_click"]:not(:has(> div[class="flex flex-col items-center text-center"] > img[src^="/avatar/"][src$=".png"][height="48"][width="48"][style="color: transparent;"] + p + p[class="text-xs text-gray-500 truncate w-full"] + p[class="text-xs text-blue-600 mt-1"]:has-text(/^\d+(,\d+)* フォロワー$/)))
 socialxup.com##a[data-track="home_popular_tweet_profile_click"]:not(:has-text(/^@[0-9A-Z_a-z]+$/)):not(:has(> img:only-child))
