@@ -9,6 +9,7 @@
 kick.com#%#//scriptlet('prevent-fetch', 'litix.io')
 kick.com#%#//scriptlet('prevent-setTimeout', 'startBeaconSending')
 ||colorfilter.net^
+||funkpit.com^
 ||housewheels.com^
 ||jackalsmovie.com^
 ||lidsmarket.com^
@@ -29,4 +30,6 @@ kick.com#%#//scriptlet('prevent-setTimeout', 'startBeaconSending')
 ||sweetbeat.net^
 ||systemone.net^
 ||tableheads.com^
+||tentpick.com^
 ||tinybodega.com^
+||wrathsecrets.com^

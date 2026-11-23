@@ -42,6 +42,7 @@ cricwatch.io,cricwatch.*,tennisonline.im,tennisonline.*,dartsstreams.me,fbstream
 olympiclive.me,olympicweb.*,www.viprow.lc,viprow.*,soccerbox.st,soccerbox.*,vipbox.ga,vipbox.*,vipleague.li,vipleague.*,f1live.me,f1live.*,mlbbox.me,mmabox.me,mmabox.*,nbabox.*,nbabox.im,nflbox.sx,nflbox.*,nhlbox.me,rugbybox.me,rugbybox.*,tennisonline.im,tennisonline.*,cricwatch.io,cricwatch.*,dartsstreams.me,vipboxtv.*,dartsstream.me,golfstreams.me,motogpstream.me,boxingbox.im,boxingbox.*,ufcstream.me,nbastream.nu##div[class*="position-absolute"][class*="bg-opacity-"]
 retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,strcsh.xyz,audioz.download,savefiles.com,missflight.net,grandemx.org,bembed.sbs,uqload.*,desicinema.se,dramavideo.se,torupload.com,stellar.rip,streame.center,totalsporteki.st,totalsportekhd.st,cricwatch.io,cricwatch.*,tennisonline.im,tennisonline.*,posamari.me,sportfusion.me,nbabox.*,nbabox.im,dartsstreams.me,soccerbox.st,soccerbox.*,thetvapp.plus,fbstream.is,fbstream.*,dollardescent.net,mappl.tv,lightflix.app,mapple.fun,mapple.*,embed.st,executeandship.com,embedindia.st,strikeout.im,strikeout.*,boxingbox.im,boxingbox.*,rugbybox.me,rugbybox.*,nflbox.sx,nflbox.*,f1live.me,f1live.*,www.viprow.lc,viprow.*,ninguno.cc,mmabox.me,mmabox.*,olympiclive.me,olympicweb.*,sportsonlinee.*,sportsonline.*,4k.beer,streamcash.to,anime.uniquestream.net,cine.su,nepu.*,vidzy.cc,fs16.lol,porneec.com,asiaflix.in,asiaflix.*,streamtape.com,yts.bz,yts.gg,yts.*,filecrypt.co,strumyk.*,powwideo.*,hornysimp.com,futemax.at,embdmstrplayer.com,pahe.ink,foulembeds.live,smksports.*,fileditchfiles.me,strumyk.cfd,dorawatch.one,streamingworld.xyz,streami.su,streamed.pk,streamed.*,visualnewshub.com,cloudnestra.com,cloudfam.io,thepibay.*,bypass.city,eztvx.to,ext.to,vidsrc.cc,sanet.st,yifysubtitles.ch,vinovo.to,livesporthub.shop,dstelemundo.site,7fractals.icu,epicplayplay.cfd,goalstreamer.shop,streameast7.com,buffztreamz.shop,rippleplay.shop,shd247.click,antenasport.top,gamestrend.net,exposestrat.com,embedsports.top,seir-sanduk.com,embedtv-5.icu,daddylive3.com,sterham.net,animeunity.*,vixcloud.*,buffsports.io,soccerstreams7.com,loadvid.com,telewizjada.top,ogladaj.in,istreameast.app,streamingnow.mov,watchug.to,primewire.tf,worldsports.si,filecrypt.cc,veplay.top,colegialasdeverdad.*,anime4i.com,cuttyy.com,puffytr.com,anizm.*,anizle.*#%#//scriptlet('abort-on-property-read', 'aclib')
 /openrtb2/auction^$xmlhttprequest
+/prebid-library.js
 ||22cwutviuclmjyqcumu45t8.rest^
 ||2h5vr825wv6gfnwr.rest^
 ||2v6pb5xbhunnmy8o.cfd^
@@ -55,6 +56,7 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||5ro76jxwweylgt18rm56qw.cfd^
 ||5v8xnjmivocmuh6zul.cfd^
 ||61ct4yimmej4gb8146bt.rest^
+||7ojze6gy31eprr42y.cfd^
 ||8kitpizutoxhjg9.cfd^
 ||8qbtyzw45xk3urr5q.rest^
 ||8urqj3m2wrx4cqkbo2lpp74q.cfd^
@@ -65,18 +67,22 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||abdeurqce.com^
 ||abjointmedea.rest^
 ||ablendcoelin.cfd^
+||aboveboarder.com^
 ||abpsasragza.in^
 ||abretacidify.cfd^
 ||acgfyruuadkfr.online^
 ||achxelqnpdlsk.site^
 ||acrinylhypt.com^
+||acyrbscgr.com^
 ||adblockghost.com^
 ||adgrowthpro.com^
 ||adkbrfxxkgtlf.online^
 ||adorablebass.com^
 ||advancedtechdev.buzz^
 ||aedilealumnae.cyou^
+||aeoniststance.com^
 ||aeridesnoshed.cyou^
+||agiyftyfyopyf.site^
 ||aiocwtzty.com^
 ||aiuaraudkcpjp.online^
 ||aiwsdkxqizteg.online^
@@ -126,7 +132,9 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||azevalaovugqg.space^
 ||azjaetdikwysg.online^
 ||azotatebuboslean.cyou^
+||bahrlfigetspn.space^
 ||bakayyflvurcg.online^
+||bamnvzwazmlzn.space^
 ||barbitabackupslexemic.cfd^
 ||bdethylicsubduct.cfd^
 ||bdrykffavezxq.website^
@@ -134,6 +142,7 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||betterviolet.org^
 ||beworrybellis.com^
 ||bezhaicqxqaku.online^
+||bfykxkeewyhdi.site^
 ||bgijshqfhaqsx.website^
 ||bgnejjmqennoj.site^
 ||bgpgfkaz.com^
@@ -189,7 +198,9 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||cacambogwaytruckie.cyou^
 ||camiontorques.click^
 ||canabaelulls.com^
+||caprockchurchy.com^
 ||carcassarnadistrix.cyou^
+||carnouswoodeny.com^
 ||casualcitrus.biz^
 ||cdmvwwwusfbrq.website^
 ||ceoxl3115ih9j1p4kg39.cfd^
@@ -250,7 +261,9 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||ddnamegymnic.com^
 ||deepoceandrop.biz^
 ||densitymacaws.cfd^
+||dentilchimbe.rest^
 ||deployskind.com^
+||depureplowers.cyou^
 ||dfsjvdvyejmfs.site^
 ||dgoldsaidthewal.org^
 ||dguveltqwkzyg.online^
@@ -270,6 +283,7 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||dlowktdzuxjcp.space^
 ||dmddzmkytvw.com^
 ||dojmyftcqwcjx.space^
+||dorkexspffjmk.online^
 ||doubleacingawheel.cyou^
 ||douxpatrix.click^
 ||dovensaprocta.com^
@@ -286,6 +300,7 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||dznrjqixfcvyb.space^
 ||e7399e9486.com^
 ||eagerdish.org^
+||earwaxhurty.cyou^
 ||eatibrutdmzdt.online^
 ||eawdhifx.com^
 ||ebbmoqui.click^
@@ -314,6 +329,7 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||evicdfiftovcs.space^
 ||excellentwave.me^
 ||excuseschewerspokers.cfd^
+||f0432fd3fc.com^
 ||f4d927ca35.com^
 ||f8t61ilbfcyi4ntnkm4.rest^
 ||fabulousclover.com^
@@ -332,6 +348,7 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||felledpasillo.com^
 ||fellowunsulkysud.cyou^
 ||ferrelstremble.cfd^
+||fescuessubarch.cyou^
 ||feuedmuphrid.rest^
 ||fexcqteftltcp.space^
 ||fhznzfbivxjqj.site^
@@ -341,6 +358,7 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||fketrypw.in^
 ||flnrrqbwwkfxp.online^
 ||fmpyblulujqff.online^
+||fnqinqimbueqv.site^
 ||focallysufism.com^
 ||foiadhsltuock.site^
 ||foolerystrop.com^
@@ -375,6 +393,8 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||gltzwkfiddrxc.site^
 ||gnpqqrcdkzefx.website^
 ||gntayeyzcryrn.website^
+||godfreymeithei.click^
+||gonzuzjvacews.website^
 ||googlylaconic.rest^
 ||goonieanvilmanic.cfd^
 ||gqhkkcqfnxuiu.site^
@@ -420,6 +440,7 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||hodderracemedebunk.cfd^
 ||hondnpvferhbv.website^
 ||honkeybatavi.cfd^
+||hpsbiffdokrzo.online^
 ||hstvlfnnrjgll.space^
 ||htckatjemsbzq.online^
 ||htl6hgbj3k4zbq9p4q7pcfffh4bf8.cfd^
@@ -448,6 +469,7 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||intraptempo.cfd^
 ||inwardsscamped.click^
 ||inyofzebtuavx.space^
+||ionizebignoulagopus.cyou^
 ||iqbrephakndpv.online^
 ||irruptstarsus.click^
 ||isoflorcowponydrawees.cfd^
@@ -476,10 +498,13 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||jjhlqnxekuzzj.space^
 ||jkabgsmcttous.website^
 ||jkecnhkkvabir.space^
+||jkuaxpogro.in^
+||jkwctrvfhrgdp.space^
 ||jlmspraypezct.com^
 ||jltonxzvezifs.website^
 ||jlvaxxjzpqavi.online^
 ||jqigbwwsqscnl.online^
+||jqshluizajv.com^
 ||jqwprcbgiohuf.site^
 ||jrrswcrteqcdu.website^
 ||jrrxbicxeekny.online^
@@ -497,7 +522,9 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||jwnzidarvaypg.online^
 ||jypgjzagcphbd.website^
 ||jyquvlixevczl.site^
+||jzcwhjknsxtbz.online^
 ||kallegereland.rest^
+||kcbobqjdmyjnx.site^
 ||kdfmxpdsstyfo.online^
 ||kdytfirkumelw.space^
 ||kelewverfsrbr.online^
@@ -536,10 +563,12 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||limbatalonsobud.cyou^
 ||limbeckmarled.com^
 ||liuspylrbeqgi.website^
+||liveandhadapickup.org^
 ||ljgecsopvhsjl.website^
 ||ljueytdnmpfsn.online^
 ||llolioxmsrfsj.site^
 ||llsofpbwwufml.online^
+||lmouywaaussjy.website^
 ||lmqduqzuqzjbs.space^
 ||lowfly.pro^
 ||loyal-product.com^
@@ -561,7 +590,9 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||mcupugojztic.in^
 ||mdwalochrmnsy.online^
 ||mdxvgmadrafxe.website^
+||meatusrunch.com^
 ||mercu-wgp.com^
+||mescalfalsie.click^
 ||metalerduvet.com^
 ||metepasreedily.rest^
 ||mfuqmubyjlktg.space^
@@ -600,6 +631,7 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||narcosefeuar.rest^
 ||narrowefficiency.com^
 ||naugerbaffing.rest^
+||nazardspallerfleur.cfd^
 ||ncucctadziasa.website^
 ||nddlfmvbww.com^
 ||ngcufsbnyq.com^
@@ -625,6 +657,7 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||nzlvnypmdkjsd.online^
 ||oblh5vnhybtiwbbzi77bzqk6987lp.rest^
 ||obyzyxkayqcij.online^
+||ocozoavciawbl.online^
 ||ocracyaftmost.cfd^
 ||ocrhpbwqhmoxw.space^
 ||odbyrzbelsqwl.online^
@@ -697,22 +730,28 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||pplrxklfputhf.website^
 ||premieseafarevg.cfd^
 ||prieglaiket.click^
+||prqbrdzfzrwlv.online^
 ||pstfkyapfrrfk.site^
 ||pstopening.rest^
 ||psxlkwmzitocq.site^
+||pulldooreanvilbick.cfd^
 ||punkaactuary.com^
 ||puppilyendhand.rest^
 ||pvkpfwxfxabqf.site^
 ||pvzwcgmwulngj.site^
+||pwjkbxkmphibo.website^
 ||pxbjpwwtidoxl.space^
 ||pxlxgtktpfpap.online^
 ||pzzkyiyiwhfkm.space^
 ||qaqmhckwsblmy.space^
+||qeelgrakizfjm.space^
 ||qenfyrdmlplnq.online^
 ||qenxaznflsysp.space^
+||qfaofgurgui.com^
 ||qflepbrtavycb.space^
 ||qgawrrjkkqepx.site^
 ||qiohgfhvntoyz.space^
+||qkglku8v52hjoy7xjx7bh.rest^
 ||qkweatlvlakfg.website^
 ||qlcbxdnymc.com^
 ||qoy1tz2lb5icfeil.rest^
@@ -755,6 +794,7 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||rmveddje.com^
 ||rndmlcjxoaopd.space^
 ||rnmodtaeuegne.space^
+||roeojuxgxdsaq.online^
 ||rogzovrknnqul.website^
 ||rosilloipomoea.cyou^
 ||rotxggpqnbeqp.online^
@@ -764,15 +804,19 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||rubianmyopes.com^
 ||runyqozdowoed.online^
 ||rvcr3ftmrku5vhlnp1.rest^
+||rvn5l858ougimvbp.rest^
 ||rwaddzdgiwsbu.site^
+||rymmoqhkaidqp.website^
 ||sabalosaukletswanhap.cyou^
 ||sandburceride.com^
 ||saqtuwrryaft.in^
 ||saucinginne.com^
 ||sbirroamylum.rest^
 ||scarevapidly.com^
+||scfywgqhlxpfy.website^
 ||scowmenbemoans.cfd^
 ||scrollnovela.click^
+||scujknruxwcep.site^
 ||scupfulrespond.cyou^
 ||sdplzkixuivrv.site^
 ||searbgbbmeixj.online^
@@ -786,6 +830,7 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||shinyalto.me^
 ||shinyalto.mobi^
 ||silkmenrattles.com^
+||sinhxpdlctxvb.site^
 ||sjrdlqpvpzcay.online^
 ||skdkvwchzjkfk.site^
 ||skeansunframe.com^
@@ -811,6 +856,7 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||spungehowes.com^
 ||srjgxxazkopdh.space^
 ||srmcychtzaeny.online^
+||ssbwwqiciuqno.site^
 ||stealerhaulier.click^
 ||stealycubica.cfd^
 ||steedlentor.com^
@@ -825,12 +871,14 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||sxgbnjmbqacpw.space^
 ||sxzrwvidonkqe.space^
 ||syceesamekhsalumnae.cfd^
+||synangesinky.com^
 ||systssczhkth.com^
 ||szcipilourzpu.website^
 ||taenitebows.click^
 ||talkative-version.pro^
 ||talonswhanged.com^
 ||tanhablites.click^
+||tatszoktoqr.in^
 ||tawsedbishops.cfd^
 ||tbnuacnbzsvgc.site^
 ||tcgtjqvnxvjot.website^
@@ -886,7 +934,9 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||uhfydnwcpafcs.space^
 ||uhijbypctseox.space^
 ||uhuamdzywzxsc.online^
+||uhvimfaemjhzk.site^
 ||ujlolbxhbczbh.online^
+||ulbvhbefihzzf.site^
 ||ulkwsxqatkgzq.site^
 ||umhhodwadqeo.com^
 ||umhywwaktzkyy.space^
@@ -896,10 +946,13 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||unfamedupside.cfd^
 ||ungswaeprgvpj.site^
 ||unguisregaltylorarii.cyou^
+||unhurtdittay.click^
+||unlistydopa.cyou^
 ||unpleasant-aspect.pro^
 ||upaywxkviolqn.online^
 ||upmostwedels.cfd^
 ||uraeusanisol.com^
+||urlcqusrhzcjp.website^
 ||urzpapzx.com^
 ||utpispykiipyy.website^
 ||utvrwtqhankis.website^
@@ -910,9 +963,11 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||uxsyynwodf.com^
 ||uzicoerpqqkou.site^
 ||vadgysytvtull.site^
+||vagmvbpmplcjo.site^
 ||vannedrigsenbrave.cfd^
 ||vcctzvjrfzvrp.website^
 ||vcwvxvwpdliks.online^
+||vdfnethzjsbng.online^
 ||velvetcairns.com^
 ||veneriskilldee.com^
 ||verreltrinkhe.cyou^
@@ -921,6 +976,7 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||vfflllthditxz.online^
 ||vgfyzxruvnjfr.site^
 ||vhdtukjxfzesr.online^
+||viduinewallaerineum.cfd^
 ||vimanahuacaperiwig.cfd^
 ||vjgxclult.com^
 ||vljiwkehciqts.space^
@@ -947,6 +1003,7 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||wexlzvaiiagwy.online^
 ||weyfrlgbpcvxo.site^
 ||wfifasask.in^
+||wfirmvvxyn.com^
 ||wgcnxpayqnksw.website^
 ||wgyufmpvbblvj.online^
 ||wharfsdicyan.cyou^
@@ -991,6 +1048,7 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||xkfygwyqbecbr.online^
 ||xlvaaarmxtewv.site^
 ||xmbviqlbcjybt.website^
+||xnboo8l32flmyyzo.cfd^
 ||xnjkxplrasnqu.space^
 ||xtryfpwnkzmxa.site^
 ||xulbpebhgqnku.space^
@@ -1003,13 +1061,16 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||yafltxtjsjxdl.online^
 ||yaupdizzy.com^
 ||ydheypen.com^
+||yeddxzhfcorty.site^
 ||yfczyarvhkfbw.website^
 ||yhaxtkqkdgnmu.website^
 ||yhkribbwbtepp.website^
 ||yhwadexncyozg.website^
+||yhyonread.com^
 ||yifbkgyrogtxq.site^
 ||yjakwxjgjdweg.site^
 ||ykemtastozpwb.space^
+||ykxtoxlxxzyij.website^
 ||yllfhllvjucxe.website^
 ||ylpvvowmosgjn.space^
 ||ynpsubtm.com^
@@ -1029,6 +1090,7 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||zfqbutphtgciv.space^
 ||zhgcmhqmojdnc.site^
 ||ziaensqwaxzpu.online^
+||zincatelienee.com^
 ||zinhklnmywvjf.website^
 ||zinnrakakurnm.online^
 ||zjpvvpattrjxx.website^
@@ -1046,16 +1108,20 @@ retrovault.ch,tossequip.net,thedaddy.li,dembed.st,up-4ever.net,frstream.life,str
 ||zpuelyeoxvyov.website^
 ||zqaeuutwesr.com^
 ||zrcbckthwcsox.online^
+||zroukdhu.com^
 ||zrsgpdgtnhkez.space^
 ||zsnphsolhhpvu.website^
 ||ztqfswmhcjuca.online^
 ||ztzagqzdkushi.online^
 ||zvhruccgofmal.site^
 ||zwviaudbvtrbf.website^
+||zxvdpwesxvppt.space^
 ||zygrbnyipwvbe.site^
+||anonymousdemographics.com^$third-party
 ||getsquirrel.co^$third-party
 ||stackup-ai.com^$third-party
 ||creative.janusaent.com^
+||aps.dz/en/_next/*banner$image
 ||whispersinthecorridors.in/api/ads/
 /player-extras.$domain=ashemaletube.com|boyfriendtv.com|fetishpapa.com
 /zv3/b/*$domain=ashemaletube.com|boyfriendtv.com|fetishpapa.com
@@ -1064,17 +1130,22 @@ indiatimes.com###custom_ad_wrapper_0
 thedailybeast.com###header-ad__wrapper
 thedailybeast.com###outstream-video-ad-wrap
 12news.com,8gwifi.org,9news.com,9to5google.com,9to5mac.com,aad.org,advfn.com,all3dp.com,allaboutcookies.org,allnovel.net,amny.com,athleticbusiness.com,audiokarma.org,beeradvocate.com,beliefnet.com,bizjournals.com,bolavip.com,bonappetit.com,breakingac.com,britishheritage.com,businessday.ng,businessinsider.com,capemaynjdaily.com,cbs8.com,cc.com,ccjdigital.com,centralbucksnews.com,dailytrust.com,delish.com,downbeach.com,dutchnews.nl,ecr.co.za,electrek.co,engineeringnews.co.za,equipmentworld.com,euromaidanpress.com,fastcompany.com,fishermap.org,footyheadlines.com,fox10phoenix.com,fox13news.com,fox26houston.com,fox29.com,fox2detroit.com,fox32chicago.com,fox35orlando.com,fox4news.com,fox5atlanta.com,fox5dc.com,fox5ny.com,fox7austin.com,fox9.com,foxbusiness.com,foxla.com,foxnews.com,funkidslive.com,gfinityesports.com,globalspec.com,gmanetwork.com,grammarbook.com,greatbritishchefs.com,greatitalianchefs.com,hbr.org,highdefdigest.com,historynet.com,horshamnow.com,howstuffworks.com,huffpost.com,ibtimes.sg,inc.com,insidehook.com,intouchweekly.com,irishcentral.com,karanpc.com,khou.com,koat.com,ktvu.com,lifeandstylemag.com,longislandpress.com,macstories.net,mail.com,memuplay.com,metro.us,metrophiladelphia.com,minecraftforum.net,miningweekly.com,mixed-news.com,mobilesyrup.com,modernhealthcare.com,namemc.com,nbcnews.com,newrepublic.com,northpennnow.com,nzherald.co.nz,ocnjdaily.com,oneesports.gg,opb.org,outkick.com,papermag.com,perkvalleynow.com,phillydaily.com,physiology.org,pixiv.net,podcastaddict.com,punchng.com,qns.com,realsport101.com,reason.com,refinery29.com,ringsidenews.com,roadandtrack.com,runguides.com,scroll.in,seaislenews.com,seattletimes.com,songkick.com,sportskeeda.com,storyboard18.com,techrepublic.com,the-decoder.com,thelocal.at,thelocal.ch,thelocal.de,thelocal.dk,thelocal.es,thelocal.fr,thelocal.it,thelocal.no,thelocal.se,thenationonlineng.net,thenewstack.io,thepost.co.nz,thetimes.com,tmz.com,toofab.com,tuasaude.com,uploadvr.com,usmagazine.com,vanguardngr.com,wildtangent.com,willowgrovenow.com,wired.com,wogx.com,worldsoccertalk.com,wral.com,yahoo.com##.ad-container
+aan.com,aarp.org,additudemag.com,agbi.com,animax-asia.com,audioxpress.com,axn-asia.com,bravotv.com,citiblog.co.uk,cnbctv18.com,cnn59.com,controleng.com,curiosmos.com,downzen.com,dw.com,escapeatx.com,europeantour.com,foodsforbetterhealth.com,gemtvasia.com,hcn.org,hotdogwater.dog,huffingtonpost.co.uk,huffpost.com,investmentnews.com,ipaomtk.com,jewishworldreview.com,legion.org,lifezette.com,livestly.com,magtheweekly.com,moneyland.ch,offshore-energy.biz,onetvasia.com,oxygen.com,oydir.com,pch.com,philosophynow.org,prospectmagazine.co.uk,readamericanfootball.com,readarsenal.com,readastonvilla.com,readbasketball.com,readbetting.com,readbournemouth.com,readboxing.com,readbrighton.com,readbundesliga.com,readburnley.com,readcars.co,readceltic.com,readchampionship.com,readchelsea.com,readcricket.com,readcrystalpalace.com,readeverton.com,readeverything.co,readfashion.co,readfilm.co,readfood.co,readfootball.co,readgaming.co,readgolf.com,readhorseracing.com,readhuddersfield.com,readhull.com,readinternationalfootball.com,readlaliga.com,readleicester.com,readliverpoolfc.com,readmancity.com,readmanutd.com,readmiddlesbrough.com,readmma.com,readmotorsport.com,readmusic.co,readnewcastle.com,readnorwich.com,readnottinghamforest.com,readolympics.com,readpl.com,readrangers.com,readrugbyunion.com,readseriea.com,readshowbiz.co,readsouthampton.com,readsport.co,readstoke.com,readsunderland.com,readswansea.com,readtennis.co,readtottenham.com,readtv.co,readussoccer.com,readwatford.com,readwestbrom.com,readwestham.com,readwsl.com,reason.com,redvoicemedia.com,revolver.news,rogerebert.com,smithsonianmag.com,streamingmedia.com,the-scientist.com,thecatholicthing.org,thecrimson.com,therighthairstyles.com,topsmerch.com,weatherwatch.co.nz,whichcar.com.au,woot.com,worldofbitco.in##.advertisement
+ascopost.com,kingmods.net,tappedout.net,tvinsider.com##.banner-ad
 thedailybeast.com##.body-ad
 indianmasterminds.com##.bodyAds
-artnews.com,deadline.com,goldderby.com,hollywoodreporter.com,variety.com,vibe.com##.boomerang
+artnews.com,billboard.com,deadline.com,goldderby.com,hollywoodreporter.com,sportico.com,variety.com,vibe.com,wwd.com##.boomerang
+100percentfedup.com,academicful.com,addapinch.com,aiarticlespinner.co,allaboutfpl.com,alltechnerd.com,americanmilitarynews.com,americansongwriter.com,androidsage.com,animatedtimes.com,anoopcnair.com,askpython.com,australiangeographic.com.au,autodaily.com.au,bakeitwithlove.com,bioinformant.com,bohemian.com,borncity.com,boxingnews24.com,browserhow.com,celtsarehere.com,chillinghistory.com,chromeunboxed.com,circuitbasics.com,cjr.org,coincodecap.com,conservativebrief.com,conservativefiringline.com,corrosionhour.com,cricfy.net,crimereads.com,cryptobriefing.com,cryptointelligence.co.uk,cryptopotato.com,cryptoreporter.info,cryptoslate.com,cryptotimes.io,dafontfree.io,dailynewshungary.com,digitalreg.net,dorohedoro.online,dramacool.com.my,ecoportal.net,ecoticias.com,emobilityplus.com,engineering-designer.com,epicdope.com,eurweb.com,fandomwire.com,firstcuriosity.com,firstsportz.com,flashbak.com,flickeringmyth.com,flowmountainbike.com,flyingmag.com,freemagazines.top,gadgetinsiders.com,gamebyte.com,gameinfinitus.com,gamertweak.com,gamingdeputy.com,gatewayhispanic.com,gatewaynews.co.za,geekdashboard.com,geekzag.com,glassalmanac.com,goodyfeed.com,greekreporter.com,hard-drive.net,harrowonline.org,haxmac.cc,healthinfo.healthengine.com.au,helihub.com,hollywoodinsider.com,hollywoodunlocked.com,hotcelebshome.com,ifoodreal.com,indianhealthyrecipes.com,inspiredtaste.net,iotwreport.com,jardineriaon.com,jessicagavin.com,jojolandsmanga.com,journeybytes.com,journeyjunket.com,libertyunlocked.com,linuxfordevices.com,lithub.com,londonlovesbusiness.com,mangaread.org,mb.com.ph,meaningfulspaces.com,medicotopics.com,medievalists.net,mpost.io,mycariboonow.com,mymodernmet.com,mymotherlode.com,nationalfile.com,navalnews.com,nexdrive.lol,nexusgames.to,nintendoeverything.com,noahreport.com,nokiapoweruser.com,notalwaysright.com,nxbrew.com,nxbrew.net,organicfacts.net,orlandoweekly.com,patriotfetch.com,pcguide.com,pcoptimizedsettings.com,politizoom.com,premiumtimesng.com,primeaudio.org,protrumpnews.com,psu.com,pureinfotech.com,pwmania.com,redrightvideos.com,religionnews.com,reneweconomy.com.au,reptilesmagazine.com,retrohandhelds.gg,rightwingnews.com,roadaheadonline.co.za,rok.guide,romsworlds.com,saabplanet.com,sacurrent.com,sciencenotes.org,simscommunity.info,slaynews.com,small-screen.co.uk,snipercentral.com,snowbrains.com,statisticsbyjim.com,storypick.com,streamingbetter.com,suggest.com,superwatchman.com,talkandroid.com,talkers.com,tech-latest.com,techaeris.com,technobaboy.com,techpp.com,techrounder.com,techviral.net,the-gadgeteer.com,theautopian.com,thebeaverton.com,theblueoceansgroup.com,thecinemaholic.com,thecricketlounge.com,thedailysight.com,thedriven.io,thegamehaus.com,thegatewaypundit.com,thegeekpage.com,thelibertydaily.com,thenipslip.com,theoilrig.ca,thepeoplesvoice.tv,theprint.in,thewincentral.com,thisquality.com,trendingpoliticsnews.com,troypoint.com,tvtonight.com.au,twistedvoxel.com,vice.com,walletinvestor.com,washingtonblade.com,waves4you.com,wbiw.com,welovetrump.com,wepc.com,whynow.co.uk,win.gg,windowslatest.com,wisden.com,wltreport.com,wnd.com,wrestlingheadlines.com,wrestlingnews.co,wtmj.com,zerohanger.com,ziperto.com##.code-block
 indianmasterminds.com##.elementor > .elementor-element:has(> div.e-con-inner > div.elementor-widget-html div.bodyAds)
 indianmasterminds.com##.elementor-element > .elementor-widget-container > div:not([id]):has(> div.lazyloadads)
 indianmasterminds.com##.elementor-widget-html > .elementor-widget-container > div:not([id]):has(> div[id^="div-gpt-ad"][data-adcode])
 indianmasterminds.com##.elementor-widget-image > .elementor-widget-container:has(a:not([href^="https://indianmasterminds.com/"])[target="_blank"])
 indianmasterminds.com##.ftrstkyad
+stackexchange.com##.js-native-comment-ad
 stackexchange.com##.js-zone-container
 english.nv.ua,kyivindependent.com##.nts-ad
 amateurphotographer.com##.pageskin-ads
+ascopost.com##.section--full-width-ad
 thedailybeast.com##.tdb-ad
 whispersinthecorridors.in##.wh-ad-slot
 whispersinthecorridors.in##.wh-after-header-ad
