@@ -1,0 +1,3 @@
+iol.pt##.billboardxl--wrapper
+tviplayer.iol.pt,selfie.iol.pt,tvi.iol.pt,versa.iol.pt,cnnportugal.iol.pt##.pub-outer-wrapper
+tviplayer.iol.pt,aquelamaquina.pt,abola.pt,caras.pt,xl.pt##.mrec

@@ -1,4 +1,25 @@
+city.ichihara.chiba.jp#$#.col_evaluation { flex: 0 0 100% !important; max-width: 75% !important; }
+city.ichihara.chiba.jp#$#@media (width < 768px) { .col_evaluation { max-width: 100% !important; } }
 ccn.com,tanjug.rs,iflscience.com,croxyproxy.app,natgeomedia.com,akhbarelyom.com,blogs.opera.com,hugogloss.uol.com.br,lsm.lv,paradergi.com.tr,czasfinansow.pl,attacomsian.com,meme-arsenal.com,merriam-webster.com,embed.ustudio.com,marketwatch.com,blog.1password.com##.share-icons
+krcrtv.com##p:has(> a[href="https://www.instagram.com/wearepauserewind/"])
+krcrtv.com###stay-connected
+hockeyfeed.com##.mt-4 > div.rounded-lg.print\:hidden
+mprnews.org##.share-social-outer
+i24news.co.il##.i24-share
+i24news.co.il##.i24-card-share
+newsday.com##.share-frame-v2
+saint-marc-hd.com##.c-article-sns
+nsttv.com##.entry-share-modal
+zebra.co.jp##.m-share-sns
+city.ichihara.chiba.jp##.col_share
+urawa-keiba.jp##.c-article__share-box
+hands.net##.cmn-unit.-bg-lg:has(.m-m-share)
+giftmall.co.jp##.quotation-button
+studyhacker.net##.share-preview
+apkapp.ru###telegram-full
+enen-interior.com##.productShare
+creema.jp##.p-item-detail-share
+businesstech.co.za##.sticky-social-share > div.d-flex:has(> div.col > a > i[aria-label="Facebook"])
 pib.gov.in###fixed-social
 aajtak.in##div.cartoon-wrapper > div.cartoon-footer:has(> div.cr-share-icon)
 gnttv.com##[onclick^="window.open('http://www.facebook.com/sharer/sharer.php?"]
@@ -11,4 +32,12 @@ kisantak.in##li.share-li
 gamingonlinux.com##.gol-right-article-meta
 symbaloo.com##div[aria-label="Webmix Details"] button:not([id]):has(> span > i.mdi-share-variant)
 menards.com###pdpSharing
+gazetakrakowska.pl,naszemiasto.pl##.atomsArticleHead__mediaTool
+kawasaki-keiba.jp,cinemore.jp##.m-article-share
+gopsusports.com,gamer.ne.jp,byucougars.com##.article-head__share
+mgoblue.com,arizonawildcats.com,soonersports.com##.s-share
+global.honda,books.bunshun.jp,rakumachi.jp,conan-movie.jp##.snsBox
+news.delta.com,gamekillerapp.com,popville.com,nekoray.org,erothots.co,news.cornell.edu,clashforwindows.org,military.com,diabetes.org,cyclowired.jp,harvardmagazine.com,datacenterdynamics.com,kienyke.com,learnmetrics.com,nepisirsem.com,voguehk.com,sadhguru.org,pagamentidigitali.it##.a2a_kit
+rule34porno.cc,megatube.xxx,xasiat.com,sxspy.com,porngem.com,thebussybandit.com##a[href="#tab_share"]
+bs-log.com,bg-mania.jp,j-cast.com##.entry-share-btns
 livecombs.com,media-polesye.com,samsungsvc.co.kr,eclipse.imperialsaga.jp,dogatch.jp,myfxbook.com,videacesky.cz###shareBtn

@@ -1,1 +1,2 @@
 ||nexuismods.com^$all
+||nexosmods.com^$doc

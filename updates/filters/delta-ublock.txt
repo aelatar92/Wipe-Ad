@@ -1,3 +1,4 @@
+pornhub.*##.adsRemoveButtonWrapper
 ||sy.ameblo.jp^$badfilter
 ||sy.ameba.jp^$badfilter
 ||sy.amebame.com^$badfilter
@@ -12,3 +13,4 @@ caseyseemavoid.com##+js(acs, WebAssembly, atob)
 ||caseyseemavoid.com^$badfilter
 socialxup.com##a[data-track="related_click"]:not(:has(> div[class="flex flex-col items-center text-center"] > img[src^="/avatar/"][src$=".png"][height="48"][width="48"][style="color: transparent;"] + p + p[class="text-xs text-gray-500 truncate w-full"] + p[class="text-xs text-blue-600 mt-1"]:has-text(/^\d+(,\d+)* フォロワー$/)))
 socialxup.com##a[data-track="home_popular_tweet_profile_click"]:not(:has-text(/^@[0-9A-Z_a-z]+$/)):not(:has(> img:only-child))
+socialxup.com##.promo-card

@@ -1,7 +1,14 @@
+||nawobsophta.cyou^
+||algarotfixated.com^
 ||popzu-srv.live^
+##div[class$="-reklam-satir"]
+selcuksporthd.net,superfilmizle.*,plusizle.com,filmkuzusu.vip,hboxcdn.xyz,keplersociety.com,vegoltv981.com,sierato.com,dizigom.love,cehennemizle.cc,cdnvexo.site,bingozade.com,ifsaciturksex99.site,99turkifsaizle.site,trkifsalariz.site,escobarvip.blog,dizipal.website,videojs.online,epikplayer.xyz,animeler.me,player.filmizle.in,tranimaci.com,izlekolik.org,4kfilmizlesene.*#%#//scriptlet('prevent-window-open')
+justintv-canli.online##video ~ div[class^="absolute inset-0 z-50 grid place-items-center bg-black"]
+||justintv-canli.online/media/*.mp4
 asyaanimeleri.top###u5ub8bzte40
 evrimagaci.org##div[data-ad-type]
 teknoblog.com##.tbis-masthead-wrap
 teknoblog.com##div[id^="taboola-below-article-widget"]
 teknoblog.com##.e-con-boxed:has(> .e-con-inner > .elementor-widget-shortcode > .elementor-shortcode > .tb-ad-placement)
 teknoblog.com##.tbn-rail-ad
+justintv-canli.online,sozcu.com.tr##a[rel="noopener sponsored"]

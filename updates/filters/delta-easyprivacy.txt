@@ -22,6 +22,7 @@
 ||housewheels.com^
 ||jackalsmovie.com^
 ||lidsmarket.com^
+||lightwars.com^
 ||logomet.com^
 ||masondown.com^
 ||nitrojiveband.com^
@@ -43,7 +44,13 @@
 ||tentpick.com^
 ||tinybodega.com^
 ||toffeetribe.com^
+||twistboat.com^
+||watchbighead.com^
+||weirdknight.com^
 ||wrathsecrets.com^
+||yogatryout.com^
+||yummymacaroni.com^
+||zodiacglass.com^
 ||analytics.shelbyklein.com^
 ||dev.visualwebsiteoptimizer.com/cdn/edrv/
 ||dev.visualwebsiteoptimizer.com/edrv/
@@ -65,4 +72,5 @@
 ||sink.archive.org^
 ||thedailybeast.com/metrics/
 ||whispersinthecorridors.in/public/js/analytics.js
+||greynoise.io/nvhc9u4gxsagNjY3ZGQ0MGViYjgwOTVlODlmMjc1NjM5/
 @@||scorecardresearch.com/plugins/streaming-jwplayer/$script,domain=newstak.in
