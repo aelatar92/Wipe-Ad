@@ -1,5 +1,7 @@
 ||dataplane.rudderstack.com^
 ||api.rudderstack.com^
+||track.did.kr^
+||analytics.did.kr^
 ||event-ingestion.yazio-analytics.com^
 ||anx-new.beginlearning.com^
 ||affil.hledejceny.cz^
@@ -32268,6 +32270,7 @@ www.sanluisobispo.happycustomer.io$image
 www.startupba.com.br$image
 www.webspecmail.com$image
 yarp.shileyohs.com$image
+||pexels.com/*/vendor/snowplow
 ||r34tube.com/clk/c|
 ||wispbyte.com/client/api/analytics/
 ||ninjaone.com/wp-content/themes/ninjaone/js/analytics/

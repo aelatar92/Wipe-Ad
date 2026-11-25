@@ -1,3 +1,5 @@
 iol.pt##.billboardxl--wrapper
 tviplayer.iol.pt,selfie.iol.pt,tvi.iol.pt,versa.iol.pt,cnnportugal.iol.pt##.pub-outer-wrapper
+tempo.pt,tiempo.com,meteored.*##.tappx-ad
+tempo.pt,tiempo.com,meteored.*##.meteored-ads
 tviplayer.iol.pt,aquelamaquina.pt,abola.pt,caras.pt,xl.pt##.mrec

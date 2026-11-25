@@ -1,14 +1,14 @@
 {
- "version": "202611250528",
- "generated": "2026-11-25T05:28:13.158Z",
+ "version": "202611251719",
+ "generated": "2026-11-25T17:19:00.557Z",
  "baselineVersion": "1.1.1",
  "lists": [
   {
    "id": "easylist",
    "ruleset": "easylist",
    "url": "delta-easylist.txt",
-   "sha256": "2906407d5cb0806b06f7538487cfcdd7c97d54340fd56470c0c59619b5a20202",
-   "lines": 1946
+   "sha256": "83fb6a8a6c4d16bd9927d48ea0bd5a6c3712a21e054c150cfcb8f1e548bac0f0",
+   "lines": 2135
   },
   {
    "id": "ublock",
@@ -21,29 +21,29 @@
    "id": "adguard-base",
    "ruleset": "adguard-base",
    "url": "delta-adguard-base.txt",
-   "sha256": "92feb060691cbed50241c3bbef84bc536ad68a4766218ae760756c8164df8a8a",
-   "lines": 3398
+   "sha256": "ea89f8ad71ef5a6b4a40bfe98c1d98d8a3030bb48f9fe69c9be5c67be310ab93",
+   "lines": 3490
   },
   {
    "id": "pgl",
    "ruleset": "pgl",
    "url": "delta-pgl.txt",
-   "sha256": "fa0535847c0c15cfa0e636c7da04440c1b00bfa76c1ca0f6bccebdb7384c9dd0",
-   "lines": 2
+   "sha256": "dafc79db4fec16bead39f080df1065be204f3a75e625397ed019adab462db5d2",
+   "lines": 3
   },
   {
    "id": "easyprivacy",
    "ruleset": "easyprivacy",
    "url": "delta-easyprivacy.txt",
-   "sha256": "29c095c7e1bb911fcffbb1e0eb921a787d8a945796f01ed6d7a5dcca1b94c0d2",
-   "lines": 83
+   "sha256": "7c1e9c2d87bd0ab551d8fc984e46cf68b2de2e8b3e777e63026a48cc78b0826f",
+   "lines": 85
   },
   {
    "id": "adguard-tracking",
    "ruleset": "adguard-tracking",
    "url": "delta-adguard-tracking.txt",
-   "sha256": "c275337949c6ba84489ad0bb58c8ace5a5cecc7c9d0c7a69106f0a856c2fd6e2",
-   "lines": 32324
+   "sha256": "7973dc7e3e3126d9193c3a5616c3b45dbc572e7ad96c5c73d60bcce43051924e",
+   "lines": 32327
   },
   {
    "id": "badware",
@@ -56,36 +56,36 @@
    "id": "urlhaus",
    "ruleset": "urlhaus",
    "url": "delta-urlhaus.txt",
-   "sha256": "208a0d6f1e781134a519d9956c08b1937c65b928a04f61c88381e5b528e011f1",
-   "lines": 506
+   "sha256": "7da49a3049eecd43441aa7d6da4b593bf7bd234d9291a7d619da2755f16d31f9",
+   "lines": 513
   },
   {
    "id": "phishing",
    "ruleset": "phishing",
    "url": "delta-phishing.txt",
-   "sha256": "992074ed78522e078b24922641889743b90891d851534d242f8d73a561272c81",
-   "lines": 1039
+   "sha256": "452f4c5b7b2f2eb6862f2a1ee374d77b2bd203fe360b3fb0415d9e69a544df1f",
+   "lines": 1059
   },
   {
    "id": "cookies",
    "ruleset": "cookies",
    "url": "delta-cookies.txt",
-   "sha256": "4a9c0286ec7ab17a157b2e2dae6c6385f387fd7d1ef7264b7bf9d3f205ed9a8a",
-   "lines": 33
+   "sha256": "378ab6b607c032868ae12befcf262cd8c4ed08c0b68ef56681ef20beddf8d5e5",
+   "lines": 37
   },
   {
    "id": "annoyances",
    "ruleset": "annoyances",
    "url": "delta-annoyances.txt",
-   "sha256": "5d17a6e1eaeaec88d490b535d8cbffd73da8a8aa9135825a021778ca47a04dce",
-   "lines": 63
+   "sha256": "c4c0666e199180f57968bfec1ca05ea5897495493ca191f07f97cdc51a02a4b9",
+   "lines": 67
   },
   {
    "id": "social",
    "ruleset": "social",
    "url": "delta-social.txt",
-   "sha256": "4242e97cd05eba4f3b235d4fe57ddfc3e7fc0cd9f59745202f379e890e6871e3",
-   "lines": 54
+   "sha256": "0a705984537dd2a1b0cc38af17cba1ceff6aa075bd42f4369051b930f83c85ab",
+   "lines": 58
   },
   {
    "id": "adult",
@@ -98,8 +98,8 @@
    "id": "tur",
    "ruleset": "tur",
    "url": "delta-tur.txt",
-   "sha256": "68a24c217932634e9935d820ff60e8db5e0b65dc494eba915d0f7105ca44c947",
-   "lines": 18
+   "sha256": "dd4f9d98cac114a43ee6b418ad831d5c429ae7dd6a01c359b8a3f6c3714a9ddf",
+   "lines": 21
   },
   {
    "id": "fra",
@@ -119,8 +119,8 @@
    "id": "spa",
    "ruleset": "spa",
    "url": "delta-spa.txt",
-   "sha256": "fa2eb346c195ad98becf94dc0d71c986eef7df8efecf60922d7460c9ebc1ca34",
-   "lines": 3
+   "sha256": "969f06782d54c5a1b24d4fa83cfaeef2ef16bcfe6e02afdb434b28ce8a464305",
+   "lines": 5
   },
   {
    "id": "rus",
@@ -133,8 +133,8 @@
    "id": "chn",
    "ruleset": "chn",
    "url": "delta-chn.txt",
-   "sha256": "b37f6d9462adb19473a4fd8c797fb12009a821942f471a8ef8f28d1c2c1bc1ab",
-   "lines": 63
+   "sha256": "0e8eef5d68fe7e9cf322c4a7aec996704ac9b966b6e90910b5cadf8813bf60da",
+   "lines": 67
   },
   {
    "id": "wipead-fixes",

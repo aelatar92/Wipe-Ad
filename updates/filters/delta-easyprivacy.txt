@@ -18,6 +18,7 @@
 ||derbysoftsec.com^$third-party
 ||pubfluencers.com^$third-party
 ||colorfilter.net^
+||filmcomm.net^
 ||funkpit.com^
 ||housewheels.com^
 ||ivoryandcrow.com^
@@ -43,6 +44,7 @@
 ||systemone.net^
 ||tableheads.com^
 ||tentpick.com^
+||timeprince.com^
 ||tinybodega.com^
 ||toffeetribe.com^
 ||twistboat.com^

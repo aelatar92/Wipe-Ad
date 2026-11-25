@@ -3,6 +3,7 @@
 ||cdn.toolz.at/banner-cmp.js
 ||consentmodebanner.com^$third-party
 ascopost.com###pm-consent-host
+web-site.care###wsc-consent
 deepai.org##.ai-disclaimer
 behaviourchangeagency.com,greynoise.io##.ck-cookie-w
 privacysavvy.com,university.gormtheold.net##.fixed
@@ -28,6 +29,9 @@ aluf-delivery.com##div[aria-label="הסכמה לקוקיז"]
 zig-zag.co.il##div[aria-label="הצהרת cookies"]
 mispar1.co.il##div[aria-labelledby="cookie-title"]
 amosbld.co.il,billiard.co.il,brandsonsale.co.il,cameracity.co.il,carmelpc.co.il,ceramicdepot.co.il,depot365.co.il,dror-tools.co.il,drummer.co.il,dynamica.co.il,dyo-ink.co.il,electro-buy.co.il,eline.co.il,elitaieb.co.il,espressobar.com,foxhead.co.il,freedio.co.il,grillmaster.co.il,hacontainer.co.il,hotbuy.co.il,iwtools.co.il,j-sale.co.il,kafu.co.il,kfar.co.il,kilombo.co.il,knaani.co.il,ktech.co.il,laserline.co.il,lcdeal.co.il,levhabait.co.il,mabudi.co.il,mai-art.co.il,mnmltd.co.il,motoline.co.il,msport.co.il,mugrabi.co.il,musicol-shop.co.il,musicworld.co.il,orpc.co.il,out-of-the-box.co.il,owlmarket.co.il,pascale.co.il,pokito.co.il,pro-safety.co.il,selaram.co.il,speedio.co.il,sportcenter.co.il,studioland.co.il,sulemastore.co.il,taflaya.co.il,tapro.co.il,technoshlomo.co.il,totalsport.co.il,toysandmore.co.il,victor-arizot.co.il,video.org.il,voltstreet.co.il,welovecoffee.co.il,wineandmore.co.il,workimhi.co.il##div[class^="cookiesPopup"]
+rutube.ru##.cookie-snackbar-module__snackbar
 sogaz.ru##.dBEhkt
 chongluadao.vn##._banner_1mcvy_1
+||privacy.diepresse.com^
+||privacy.maison-travaux.fr^
 br-dge.to,citaalen.com,cityairporttrain.com,feierabend.de,gpiaaf.gov.pt,hoesjesdirect.nl,huellendirekt.de,kmudigital.at,kontostand.at,mazda-autohaus-volz-saarbruecken.de,sap-press.com,serveminecraft.net,spares2repair.co.uk,ukrinform.net,ukrinform.ua,vrtranspoint.fi,zukunft-jetzt.deutsche-rentenversicherung.de#@##cookie-banner
