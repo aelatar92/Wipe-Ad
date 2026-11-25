@@ -10,6 +10,9 @@ blog.csdn.net##.simple-ad-slot
 pa1151.top##a[href="https://dagexxx.com"]
 pa1151.top##a[href="https://dage.top/"]
 huavod.com,huavod.net##div[style="margin:2px 0;"] > a.item > img[src^="https://static.okokserver.com/uploads/"]
+||0jbyj9d2l.com^
+||umd8dz8x9.com^
+||uaazwczowtfswj.com^
 ||j31pozck4v.com^
 ||remainder22.com^
 ||a6j9wqsyq6.com^
@@ -20,6 +23,7 @@ huavod.com,huavod.net##div[style="margin:2px 0;"] > a.item > img[src^="https://s
 ||d9zkof.com^
 ||4hg1oddm34.com^
 ||ajc1d0k4nr.com^
+||rectangle20.com^
 ||4eyn3s9wj.com^
 ||semicircle59.com^
 ||4vzi54g47.com^

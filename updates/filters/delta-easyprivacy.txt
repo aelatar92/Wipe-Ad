@@ -20,6 +20,7 @@
 ||colorfilter.net^
 ||funkpit.com^
 ||housewheels.com^
+||ivoryandcrow.com^
 ||jackalsmovie.com^
 ||lidsmarket.com^
 ||lightwars.com^
@@ -52,6 +53,8 @@
 ||yummymacaroni.com^
 ||zodiacglass.com^
 ||analytics.shelbyklein.com^
+||api.sided.co/embed/registerDebateEvent
+||api.sided.co/embed/updateSession
 ||dev.visualwebsiteoptimizer.com/cdn/edrv/
 ||dev.visualwebsiteoptimizer.com/edrv/
 ||estuary-data.com/ga4-identify
@@ -63,6 +66,7 @@
 ||view.publitas.com/javascripts/vendors/publitas-stats.js
 ||adweek.com/vx39/
 ||bytes.adweek.com/vs.js
+||gg.deals/scripts/track-gtm.js
 ||gpupartner.com/57df8107ae016629/script.js
 ||media.audubon.org/js/aud_tracker.min.js
 ||pureinfotech.com/media/api/send
@@ -71,6 +75,9 @@
 ||sfchronicle.com/api/client-logs
 ||sink.archive.org^
 ||thedailybeast.com/metrics/
+||uniqueness.greenmangaming.com^
 ||whispersinthecorridors.in/public/js/analytics.js
 ||greynoise.io/nvhc9u4gxsagNjY3ZGQ0MGViYjgwOTVlODlmMjc1NjM5/
+||secure.valnetinc.com/discover
+||tiles.openfreemap.org/planet
 @@||scorecardresearch.com/plugins/streaming-jwplayer/$script,domain=newstak.in

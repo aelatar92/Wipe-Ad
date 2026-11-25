@@ -4471,6 +4471,7 @@
 ||ctd.pista-asc.it^
 ||ingest.t3.codes^
 ||a.menards.com^
+||tracker.beam.remp.startitup.sk^
 11884.connector-qa1.marketingcloudqaapis.com$image
 11dkim1._domainkey.debit.affirm.com$image
 12039.editor-qa1.marketingcloudqaapis.com$image
@@ -32267,6 +32268,7 @@ www.sanluisobispo.happycustomer.io$image
 www.startupba.com.br$image
 www.webspecmail.com$image
 yarp.shileyohs.com$image
+||r34tube.com/clk/c|
 ||wispbyte.com/client/api/analytics/
 ||ninjaone.com/wp-content/themes/ninjaone/js/analytics/
 ||fp.yangcong345.com/fe-monitor-
@@ -32288,6 +32290,7 @@ kick.com#%#//scriptlet('prevent-setTimeout', 'startBeaconSending')
 ||colorfilter.net^
 ||funkpit.com^
 ||housewheels.com^
+||ivoryandcrow.com^
 ||jackalsmovie.com^
 ||lidsmarket.com^
 ||lightwars.com^
