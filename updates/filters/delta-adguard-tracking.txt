@@ -1,3 +1,7 @@
+||clerk-telemetry.com^
+||ghtinc.com^
+||download.gameanalytics.com^
+||stmtag.ru^
 ||dataplane.rudderstack.com^
 ||api.rudderstack.com^
 ||track.did.kr^
@@ -4471,6 +4475,7 @@
 ||utiq.nwzonline.de^
 ||utiq.release.historyextra.com^
 ||ctd.pista-asc.it^
+||dsh-otel-collector.deepseeksvc.com^
 ||ingest.t3.codes^
 ||a.menards.com^
 ||tracker.beam.remp.startitup.sk^
@@ -32270,6 +32275,9 @@ www.sanluisobispo.happycustomer.io$image
 www.startupba.com.br$image
 www.webspecmail.com$image
 yarp.shileyohs.com$image
+/p/p.gif?p=
+||pxl-us.
+||html5.gamedistribution.com/*/gameanalytics.js
 ||pexels.com/*/vendor/snowplow
 ||r34tube.com/clk/c|
 ||wispbyte.com/client/api/analytics/
@@ -32290,7 +32298,10 @@ school.yangcongxueyuan.com#%#//scriptlet('set-constant', 'OnionWebMonitor.run', 
 @@||fp.yangcong345.com/*/webTrack.js$domain=school.yangcongxueyuan.com
 kick.com#%#//scriptlet('prevent-fetch', 'litix.io')
 kick.com#%#//scriptlet('prevent-setTimeout', 'startBeaconSending')
+||axedint.com^
 ||colorfilter.net^
+||dolphinplate.com^
+||filmcomm.net^
 ||funkpit.com^
 ||housewheels.com^
 ||ivoryandcrow.com^
@@ -32316,6 +32327,7 @@ kick.com#%#//scriptlet('prevent-setTimeout', 'startBeaconSending')
 ||systemone.net^
 ||tableheads.com^
 ||tentpick.com^
+||timeprince.com^
 ||tinybodega.com^
 ||toffeetribe.com^
 ||twistboat.com^

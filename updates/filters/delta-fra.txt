@@ -85,9 +85,12 @@ vide-greniers.org##.agw-banner
 ||aps.dz/*/image?*%2Fbanner
 ||distrowatch.com/images/cpxtu/rippgmh
 ||distrowatch.com/images/cpxtu/yzexwwqmj
+##.ad-mobileTablet
+##.ad-tabletDesktop
 ##.device-desktop.ads
 ##.device-mobile.ads
 ##.device-tablet.ads
+aerobuzz.fr,allodocteurs.fr,auchan.fr,courrierinternational.com,directvelo.com,dna.fr,e-sante.fr,fabriquer-des-meubles.fr,freepik.com,gamer-network.fr,gqmagazine.fr,journalmetro.com,lachainemeteo.com,ladepeche.fr,lematin.ch,lequotidiendumedecin.fr,lopinion.fr,marques.expert,msn.com,p-nintendo.com,photo.fr,rue89lyon.fr,smail.fr,soundlightup.com,tetu.com,truecaller.com,ubergizmo.com,voici.fr,webtor.io,zapiks.fr##.ad
 aps.dz##a[href^="https://gica.dz/"]
 aps.dz##a[href^="https://solutions.djezzy.dz/"]
 maison-travaux.fr##a[target="blank"] > img[width^="300"][height="160"]

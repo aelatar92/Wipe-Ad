@@ -4,6 +4,7 @@
 ||huavod.com/static/js/ntc.js
 huavod.net,huavod.com#$#.ec-ad { position: fixed !important; left: -99999px !important; top: -99999px !important; width: 1px !important; height: 1px !important; opacity: 0.01 !important; visibility: visible !important; }
 huavod.net,huavod.com#$#.hr-banner-stack { position: fixed !important; left: -99999px !important; top: -99999px !important; width: 1px !important; height: 1px !important; opacity: 0.01 !important; visibility: visible !important; }
+map.baidu.com###message-center-panel:has(> span.message-ad-tag)
 comic18j-susu.com,jmcomic-zzz.one,18comic.vip##.web-right-float-button
 comic18j-susu.com,jmcomic-zzz.one,18comic.vip##.top-a2db
 blog.csdn.net##.simple-ad-slot
@@ -17,6 +18,7 @@ huavod.com,huavod.net##div[style="margin:2px 0;"] > a.item > img[src^="https://s
 ||9xxne23lm.com^
 ||j5gv7t9sv.com^
 ||zitdymshto.icu^
+||nah9b3ag8.com^
 ||j31pozck4v.com^
 ||remainder22.com^
 ||a6j9wqsyq6.com^
