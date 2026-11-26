@@ -1,4 +1,5 @@
 pornhub.*##.adsRemoveButtonWrapper
+fcportables.com,filecatchers.com##+js(nostif, onerror)
 ||sy.ameblo.jp^$badfilter
 ||sy.ameba.jp^$badfilter
 ||sy.amebame.com^$badfilter

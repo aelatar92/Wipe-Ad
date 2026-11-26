@@ -1,3 +1,4 @@
+||adcanvas.com^$third-party
 ||clerk-telemetry.com^
 ||ghtinc.com^
 ||download.gameanalytics.com^
@@ -4475,6 +4476,7 @@
 ||utiq.nwzonline.de^
 ||utiq.release.historyextra.com^
 ||ctd.pista-asc.it^
+||pan.pazarama.com^
 ||telemetry.*.oci.oraclecloud.com^
 ||dsh-otel-collector.deepseeksvc.com^
 ||ingest.t3.codes^
@@ -32278,6 +32280,9 @@ www.webspecmail.com$image
 yarp.shileyohs.com$image
 /p/p.gif?p=
 ||pxl-us.
+||cdn.tmtarget.com/tracking/
+||pazarama.com/event-collector-worker.js
+||busbud.com/metrics/
 ||shiftdelete.net/api/olay|
 ||html5.gamedistribution.com/*/gameanalytics.js
 ||pexels.com/*/vendor/snowplow
@@ -32297,21 +32302,26 @@ school.yangcongxueyuan.com#%#//scriptlet('set-constant', 'OnionWebMonitor.run', 
 ||fls-eu.amazon.de/*batch/*uedata*Gateway
 ||ev.chitchat.tv/e/
 ||ev.chitchat.tv/i/*/e/
+||appmetrica.sovcombank.ru^
 @@||fp.yangcong345.com/*/webTrack.js$domain=school.yangcongxueyuan.com
 kick.com#%#//scriptlet('prevent-fetch', 'litix.io')
 kick.com#%#//scriptlet('prevent-setTimeout', 'startBeaconSending')
 ||axedint.com^
+||berrytots.com^
 ||choosehobby.com^
 ||colorfilter.net^
 ||dolphinplate.com^
 ||filmcomm.net^
 ||funkpit.com^
+||heathstyle.com^
 ||housewheels.com^
+||howglam.com^
 ||ivoryandcrow.com^
 ||jackalsmovie.com^
 ||lidsmarket.com^
 ||lightwars.com^
 ||logomet.com^
+||maskdomains.com^
 ||masondown.com^
 ||nitrojiveband.com^
 ||ordinalzero.com^
@@ -32341,3 +32351,4 @@ kick.com#%#//scriptlet('prevent-setTimeout', 'startBeaconSending')
 ||yummymacaroni.com^
 ||zodiacglass.com^
 10tv.com,11alive.com,12news.com,12newsnow.com,13newsnow.com,13wmaz.com,5newsonline.com,9news.com,abc10.com,al.com,aol.com,apnews.com,artforum.com,artnews.com,bellinghamherald.com,billboard.com,birdsandblooms.com,calgaryherald.com,calgarysun.com,cbs19.tv,cbs8.com,chattanoogacw.com,cleveland.com,crazygames.com,crooksandliars.com,cwtv.com,deadline.com,dpreview.com,driving.ca,edmontonjournal.com,edmontonsun.com,familyhandyman.com,financialpost.com,firstcoastnews.com,fox43.com,fox61.com,futbin.com,goldderby.com,golfdigest.com,gulflive.com,hollywoodreporter.com,indiewire.com,kare11.com,kcentv.com,kens5.com,kgw.com,khou.com,kiiitv.com,king5.com,komonews.com,krem.com,ktvb.com,kvue.com,lehighvalleylive.com,lfpress.com,localmemphis.com,masslive.com,mlive.com,motor1.com,myfoxzone.com,nationalpost.com,nbcsports.com,news.com.au,newscentermaine.com,newswest9.com,nj.com,nydailynews.com,oregonlive.com,ottawacitizen.com,ottawasun.com,pcworld.com,pennlive.com,rd.com,robbreport.com,rollingstone.com,sherdog.com,sidereel.com,silive.com,sportico.com,superherohype.com,syracuse.com,tasteofhome.com,techcrunch.com,thehealthy.com,thv11.com,tj.news,torontosun.com,twinfinite.net,vancouversun.com,variety.com,vibe.com,wbir.com,wcnc.com,weareiowa.com,weather.com,wfaa.com,wfmynews2.com,wgrz.com,whas11.com,windsorstar.com,wkyc.com,wltx.com,wnep.com,wowhead.com,wqad.com,wthr.com,wtol.com,wtsp.com,wusa9.com,wwd.com,wwltv.com,wzzm13.com#%#//scriptlet('ubo-acs', 'document.getElementsByTagName', '.pubads')
+baeldung.com,cheatsheet.com,pcwelt.de,pwinsider.com,tasteofhome.com#%#//scriptlet('ubo-rmnt', 'script', 'admiral')
