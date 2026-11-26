@@ -7,6 +7,7 @@ ecohustler.com##.zine-grid-cta
 ecohustler.com##.zine-mid-article-cta
 ecohustler.com##.zine-post-article-cta
 rona.ca##a[class^="ColumnContentTiledImage_Link_"][href^="https://www.rona.ca/en/financing-loan-credit-card-programs/affirm-program?"]
+##a[href^="https://www.facebook.com/sharer?"]
 bismarcktribune.com,chippewa.com,columbustelegram.com,journalstar.com,pantagraph.com,qctimes.com,siouxcityjournal.com,wcfcourier.com###preferredSource
 abcnews.com##.Byline__GooglePreferredSource
 carnewschina.com##.b-preferred-source

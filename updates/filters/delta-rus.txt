@@ -4,6 +4,8 @@ pikabu.ru#%#//scriptlet('remove-node-text', 'script', '/xhr\.setRequestHeader[\s
 translate.yandex.ru##.side-block > div[id]:not([class]):has(> div[class]:not([id]) button[aria-label="Скрыть рекламу"])
 shtampik.com##.sidebar > a[target="_blank"] > img
 kudago.com,porno666.link,thebell.io,nhike.ru,bankinform.ru,championat.ru,prufy.ru,kostroma.today,fnvolga.ru,menunedeli.ru,sfera.fm,frankmedia.ru,cisoclub.ru,trafficcardinal.com,kursiv.media,moskvichmag.ru,netex.co.il,in-scale.ru,ukraina.ru,mipped.com,diapazon.kz,bloknot.ru##.banner
+sosalkino.city,sosalkino.*##.jvpn-banner
+||sosalkino.*/static/images/spot/
 apteka.ru##.ViewHomepage__carousel
 apteka.ru##.HomeMinishops__scrollbox__list > li:has(> div.MinishopTile > div.PosterAdInfo)
 apteka.ru##.PrivateOfficeOrdersCarousel
@@ -25,4 +27,5 @@ my.cdek.ru##.mt-4 > div.mt-0:has(> div.mb-3 > span[data-pr-tooltip^="Рекла�
 ||tenchat.ru/tenchat-ads/
 yummyani.me,amd.online,anime-bit.ru,animego.me,marvel-online.ru,kadikama.com#%#//scriptlet('json-prune', 'ads.vast.prerolls.* ads.vast.pauserolls.* vast.prerolls.* vast.pauserolls.*')
 kudago.com,sakhalinmedia.ru,shedevrum.ai,eaomedia.ru,amurmedia.ru,stavropol.media,ulanmedia.ru,nakhodka.media,ussurmedia.ru,sevastopolmedia.ru,footballua.tv,dp.ru,vctr.media,buro247.ru,afisha.ngs.ru,newsvl.ru##.banner-container
+sosalkino.city,sosalkino.*,erocadr.com,masturbationgirl.com,porn0sex.net##.spot
 cheques-lk.orangedata.ru,rbc.ru##div[data-placement]

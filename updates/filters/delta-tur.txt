@@ -1,8 +1,11 @@
+||stads.cfd^
 ||nawobsophta.cyou^
 ||algarotfixated.com^
 ||popzu-srv.live^
 ##div[class$="-reklam-satir"]
 selcuksporthd.net,superfilmizle.*,plusizle.com,filmkuzusu.vip,hboxcdn.xyz,keplersociety.com,vegoltv981.com,sierato.com,dizigom.love,cehennemizle.cc,cdnvexo.site,bingozade.com,ifsaciturksex99.site,99turkifsaizle.site,trkifsalariz.site,escobarvip.blog,dizipal.website,videojs.online,epikplayer.xyz,animeler.me,player.filmizle.in,tranimaci.com,izlekolik.org,4kfilmizlesene.*#%#//scriptlet('prevent-window-open')
+||fullhdfilmizle.fit/wp-content/themes/filmplus/ads-data.php
+shiftdelete.net##.sd-ad
 justintv-canli.online##video ~ div[class^="absolute inset-0 z-50 grid place-items-center bg-black"]
 ||justintv-canli.online/media/*.mp4
 asyaanimeleri.top###u5ub8bzte40
