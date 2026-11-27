@@ -3,6 +3,7 @@
 /checkout/offer/trackShow
 /hit-counter.$domain=~hit-counter.info
 /px/?rand=
+/script.outbound-links.pageview-props.js
 /track/?evt=
 /vendor/snowplow-
 ||6s83mz9kbtrj.com^
@@ -73,8 +74,10 @@
 ||feliz.data.tm-awx.com/netro-web/batch
 ||fingerprint.blockifyapp.com^
 ||otel-hfo.fareharbor.engineering/v1/traces
+||r.lr-hv-in.com^
 ||sr-cdn.shiprocket.in/sr-promise/static/iframe.html
 ||tvid.in/api/track
+||wkbrs1.tingyun.com^
 ||view.publitas.com/ecommTracker.js
 ||view.publitas.com/javascripts/vendors/publitas-stats.js
 ||adweek.com/vx39/
@@ -119,4 +122,8 @@
 ||xfinity.com/metricsaw/
 10tv.com,11alive.com,12news.com,12newsnow.com,13newsnow.com,13wmaz.com,5newsonline.com,9news.com,abc10.com,al.com,aol.com,apnews.com,artforum.com,artnews.com,bellinghamherald.com,billboard.com,birdsandblooms.com,calgaryherald.com,calgarysun.com,cbs19.tv,cbs8.com,chattanoogacw.com,cleveland.com,crazygames.com,crooksandliars.com,cwtv.com,deadline.com,dpreview.com,driving.ca,edmontonjournal.com,edmontonsun.com,familyhandyman.com,financialpost.com,firstcoastnews.com,fox43.com,fox61.com,futbin.com,goldderby.com,golfdigest.com,gulflive.com,hollywoodreporter.com,indiewire.com,kare11.com,kcentv.com,kens5.com,kgw.com,khou.com,kiiitv.com,king5.com,komonews.com,krem.com,ktvb.com,kvue.com,lehighvalleylive.com,lfpress.com,localmemphis.com,masslive.com,mlive.com,motor1.com,myfoxzone.com,nationalpost.com,nbcsports.com,news.com.au,newscentermaine.com,newswest9.com,nj.com,nydailynews.com,oregonlive.com,ottawacitizen.com,ottawasun.com,pcworld.com,pennlive.com,rd.com,robbreport.com,rollingstone.com,sherdog.com,sidereel.com,silive.com,sportico.com,superherohype.com,syracuse.com,tasteofhome.com,techcrunch.com,thehealthy.com,thv11.com,tj.news,torontosun.com,twinfinite.net,vancouversun.com,variety.com,vibe.com,wbir.com,wcnc.com,weareiowa.com,weather.com,wfaa.com,wfmynews2.com,wgrz.com,whas11.com,windsorstar.com,wkyc.com,wltx.com,wnep.com,wowhead.com,wqad.com,wthr.com,wtol.com,wtsp.com,wusa9.com,wwd.com,wwltv.com,wzzm13.com##+js(acs, document.getElementsByTagName, .pubads)
 baeldung.com,cheatsheet.com,pcwelt.de,pwinsider.com,tasteofhome.com##+js(rmnt, script, admiral)
+ekitan.com##+js(set, executeImpressionTicketTracking, noopFunc)
+ekitan.com##+js(set, initHomesTracking, noopFunc)
+@@||ekitan.com/transit/js/ticket-analytics.js$badfilter,~third-party
 @@||scorecardresearch.com/plugins/streaming-jwplayer/$script,domain=newstak.in
+@@||ekitan.com/transit/js/ticket-analytics.js$~third-party

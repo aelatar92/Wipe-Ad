@@ -1,5 +1,8 @@
+||banners.babylon-x.com^
 ||berrytots.com^
 ||capablepotato.com^
+||freewebcounter.com^
 ||links.prosservice.fr^
 ||native123.com^
 ||timeprince.com^
+||x-traceur.com^

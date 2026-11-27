@@ -1,3 +1,4 @@
+||cdn.diginetica.net^
 ||adcanvas.com^$third-party
 ||clerk-telemetry.com^
 ||ghtinc.com^
@@ -4476,11 +4477,15 @@
 ||utiq.nwzonline.de^
 ||utiq.release.historyextra.com^
 ||ctd.pista-asc.it^
+||ac.avito.ru^
+||ap-prd-edge-clientlog.nexon.com^
+||toy.log.nexon.io^
 ||pan.pazarama.com^
 ||telemetry.*.oci.oraclecloud.com^
 ||dsh-otel-collector.deepseeksvc.com^
 ||ingest.t3.codes^
 ||a.menards.com^
+||beam.denikn.cz^
 ||tracker.beam.remp.startitup.sk^
 11884.connector-qa1.marketingcloudqaapis.com$image
 11dkim1._domainkey.debit.affirm.com$image
@@ -32280,6 +32285,8 @@ www.webspecmail.com$image
 yarp.shileyohs.com$image
 /p/p.gif?p=
 ||pxl-us.
+||streamvsmov.com/api/embed-hit|
+||daophim.*/metrics/
 ||cdn.tmtarget.com/tracking/
 ||pazarama.com/event-collector-worker.js
 ||busbud.com/metrics/
@@ -32320,6 +32327,7 @@ kick.com#%#//scriptlet('prevent-setTimeout', 'startBeaconSending')
 ||jackalsmovie.com^
 ||lidsmarket.com^
 ||lightwars.com^
+||livingoff.com^
 ||logomet.com^
 ||maskdomains.com^
 ||masondown.com^

@@ -1,49 +1,49 @@
 {
- "version": "202611270256",
- "generated": "2026-11-27T02:56:05.701Z",
+ "version": "202611271233",
+ "generated": "2026-11-27T12:33:42.608Z",
  "baselineVersion": "1.1.1",
  "lists": [
   {
    "id": "easylist",
    "ruleset": "easylist",
    "url": "delta-easylist.txt",
-   "sha256": "08566447cbb09eda77093a1e87334b385f17ca6504f39ba1f23e0882cf6144b2",
-   "lines": 2660
+   "sha256": "284d668cd3905e345ed49807d34a20175326e25798da0e2e04e532183f3b988d",
+   "lines": 2820
   },
   {
    "id": "ublock",
    "ruleset": "ublock",
    "url": "delta-ublock.txt",
-   "sha256": "93da019be3c52def5c36a8add6933bbeadfee30d091bc46df0bc25bddc9e6f53",
-   "lines": 17
+   "sha256": "6baa404f86a1ca46701a120040e89b29e04d1f775ec6eaef4db166f3de0b7678",
+   "lines": 20
   },
   {
    "id": "adguard-base",
    "ruleset": "adguard-base",
    "url": "delta-adguard-base.txt",
-   "sha256": "40126d21fce4f68e9ef68411a7577c11049e625d99d7ad6f3f4853213f26e904",
-   "lines": 4123
+   "sha256": "7aeea1895feacf41db6f8a2e48e6052f576dd787e3a257e5320d0c58356d2dbf",
+   "lines": 4324
   },
   {
    "id": "pgl",
    "ruleset": "pgl",
    "url": "delta-pgl.txt",
-   "sha256": "40f8d2d385b4d849fff01480c02be9a6d32142b0221d08811989d71e2fc21f09",
-   "lines": 5
+   "sha256": "08482cfb1a7d373cd626b0e0148fa7036a4d486980bec42a95715403dd28c17f",
+   "lines": 8
   },
   {
    "id": "easyprivacy",
    "ruleset": "easyprivacy",
    "url": "delta-easyprivacy.txt",
-   "sha256": "8e4b80c3ab1dbf216cba4962b603c511f75b5e86248459525cf3262377bce47a",
-   "lines": 122
+   "sha256": "9af8f24aa4714f68039d3fa13d9219370f32ee64666191dd9cfaac5ad656f7c6",
+   "lines": 129
   },
   {
    "id": "adguard-tracking",
    "ruleset": "adguard-tracking",
    "url": "delta-adguard-tracking.txt",
-   "sha256": "90e3c1083a5d3da11427c4eb1b5efeef967058d532c13469af2edc3f890b6215",
-   "lines": 32354
+   "sha256": "a634e7904784a88143b64bb949f208d7c4e8bda8c1d47e488aa814e027c826e5",
+   "lines": 32362
   },
   {
    "id": "badware",
@@ -70,22 +70,22 @@
    "id": "cookies",
    "ruleset": "cookies",
    "url": "delta-cookies.txt",
-   "sha256": "79570892e6675b21744d6ced99b81b4767adac4e3be514b7118d4e013faece5b",
-   "lines": 38
+   "sha256": "5eeeac881e5031fb07e546a55f50b6e638023ec482a7fa49ea0fc8ed81549c36",
+   "lines": 40
   },
   {
    "id": "annoyances",
    "ruleset": "annoyances",
    "url": "delta-annoyances.txt",
-   "sha256": "4bb02dea08c384146592373357505e2f81e1367b2e45656e328c0d9b1885e507",
-   "lines": 71
+   "sha256": "35967b0abb942a7cd4fb3cce8def669ca33ec591e4282521d3fce0c7e32763ff",
+   "lines": 74
   },
   {
    "id": "social",
    "ruleset": "social",
    "url": "delta-social.txt",
-   "sha256": "4d21492c4d96e8755f5c708162bd85592db8b1bfbda7ab666028465285178087",
-   "lines": 81
+   "sha256": "9ac37c445eb6b60e1f6d2e50ba2ae5a97b67d37ad3803902fe04c02d9b5469ea",
+   "lines": 85
   },
   {
    "id": "adult",
@@ -98,15 +98,15 @@
    "id": "tur",
    "ruleset": "tur",
    "url": "delta-tur.txt",
-   "sha256": "088f72014da0ea3da8df50e8d298bed37bb295cbf22c2f766b4a15f5d8bce827",
-   "lines": 24
+   "sha256": "41cf3188f202f94f5c06c1885f67c483b5aede6facd5da14f6d77fdbc3dccc9e",
+   "lines": 32
   },
   {
    "id": "fra",
    "ruleset": "fra",
    "url": "delta-fra.txt",
-   "sha256": "aa29e528ed32c15dcd61b30f81b84c398fdfb257be309b493b269b294e7f1d54",
-   "lines": 96
+   "sha256": "e8130cbab4b91a6173dacc7c15d104818193a4b1de8451b3181fa6cbadff297e",
+   "lines": 98
   },
   {
    "id": "deu",
@@ -133,8 +133,8 @@
    "id": "chn",
    "ruleset": "chn",
    "url": "delta-chn.txt",
-   "sha256": "b630728dd0b13a0ea98c62f27765c44393e01a57896178eff5d33d94325a6390",
-   "lines": 83
+   "sha256": "3f0fc033ea7811052be400f3204e99d84de5c9475546ee9417c60fb698d39fcd",
+   "lines": 90
   },
   {
    "id": "wipead-fixes",
