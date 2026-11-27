@@ -11,6 +11,8 @@ blog.csdn.net##.simple-ad-slot
 pa1151.top##a[href="https://dagexxx.com"]
 pa1151.top##a[href="https://dage.top/"]
 huavod.com,huavod.net##div[style="margin:2px 0;"] > a.item > img[src^="https://static.okokserver.com/uploads/"]
+||s2glduwz1.com^
+||quadrant59.com^
 ||quotient68.com^
 ||jqzck6m0vv.com^
 ||tu6boqunqq.com^

@@ -32,6 +32,7 @@
 ||jackalsmovie.com^
 ||lidsmarket.com^
 ||lightwars.com^
+||livingoff.com^
 ||logomet.com^
 ||maskdomains.com^
 ||masondown.com^
@@ -73,6 +74,7 @@
 ||fingerprint.blockifyapp.com^
 ||otel-hfo.fareharbor.engineering/v1/traces
 ||sr-cdn.shiprocket.in/sr-promise/static/iframe.html
+||tvid.in/api/track
 ||view.publitas.com/ecommTracker.js
 ||view.publitas.com/javascripts/vendors/publitas-stats.js
 ||adweek.com/vx39/
@@ -110,6 +112,7 @@
 ||squarespace.com/metrics/
 ||ss.partner.life360.com/bwcrqwpxgng.js
 ||taboola.com/gtm/
+||techbarrista.com/api/event
 ||theverge.com/metrics/
 ||weare.kueez.com/nvhc9u4gxsagNjgyMmY4ZDU0ODljNDJhNTU3MmVkN2Q1/
 ||www.hilton.com/gtag
