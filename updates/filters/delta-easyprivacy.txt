@@ -37,9 +37,13 @@
 ||logomet.com^
 ||maskdomains.com^
 ||masondown.com^
+||mathrevolt.com^
+||melodyivory.com^
+||messrod.com^
 ||nitrojiveband.com^
 ||ordinalzero.com^
 ||pitmanmusic.com^
+||pivotfresh.com^
 ||rapidscraper.com^
 ||rebatecircle.com^
 ||recessremote.com^
@@ -58,6 +62,7 @@
 ||tinybodega.com^
 ||toffeetribe.com^
 ||twistboat.com^
+||usersays.com^
 ||watchbighead.com^
 ||weirdknight.com^
 ||wrathsecrets.com^

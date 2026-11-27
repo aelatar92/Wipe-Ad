@@ -4477,6 +4477,9 @@
 ||utiq.nwzonline.de^
 ||utiq.release.historyextra.com^
 ||ctd.pista-asc.it^
+||telemetry.*.oraclecloud.com^
+||events.*.oci.oraclecloud.com^
+||logging.*.oci.oraclecloud.com^
 ||ac.avito.ru^
 ||ap-prd-edge-clientlog.nexon.com^
 ||toy.log.nexon.io^
@@ -32310,6 +32313,8 @@ school.yangcongxueyuan.com#%#//scriptlet('set-constant', 'OnionWebMonitor.run', 
 ||ev.chitchat.tv/e/
 ||ev.chitchat.tv/i/*/e/
 ||appmetrica.sovcombank.ru^
+ekitan.com#%#//scriptlet('set-constant', 'executeImpressionTicketTracking', 'noopFunc')
+ekitan.com#%#//scriptlet('set-constant', 'initHomesTracking', 'noopFunc')
 @@||fp.yangcong345.com/*/webTrack.js$domain=school.yangcongxueyuan.com
 kick.com#%#//scriptlet('prevent-fetch', 'litix.io')
 kick.com#%#//scriptlet('prevent-setTimeout', 'startBeaconSending')
@@ -32331,9 +32336,13 @@ kick.com#%#//scriptlet('prevent-setTimeout', 'startBeaconSending')
 ||logomet.com^
 ||maskdomains.com^
 ||masondown.com^
+||mathrevolt.com^
+||melodyivory.com^
+||messrod.com^
 ||nitrojiveband.com^
 ||ordinalzero.com^
 ||pitmanmusic.com^
+||pivotfresh.com^
 ||rapidscraper.com^
 ||rebatecircle.com^
 ||recessremote.com^
@@ -32352,6 +32361,7 @@ kick.com#%#//scriptlet('prevent-setTimeout', 'startBeaconSending')
 ||tinybodega.com^
 ||toffeetribe.com^
 ||twistboat.com^
+||usersays.com^
 ||watchbighead.com^
 ||weirdknight.com^
 ||wrathsecrets.com^
@@ -32360,3 +32370,6 @@ kick.com#%#//scriptlet('prevent-setTimeout', 'startBeaconSending')
 ||zodiacglass.com^
 10tv.com,11alive.com,12news.com,12newsnow.com,13newsnow.com,13wmaz.com,5newsonline.com,9news.com,abc10.com,al.com,aol.com,apnews.com,artforum.com,artnews.com,bellinghamherald.com,billboard.com,birdsandblooms.com,calgaryherald.com,calgarysun.com,cbs19.tv,cbs8.com,chattanoogacw.com,cleveland.com,crazygames.com,crooksandliars.com,cwtv.com,deadline.com,dpreview.com,driving.ca,edmontonjournal.com,edmontonsun.com,familyhandyman.com,financialpost.com,firstcoastnews.com,fox43.com,fox61.com,futbin.com,goldderby.com,golfdigest.com,gulflive.com,hollywoodreporter.com,indiewire.com,kare11.com,kcentv.com,kens5.com,kgw.com,khou.com,kiiitv.com,king5.com,komonews.com,krem.com,ktvb.com,kvue.com,lehighvalleylive.com,lfpress.com,localmemphis.com,masslive.com,mlive.com,motor1.com,myfoxzone.com,nationalpost.com,nbcsports.com,news.com.au,newscentermaine.com,newswest9.com,nj.com,nydailynews.com,oregonlive.com,ottawacitizen.com,ottawasun.com,pcworld.com,pennlive.com,rd.com,robbreport.com,rollingstone.com,sherdog.com,sidereel.com,silive.com,sportico.com,superherohype.com,syracuse.com,tasteofhome.com,techcrunch.com,thehealthy.com,thv11.com,tj.news,torontosun.com,twinfinite.net,vancouversun.com,variety.com,vibe.com,wbir.com,wcnc.com,weareiowa.com,weather.com,wfaa.com,wfmynews2.com,wgrz.com,whas11.com,windsorstar.com,wkyc.com,wltx.com,wnep.com,wowhead.com,wqad.com,wthr.com,wtol.com,wtsp.com,wusa9.com,wwd.com,wwltv.com,wzzm13.com#%#//scriptlet('ubo-acs', 'document.getElementsByTagName', '.pubads')
 baeldung.com,cheatsheet.com,pcwelt.de,pwinsider.com,tasteofhome.com#%#//scriptlet('ubo-rmnt', 'script', 'admiral')
+ekitan.com#%#//scriptlet('ubo-set', 'executeImpressionTicketTracking', 'noopFunc')
+ekitan.com#%#//scriptlet('ubo-set', 'initHomesTracking', 'noopFunc')
+@@||ekitan.com/transit/js/ticket-analytics.js$badfilter,~third-party

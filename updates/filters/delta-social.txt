@@ -58,6 +58,7 @@ gamingonlinux.com##.gol-right-article-meta
 symbaloo.com##div[aria-label="Webmix Details"] button:not([id]):has(> span > i.mdi-share-variant)
 menards.com###pdpSharing
 gazetakrakowska.pl,naszemiasto.pl##.atomsArticleHead__mediaTool
+backpacker.com,thedailybeast.com,on3.com,maltadaily.mt##button[aria-label="Share article"]
 kawasaki-keiba.jp,cinemore.jp##.m-article-share
 ashiyamarine.jp,geidai.ac.jp##.sns-share-wrapper
 pacogames.com,newspapers.com,xullys.xyz,lobehub.com,wallpics.app,volumo.com,funda.nl,jpost.com,teletype.in##button[title="Share"]
