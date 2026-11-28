@@ -3,6 +3,7 @@
 /checkout/offer/trackShow
 /hit-counter.$domain=~hit-counter.info
 /px/?rand=
+/relevanceapi/visitorinfo
 /script.outbound-links.pageview-props.js
 /track/?evt=
 /vendor/snowplow-
@@ -11,6 +12,7 @@
 ||ayc0zsm69431gfebd.info.com^
 ||bytes.media^
 ||connext-fd-gnbrate4fjhjb3f7.z01.azurefd.net^
+||formalytics.dev^
 ||g2insights-fd-a0gpgwa4fycxd9d4.z01.azurefd.net^
 ||jzkdrpijw30voy0.club^
 ||m2z7r9k4p1.com^
@@ -83,6 +85,7 @@
 ||feliz.data.tm-awx.com/netro-web/batch
 ||fingerprint.blockifyapp.com^
 ||monitor.tapper.ai^
+||niceincontact.com/logger-public
 ||otel-hfo.fareharbor.engineering/v1/traces
 ||qscripts.s3.amazonaws.com/pscript.js
 ||r.lr-hv-in.com^
@@ -91,27 +94,19 @@
 ||wkbrs1.tingyun.com^
 ||view.publitas.com/ecommTracker.js
 ||view.publitas.com/javascripts/vendors/publitas-stats.js
-||adweek.com/vx39/
-||bytes.adweek.com/vs.js
-||faro.mgmt.hancom.io/collect
-||gg.deals/scripts/track-gtm.js
-||gpupartner.com/57df8107ae016629/script.js
-||media.audubon.org/js/aud_tracker.min.js
-||pureinfotech.com/media/api/send
-||s.pdfroom.com/api/event
-||s.yimg.com/cv/apiv2/cv/apiv2/trueanthem/$domain=yahoo.com
-||sfchronicle.com/api/client-logs
-||sink.archive.org^
-||thedailybeast.com/metrics/
-||uniqueness.greenmangaming.com^
-||whispersinthecorridors.in/public/js/analytics.js
 ||adobe.com/gtg/
+||adweek.com/vx39/
 ||affiliates.purevpn.com^
 ||box.com/securemetric/
+||bytes.adweek.com/vs.js
+||canadiantire.ca/metrix/
 ||canva.com/gtg/
 ||cloudflare.com/go9u/
 ||cursor.com/an/5NFOPZQoiC99Q/
 ||cursor.com/metrics/
+||faro.mgmt.hancom.io/collect
+||gg.deals/scripts/track-gtm.js
+||gpupartner.com/57df8107ae016629/script.js
 ||greynoise.io/nvhc9u4gxsagNjY3ZGQ0MGViYjgwOTVlODlmMjc1NjM5/
 ||gtm.mozilla.org^
 ||gumgum.com/wvxwa3jtwetcNjllZWU1MzIzMTMzOTYwMDVmM2ExMDFi/
@@ -119,23 +114,38 @@
 ||ingest.t3.codes^
 ||lg.com/m5vgrhz/
 ||lg.com/t54xgrj/
-||lowes.com/k7x2m9/
 ||mailchimp.com/metrics/
+||media.audubon.org/js/aud_tracker.min.js
 ||onesignal.com/f7by/
 ||poki.com/rmt/
+||pureinfotech.com/media/api/send
 ||purevpn.com/nm7sjdp/
 ||s.dreamhost.com/67ead4DfmU/
+||s.pdfroom.com/api/event
+||s.yimg.com/cv/apiv2/cv/apiv2/trueanthem/$domain=yahoo.com
+||sfchronicle.com/api/client-logs
+||sink.archive.org^
+||sportchek.ca/metrix/
+||taboola.com/gtm/
+||thedailybeast.com/metrics/
+||theverge.com/metrics/
+||tsdrs.schwab.com/risk-collect/device/events
+||uniqueness.greenmangaming.com^
+||weare.kueez.com/nvhc9u4gxsagNjgyMmY4ZDU0ODljNDJhNTU3MmVkN2Q1/
+||whispersinthecorridors.in/public/js/analytics.js
+||www.hilton.com/gtag
+||xfinity.com/metricsaw/
+||127.0.0.1^$third-party,domain=53.com|ameriprise.com|chick-fil-a.com|citi.com|ebay.at|ebay.be|ebay.ca|ebay.ch|ebay.cn|ebay.co.uk|ebay.com|ebay.com.au|ebay.com.hk|ebay.com.my|ebay.com.sg|ebay.de|ebay.es|ebay.fr|ebay.ie|ebay.it|ebay.nl|ebay.ph|ebay.pl|equifax.ca|equifax.com|globo.com|gumtree.com|kleinanzeigen.de|lendup.com|mbna.ca|rusneb.ru|sciencedirect.com|sky.com|spectrum.net|td.com|tiaa.org|vedacheck.com|wepay.com
+||lowes.com/k7x2m9/
+||ocs.ameriprise.com^
 ||secure.valnetinc.com/discover
 ||squarespace.com/metrics/
 ||ss.partner.life360.com/bwcrqwpxgng.js
-||taboola.com/gtm/
 ||techbarrista.com/api/event
-||theverge.com/metrics/
-||weare.kueez.com/nvhc9u4gxsagNjgyMmY4ZDU0ODljNDJhNTU3MmVkN2Q1/
-||www.hilton.com/gtag
-||xfinity.com/metricsaw/
+||u44.pnc.com^
 10tv.com,11alive.com,12news.com,12newsnow.com,13newsnow.com,13wmaz.com,5newsonline.com,9news.com,abc10.com,al.com,aol.com,apnews.com,artforum.com,artnews.com,bellinghamherald.com,billboard.com,birdsandblooms.com,calgaryherald.com,calgarysun.com,cbs19.tv,cbs8.com,chattanoogacw.com,cleveland.com,crazygames.com,crooksandliars.com,cwtv.com,deadline.com,dpreview.com,driving.ca,edmontonjournal.com,edmontonsun.com,familyhandyman.com,financialpost.com,firstcoastnews.com,fox43.com,fox61.com,futbin.com,goldderby.com,golfdigest.com,gulflive.com,hollywoodreporter.com,indiewire.com,kare11.com,kcentv.com,kens5.com,kgw.com,khou.com,kiiitv.com,king5.com,komonews.com,krem.com,ktvb.com,kvue.com,lehighvalleylive.com,lfpress.com,localmemphis.com,masslive.com,mlive.com,motor1.com,myfoxzone.com,nationalpost.com,nbcsports.com,news.com.au,newscentermaine.com,newswest9.com,nj.com,nydailynews.com,oregonlive.com,ottawacitizen.com,ottawasun.com,pcworld.com,pennlive.com,rd.com,robbreport.com,rollingstone.com,sherdog.com,sidereel.com,silive.com,sportico.com,superherohype.com,syracuse.com,tasteofhome.com,techcrunch.com,thehealthy.com,thv11.com,tj.news,torontosun.com,twinfinite.net,vancouversun.com,variety.com,vibe.com,wbir.com,wcnc.com,weareiowa.com,weather.com,wfaa.com,wfmynews2.com,wgrz.com,whas11.com,windsorstar.com,wkyc.com,wltx.com,wnep.com,wowhead.com,wqad.com,wthr.com,wtol.com,wtsp.com,wusa9.com,wwd.com,wwltv.com,wzzm13.com##+js(acs, document.getElementsByTagName, .pubads)
 baeldung.com,cheatsheet.com,pcwelt.de,pwinsider.com,tasteofhome.com##+js(rmnt, script, admiral)
+53.com,adp.com,ameriprise.com,ap.com,bankofscotland.co.uk,bendigobank.com.au,betfair.com,betfair.com.au,betfair.es,bmo.com,canadiantire.ca,chase.com,cibc.com,citi.com,citibankonline.com,coastcapitalsavings.com,connectonebank.com,directpay.irs.gov,discover.com,ebay-kleinanzeigen.de,ebay.*,eftps.gov,fidelity.com,fisglobal.com,healthsafe-id.com,homedepot.com,ibanking-services.com,ingbank.pl,intuit.com,kueez.com,life360.com,mbna.ca,my100bank.com,navyfederal.org,onehealthcareid.com,optumbank.com,paddypower.com,quicken.com,royalbank.com,samsclub.com,sbisec.co.jp,sciencedirect.com,simplii.com,skyid.sky.com,sofi.com,spectrum.net,sportchek.ca,t-mobile.com,td.com,tdbank.com,tdcommercialbanking.com,tescobank.com,tiaa.org,tiaabank.com,tsb.co.uk,vedacheck.com,walmart.com##+js(aopw, tmx_profiling_started)
 ekitan.com##+js(set, executeImpressionTicketTracking, noopFunc)
 ekitan.com##+js(set, initHomesTracking, noopFunc)
 @@||ekitan.com/transit/js/ticket-analytics.js$badfilter,~third-party
