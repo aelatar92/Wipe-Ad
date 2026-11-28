@@ -4,13 +4,20 @@
 ||consentmodebanner.com^$third-party
 ascopost.com###pm-consent-host
 web-site.care###wsc-consent
+1kosmos.com,avaloniaui.net,bereal.com,brside.com,buildship.com,bunq.com,coworker.ai,daytona.io,enhanced.com,etfbook.com,fitanalytics.com,framer.com,gitbook.com,iverify.io,juliahub.com,localculture.org,luckyorange.com,meetkevin.com,neon-free.ch,netcraft.com,podspace.com,rollbar.com,site.trasti.pl,snoutcover.com,splx.ai,stirling.com,strongcloud.online,syncly.app,walllet.com##.--framer-cookie-banner-container
 deepai.org##.ai-disclaimer
+goldenglobes.com##.c-disclaimer
 behaviourchangeagency.com,greynoise.io##.ck-cookie-w
+adresowo.pl,app.fanfix.io,becleverwithyourcash.com,betplay.com.co,cactusclubcafe.com,careline.co.uk,click2pharmacy.co.uk,controlup.com,delfi.ee,edhardyoriginals.com,etfstream.com,extra.ie,johnryanbydesign.co.uk,kadencewp.com,kingtaps.com,newfoodmagazine.com,oiq.qc.ca,parisbaguette.com,publitas.com,puzzmo.com,qcs.co.uk,rendeljkinait.hu,scuffers.com,sidequestvr.com,soundshine.co.il,staples.ca,techcentral.ie,thehawksmoor.com,vertaa.fi##.cky-consent-container
+adresowo.pl,becleverwithyourcash.com,betplay.com.co,bluebird.hu,bluebirdinternational.com,cactusclubcafe.com,careline.co.uk,click2pharmacy.co.uk,controlup.com,delfi.ee,etfstream.com,extra.ie,johnryanbydesign.co.uk,kadencewp.com,kingtaps.com,newfoodmagazine.com,oiq.qc.ca,parisbaguette.com,publitas.com,puzzmo.com,qcs.co.uk,rendeljkinait.hu,scuffers.com,staples.ca,thehawksmoor.com,vertaa.fi##.cky-overlay
+sbnation.com,theverge.com##.duet--navigation--pmc-privacy-banner
 privacysavvy.com,university.gormtheold.net##.fixed
+infohawk.com##.ih-cookie
 lumo.proton.me##.lumo-guest-disclaimer
 1password.com,fontcheckerpro.com,quantpedia.com,shirtspace.com##[aria-label="Cookie Consent"]
 goldenglobes.com,popsugar.com,punchdrink.com,thedodo.com,thrillist.com##[aria-label="Terms of Use/Your Privacy Rights"]
 collaboraonline.com##[consent-skip-blocker]
+athenegpt.ai,betterhelp.com,brilliant.org,eurekaforbes.com,regain.us##div[data-testid="cookie-banner"]
 ed.ac.uk##uoe-consent
 1800flowers.co.il,aaa-electric.co.il,aargazim.co.il,ameat.co.il,autoparts4u.co.il,azrad.co.il,bagina.co.il,bialik-mashtelot.com,bneidavid.org,cable.co.il,cell-tec.co.il,citydeal.co.il,coffee4u.co.il,coffeedeals.co.il,coffeeman.co.il,daniel-baby.co.il,daniel-fitness.co.il,danihi.com,dubin.co.il,dyofix1.co.il,electricland.co.il,electricsale.co.il,electricshop.co.il,electroclick.co.il,electroline.co.il,emiliz.com,ertzcamping.co.il,finam.ru,finambank.ru,focus.co.il,foodappeal-online.com,freshcafe.co.il,galeykor.co.il,gevaram.co.il,graphor87.co.il,halalit.co.il,hameir.co.il,harishon-labinyan.co.il,house-design.shop,imatrix.co.il,justmotor.co.il,kartonimbeclick.co.il,kbmall.co.il,kerenby.co.il,kingelectric.co.il,korenelectric.co.il,koretzki.co.il,leensknit.co.il,linberg.nl,locks.co.il,mabatelectric.com,marco-online.co.il,me-electric.co.il,mercavot.co.il,mispar1.co.il,mosheparts.co.il,mozartbakery.co.il,nitecore.co.il,no-risk.co.il,ocha.co.il,onecoffee.co.il,order227.co.il,pccenter.co.il,peerlocks.com,pisga-shop.co.il,plastelina-ltd.co.il,pompa.co.il,pool.co.il,popeyessupplements.com,probox-online.co.il,projector.co.il,r-k.co.il,rsm.co.il,run2gain.co.il,salielectric.co.il,shaboart.co.il,shop-now14.co.il,soragit.co.il,sportcom.co.il,sporty.co.il,spy.org.il,super-electric.co.il,superelectric.co.il,telepeled.co.il,threesixty.co.il,toolman.co.il,tudo.co.il,universe.co.il,vero-cafe.co.il,wijnhaven.nl,winprice.co.il,x-press.co.il,zoref.co.il,zulacasino.com###cookie-consent-popup
 action.pl,appartementamsterdam.nl,bestbuycyprus.com,cambridge.org,careers.waystar.com,deakin.edu.au,dgpci.mai.gov.ro,discountbank.co.il,dividendmax.com,eluniversal.com.mx,faccsa.com,farrerpark.com,haber7.com,huurwoningamsterdam.nl,imda.gov.sg,jobg8.com,kameramsterdam.nl,lancsmokehouse.com,macpac.co.nz,mercantile.co.il,meups.com.br,motosport.co.il,nomos-glashuette.com,ostwest.tv,pdpc.gov.sg,piadinalumbro.gr,rules.co.uk,safra.sg,sozcu.com.tr,studiosamsterdam.nl,wobily.com,woonbotenamsterdam.com##.cookie-message

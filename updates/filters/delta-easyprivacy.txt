@@ -18,6 +18,7 @@
 ||t2037ulzqct5.com^
 ||x7k9m2q4z8r1.com^
 ||derbysoftsec.com^$third-party
+||pandect.es^$third-party
 ||pubfluencers.com^$third-party
 ||axedint.com^
 ||berrytots.com^
@@ -40,8 +41,10 @@
 ||mathrevolt.com^
 ||melodyivory.com^
 ||messrod.com^
+||mythweaver.net^
 ||nitrojiveband.com^
 ||ordinalzero.com^
+||penbuzz.com^
 ||pitmanmusic.com^
 ||pivotfresh.com^
 ||rapidscraper.com^
@@ -73,12 +76,15 @@
 ||analytics.shelbyklein.com^
 ||api.sided.co/embed/registerDebateEvent
 ||api.sided.co/embed/updateSession
+||data.clickocean.io^
 ||dev.visualwebsiteoptimizer.com/cdn/edrv/
 ||dev.visualwebsiteoptimizer.com/edrv/
 ||estuary-data.com/ga4-identify
 ||feliz.data.tm-awx.com/netro-web/batch
 ||fingerprint.blockifyapp.com^
+||monitor.tapper.ai^
 ||otel-hfo.fareharbor.engineering/v1/traces
+||qscripts.s3.amazonaws.com/pscript.js
 ||r.lr-hv-in.com^
 ||sr-cdn.shiprocket.in/sr-promise/static/iframe.html
 ||tvid.in/api/track
@@ -87,6 +93,7 @@
 ||view.publitas.com/javascripts/vendors/publitas-stats.js
 ||adweek.com/vx39/
 ||bytes.adweek.com/vs.js
+||faro.mgmt.hancom.io/collect
 ||gg.deals/scripts/track-gtm.js
 ||gpupartner.com/57df8107ae016629/script.js
 ||media.audubon.org/js/aud_tracker.min.js
@@ -99,6 +106,7 @@
 ||uniqueness.greenmangaming.com^
 ||whispersinthecorridors.in/public/js/analytics.js
 ||adobe.com/gtg/
+||affiliates.purevpn.com^
 ||box.com/securemetric/
 ||canva.com/gtg/
 ||cloudflare.com/go9u/
@@ -115,6 +123,7 @@
 ||mailchimp.com/metrics/
 ||onesignal.com/f7by/
 ||poki.com/rmt/
+||purevpn.com/nm7sjdp/
 ||s.dreamhost.com/67ead4DfmU/
 ||secure.valnetinc.com/discover
 ||squarespace.com/metrics/

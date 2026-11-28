@@ -1572,6 +1572,7 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 /lib/prebid-$script
 /prebid-library.js
 ||029d52f978.com^
+||0dc4e2d682.com^
 ||131vqvt1ni417ur85o1.cfd^
 ||17992mmt5t8w1lickw3vnjxg8xj5uv.rest^
 ||22cwutviuclmjyqcumu45t8.rest^
@@ -1585,6 +1586,7 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||43ih5huij5znfocgz5i3e7to.rest^
 ||4b6n4r2ye1bzizl52.rest^
 ||4k2r37nqc175kk.cfd^
+||4n7nlz26xpmezw8887ucz4o1f6ufkgqe.cfd^
 ||4pqlpibcjom1tbf331nz.rest^
 ||4qhg8h56veuu9mmj4c.rest^
 ||4v9oc84lv4p8lpt.cfd^
@@ -1602,7 +1604,9 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||7nmvn73b484n9e6.cfd^
 ||7ojze6gy31eprr42y.cfd^
 ||7on11fz9uiljn3v.rest^
+||7oumxpup2wfqjeyclo.rest^
 ||7soyhrnb.xyz^
+||83b983em3l53jkr91zrr1.cfd^
 ||8kitpizutoxhjg9.cfd^
 ||8oevlvter6r91nb.rest^
 ||8qbtyzw45xk3urr5q.rest^
@@ -1649,6 +1653,7 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||agatebrook.info^
 ||agfsmfrtaalcj.space^
 ||aggqycnisxtgx.website^
+||aggrateepilobe.com^
 ||agibvcsxzxmjg.site^
 ||agiyftyfyopyf.site^
 ||agroanmakescine.cyou^
@@ -1659,6 +1664,7 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||airmassdalethsdisbar.cyou^
 ||aitevcoqiwzzu.website^
 ||aitugmtvcanxdh.com^
+||aitygyoncwrcm.space^
 ||aiuaraudkcpjp.online^
 ||aiwkfysbjrhxu.website^
 ||aiwsdkxqizteg.online^
@@ -1686,6 +1692,7 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||alywsbeqoltln.website^
 ||amaamahpbrt.com^
 ||amanistgobiid.com^
+||ambryalluded.com^
 ||amethystleaf.com^
 ||amjmswjtecziz.website^
 ||amkdipsafdpo.in^
@@ -1710,6 +1717,7 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||apilinagglespuddy.cfd^
 ||apmothlut.in^
 ||apnqvhqlhzvhc.site^
+||aposiabordel.rest^
 ||apsjjjwnixpku.space^
 ||apteryxsideway.rest^
 ||aqoxdvtvj.com^
@@ -1739,10 +1747,14 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||asdtcogh.in^
 ||asfaocttaado.com^
 ||ashiestoverfit.rest^
+||asialogger.com^
+||asoptheseum.click^
+||asphaltlub.com^
 ||aspyhobbil.com^
 ||asrvohouoavdj.site^
 ||assahyclary.click^
 ||assaystrystedcork.cfd^
+||asterdrizzle.org^
 ||asvsvwswbxirk.online^
 ||asybloqlkonal.website^
 ||asyzgvzheexiw.website^
@@ -1771,6 +1783,7 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||awoddugfwgwvu.site^
 ||axbmfnnfoynqv.online^
 ||axcitqovidvoc.online^
+||axxxrckuzfgml.site^
 ||axygzacfeljmm.website^
 ||ayqkfkajfwjar.website^
 ||aysrobinintufts.cfd^
@@ -1793,12 +1806,16 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||banlieuopiningpangene.cyou^
 ||barbafvgixbsa.website^
 ||barbitabackupslexemic.cfd^
+||barhaldefines.cyou^
 ||bayokmisstayusques.cfd^
 ||bbahwrxlronlz.website^
+||bbcwebhosting.com^
+||bbdmnxtlfkpsl.site^
 ||bbeqsvlxsybog.website^
 ||bbnqwnpljcaqt.website^
 ||bcgqtky.com^
 ||bcorfvekbpskv.site^
+||bcueedpnmafwf.site^
 ||bdethylicsubduct.cfd^
 ||bdnstkfqsxmtv.online^
 ||bdrykffavezxq.website^
@@ -1806,6 +1823,7 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||bdwahasy.com^
 ||bdwlbrozfnlah.online^
 ||beayrzcpfqwqr.website^
+||bedewerknorhmndjinni.cfd^
 ||behearbkpt.com^
 ||behqvivuxazrz.online^
 ||behubuljploem.online^
@@ -1814,10 +1832,12 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||benabmoellonunpious.cyou^
 ||bestridrabbleunhope.cfd^
 ||betterviolet.org^
+||beweepsjuliana.com^
 ||beworrybellis.com^
 ||beyilbysaaoih.online^
 ||bezhaicqxqaku.online^
 ||bfiaccczaok.in^
+||bfigibxhgvxko.site^
 ||bfjmlaaavzteo.website^
 ||bfykxkeewyhdi.site^
 ||bgijshqfhaqsx.website^
@@ -1839,6 +1859,7 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||bjzvinxduxltg.website^
 ||bkabbgtmedzoy.online^
 ||bkll54lnyxth6pwo2.rest^
+||bklldynwynozp.space^
 ||bkpebarwjzavg.website^
 ||blackandwhite-language.pro^
 ||bland-outcome.pro^
@@ -1848,6 +1869,7 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||blinkeddirtier.cyou^
 ||blotternongoulan.cyou^
 ||blownshortia.com^
+||blunnenwhipray.rest^
 ||blushingexpert.pro^
 ||blyiwafrgbnfd.site^
 ||blyrcarsysnux.site^
@@ -1899,6 +1921,7 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||buapsybcocwuw.website^
 ||bulbosesuns.cfd^
 ||bummestsplodgy.rest^
+||bungostasty.com^
 ||bunkosmusterpuisny.cyou^
 ||buqpacewtgrle.site^
 ||burieschill.click^
@@ -1943,6 +1966,7 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||ccrrnhwxxaied.online^
 ||cdmrkgsnxkoje.space^
 ||cdmvwwwusfbrq.website^
+||cedingspeerexacta.cyou^
 ||cedrinefloutmckay.cfd^
 ||ceilingknockup.com^
 ||ceoxl3115ih9j1p4kg39.cfd^
@@ -1983,6 +2007,7 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||clerumzanana.rest^
 ||clerusotiose.click^
 ||cletkgeeyjqsu.space^
+||clfpjxmwxzrqf.website^
 ||clipeiunvague.click^
 ||clocksuch.com^
 ||cloudpiko.com^
@@ -1990,6 +2015,7 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||cloudybamboo.com^
 ||cloudylinen.biz^
 ||clueingleuch.cfd^
+||clypeibogyism.com^
 ||cmmrlbbmvxrky.website^
 ||cmmugifxhmlbv.space^
 ||cmsxigzqvurqm.space^
@@ -2032,6 +2058,7 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||coumarafluey.click^
 ||coupescalina.com^
 ||cowardrainbowactual.com^
+||cowboyszongora.click^
 ||cowgirlguestenmanzas.cyou^
 ||cowweedpugil.rest^
 ||cpdoshaafwdzx.space^
@@ -2043,6 +2070,7 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||cropstablier.cfd^
 ||crotaltendrac.com^
 ||crucilysphalm.rest^
+||crumengoldy.com^
 ||crunkdemur.rest^
 ||crystalgrass.com^
 ||csegfocgjhjon.space^
@@ -2098,6 +2126,7 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||dedolingtow.com^
 ||deepoceandrop.biz^
 ||deerstorm.com^
+||defjadkfunrnf.website^
 ||deforserexine.cyou^
 ||defrostborer.cfd^
 ||degavxiubxyya.com^
@@ -2122,10 +2151,12 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||diarchgullynephric.cyou^
 ||diatomacranes.cyou^
 ||dibblesrabbishsergei.cyou^
+||difnxeguezsyx.website^
 ||digeneaoctrois.com^
 ||dightereparchs.cfd^
 ||digmarvnewxvz.online^
 ||dignecashews.com^
+||diligentpreparation.pro^
 ||diluvyvampish.com^
 ||dinkiesdauded.rest^
 ||dinzzqoitqmeo.online^
@@ -2150,6 +2181,7 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||dnbagmcvtsbkf.space^
 ||dndbptdfzg.com^
 ||dnhepqnyxrmnn.space^
+||dogfwtdcdltcd.online^
 ||dojmyftcqwcjx.space^
 ||domainsculmgasted.cyou^
 ||doomsarchaic.com^
@@ -2208,9 +2240,11 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||dubsessile.click^
 ||dudyetoknndrw.online^
 ||dunesrancorssinhs.cyou^
+||dusrqtopvvjza.online^
 ||dvgoehfjbdwyz.space^
 ||dvvjmkuxpjrlc.site^
 ||dvykhdiwkpjuq.online^
+||dwvmxisvkwenf.website^
 ||dxdwfgqtuegmy.website^
 ||dxmjdtwhytzxb.space^
 ||dxyxyrailduzp.space^
@@ -2220,6 +2254,7 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||dzvnirqek.com^
 ||e3hxc6v45tgx9i1o.cfd^
 ||e7399e9486.com^
+||eadtnjekitlfr.online^
 ||eagerdish.org^
 ||eapyorpqsofux.website^
 ||earwaxhurty.cyou^
@@ -2234,10 +2269,12 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||eddwgrnxzasfc.space^
 ||edgeshaplomabanns.cyou^
 ||edhfgtlkoewjk.com^
+||editingdispar.cyou^
 ||edyvyrqphxuqw.space^
 ||edyvzmehqxtvk.space^
 ||eelfxnnyjuatb.website^
 ||eemehsezfbdjj.online^
+||efeuoyzearrwi.online^
 ||efpaprrpjzzao.website^
 ||egaliteraver.click^
 ||egglessabducedcalcomp.cyou^
@@ -2298,6 +2335,7 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||everyinline.cyou^
 ||evicdfiftovcs.space^
 ||evwiismsmecdr.online^
+||ewayiwmvpovzm.space^
 ||excellentwave.me^
 ||exceptsstores.cfd^
 ||excitedazalea.com^
@@ -2316,6 +2354,7 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||falutineaglet.com^
 ||famulusgirshes.com^
 ||fangassneesttrothed.cfd^
+||faqtyzdovaotw.space^
 ||fardageproverb.rest^
 ||faunaoampitter.cyou^
 ||fausterribald.click^
@@ -2409,6 +2448,7 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||furtiverhetor.com^
 ||fvaniklwgxqmb.online^
 ||fvegszynsnlmx.site^
+||fvojvsrvvywup.site^
 ||fvwhouxoaytpi.online^
 ||fwdsykxmlfgmr.website^
 ||fwdvhfbditbgh.website^
@@ -2420,8 +2460,10 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||gafsjogoxeepk.online^
 ||gafwqszdvapoq.site^
 ||gahiwibqvo.com^
+||galbeguatuso.click^
 ||gallachwowwows.rest^
 ||gapgwfmsaibho.online^
+||gatetemene.rest^
 ||gathvx.com^
 ||gausspinedabduct.cfd^
 ||gaxzzsjvrwidx.space^
@@ -2437,6 +2479,7 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||gelscrower.com^
 ||gemmierwasty.cyou^
 ||gerdvsvshbsgg.online^
+||getablealethealichis.cyou^
 ||getaesylvite.click^
 ||gevibbbwgpaxy.space^
 ||gfgayfvin.com^
@@ -2444,6 +2487,7 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||gfvayojvzswxr.site^
 ||ggceomkffyyhu.website^
 ||gggblvs.com^
+||ggoewkwxdjqqi.online^
 ||ggwlsmnaidwbj.space^
 ||ghautincant.cfd^
 ||ghdxhiwccltsn.site^
@@ -2451,6 +2495,7 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||ghjfdelghyadp.space^
 ||ghlaqjsboxryn.website^
 ||ghm265hgfph5z2w4.rest^
+||ghmcydrzbtqln.online^
 ||ghoomdishful.cyou^
 ||ghpbfcqztyzpw.site^
 ||gibres.xyz^
@@ -2502,6 +2547,7 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||groceryyusdrum.cyou^
 ||grosslydicastsgoodish.cyou^
 ||grouseruncastbarfing.cyou^
+||growthjymold.com^
 ||gryphonprebind.cyou^
 ||gtboyumajcson.online^
 ||gtmxlutglqqae.space^
@@ -2516,6 +2562,7 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||gvoyfyvhfomnq.website^
 ||gwpbffhjdemva.site^
 ||gwrgrvbmsrhfx.website^
+||gxeftljatpnzm.space^
 ||gxrdxtfsuksug.website^
 ||gxuntweapylyx.website^
 ||gxyzkmsksthas.website^
@@ -2578,6 +2625,8 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||hjtsqfnfukthp.space^
 ||hlfdmicon.com^
 ||hlggpgruglizv.website^
+||hlmdrcrnmnqow.online^
+||hlmicuawvsysm.website^
 ||hlqbpuenoslyj.online^
 ||hmvblcfoslkjy.space^
 ||hncotgjzlxzze.website^
@@ -2601,8 +2650,10 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||htvrhfnjawzer.website^
 ||huhcluster.cyou^
 ||huichkpqhbsxq.website^
+||hurliesgaucie.cfd^
 ||hurupjtqpngdm.website^
 ||huxfbfxnjbpoa.site^
+||huzzasstated.com^
 ||hviyvozcpwlki.website^
 ||hvqxxesmroali.website^
 ||hvshjieaj.com^
@@ -2616,6 +2667,7 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||hyraxestriced.rest^
 ||hyxtspnafwoxv.site^
 ||hzjtbzoxkzffd.space^
+||hznqeqcxqbanh.website^
 ||i1337yreugulr499qp6r58.rest^
 ||i8vk5ccf1ucblwr.rest^
 ||iaburdjxqnwoq.com^
@@ -2624,6 +2676,7 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||ibrhkpnhwzvbv.online^
 ||ibtoqfvttxkva.online^
 ||id5-tech.io^
+||idbres.xyz^
 ||idkkajuxeciwm.website^
 ||idqifqhacykoz.site^
 ||idselenchiuploop.cyou^
@@ -2635,6 +2688,7 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||ifverjmhgjpzq.online^
 ||igavdeanowltb.website^
 ||igbzdceraoqme.space^
+||iggclodyvnnjq.space^
 ||igpfsbwqohpbh.space^
 ||igwugieeyvynn.space^
 ||igyywuvughcgo.site^
@@ -2642,6 +2696,7 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||ihpkdfnisctqr.space^
 ||ihramjoust.click^
 ||iiepzyvhtdqoi.space^
+||iipvhcvoajpch.com^
 ||iizravrqlhq.com^
 ||ijonjvilzeyxa.space^
 ||ijysugjcq.com^
@@ -2749,6 +2804,7 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||jjypdfrxbgyfv.website^
 ||jkabgsmcttous.website^
 ||jkecnhkkvabir.space^
+||jkocuhxama.in^
 ||jkuaxpogro.in^
 ||jkwctrvfhrgdp.space^
 ||jlmspraypezct.com^
@@ -2760,6 +2816,7 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||joshedlieder.com^
 ||jotmlpvassasq.site^
 ||joydztyaambgn.site^
+||jqedrntdkxntn.space^
 ||jqigbwwsqscnl.online^
 ||jqshluizajv.com^
 ||jqwprcbgiohuf.site^
@@ -2812,6 +2869,7 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||katnhdjdmtujp.site^
 ||katunmown.rest^
 ||kawakaukuleleistrian.cfd^
+||kbjswufatikie.website^
 ||kcalbrill.click^
 ||kcbobqjdmyjnx.site^
 ||kcfeufkjjpdir.site^
@@ -2831,9 +2889,11 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||keyingcrueler.com^
 ||keymjhqwcwpio.site^
 ||kgaiqclfyagxh.space^
+||kghapauunmnpg.site^
 ||kgkjwsubtad.com^
 ||kimbcmprbzjed.online^
 ||kioczljstjmmd.online^
+||kirkmenintinctalbinic.cyou^
 ||kjctsxcqsevth.online^
 ||kjdgirbgkrwqg.space^
 ||kjkeajdbdzdiq.space^
@@ -2998,6 +3058,7 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||mastagesatrae.cfd^
 ||matanzaennia.cyou^
 ||matawantorsalo.cfd^
+||maviepiaba.cyou^
 ||maxjsbndgiznc.site^
 ||mazameunwhole.cyou^
 ||mbbtjbdiuhgmo.space^
@@ -3014,6 +3075,7 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||meiotussive.com^
 ||mejwsadund.com^
 ||meltscanamo.com^
+||mennuetcto.com^
 ||mepmvgkuxpwhi.space^
 ||mercu-wgp.com^
 ||mescalfalsie.click^
@@ -3046,6 +3108,7 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||mistrysurgedcocomat.cyou^
 ||miuxvxlbkbsby.space^
 ||mjsxifzcskktl.website^
+||mjucj37g2f298h22mg7n9tx9vc.rest^
 ||mkbuhgfgjoalj.website^
 ||mknfoxtmefgea.space^
 ||mkzjimniofuak.online^
@@ -3095,6 +3158,7 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||mwbowrybfgbcx.space^
 ||mwsgvnkhfrlah.space^
 ||mwsmtyhvbdsbg.space^
+||mxjirphujnful.space^
 ||mxyccryjagnoy.space^
 ||myxineonsetstride.cfd^
 ||mzaprkzksjutg.site^
@@ -3143,6 +3207,7 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||niyogazinebs.rest^
 ||njwywpwhswqku.space^
 ||nkj4ou26epqokr7h57fjg.rest^
+||nkkxxhnfbqqsc.space^
 ||nmbliikrwcmpw.site^
 ||nmilyzrhb.com^
 ||nmpuwupzfgilx.space^
@@ -3151,6 +3216,7 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||nojoxonlxcmyg.online^
 ||nonfactbrooder.rest^
 ||nongreysancy.click^
+||northbridgeads.com^
 ||notxnphljhupk.online^
 ||novitydarkeys.com^
 ||nozzlerfunds.click^
@@ -3170,8 +3236,10 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||nsdhgcvwfflsm.website^
 ||nsgrvczpmxtjh.site^
 ||nsnvutvongntq.site^
+||nszmsmmzibuwe.space^
 ||ntchvggaalbmv.space^
 ||ntjzyxcbsp.com^
+||ntprbypxmtouk.space^
 ||ntunwcfkynwjr.space^
 ||nullingacyls.com^
 ||nutcakesinking.click^
@@ -3278,6 +3346,7 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||oxyopiacactoid.cfd^
 ||oxyopytidings.com^
 ||oyanascroggy.rest^
+||oyhdybufukaol.space^
 ||oyhphlsfbckdy.online^
 ||oyjtdthtoynft.space^
 ||oyotfncssiyfn.online^
@@ -3341,9 +3410,11 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||pinusproviso.click^
 ||piquedbenumbrebs.cfd^
 ||pithsbushily.rest^
+||pitrisfinnack.rest^
 ||pituitefauns.rest^
 ||pizivuvawntzl.online^
 ||pjdfhfwnhkqhc.space^
+||pjhwhjnhmyqsm.online^
 ||pkexgxjqtnjim.online^
 ||pkfgxpgftniet.online^
 ||pkmpjqpkjvpyp.website^
@@ -3388,6 +3459,7 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||prepavesean.cyou^
 ||prieglaiket.click^
 ||primsiecliff.com^
+||princodoverlow.click^
 ||privrebinds.click^
 ||prjlikkwstrkl.website^
 ||probandfrizzes.com^
@@ -3456,6 +3528,7 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||qkglku8v52hjoy7xjx7bh.rest^
 ||qkweatlvlakfg.website^
 ||qlcbxdnymc.com^
+||qlwyflpjlqbpa.site^
 ||qobpndboehbrn.online^
 ||qoerhsebttsgn.com^
 ||qompeoajm.com^
@@ -3469,9 +3542,11 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||qrubhrfilkwmc.website^
 ||qshiqigownotd.site^
 ||qshwirfgvfkfg.website^
+||qslbgfkl.com^
 ||qsseunyggnlic.site^
 ||qsslbksuotdab.site^
 ||qsuhnxxdlrcoq.space^
+||quadrsnrrtyvp.space^
 ||quasaransarie.cfd^
 ||quasherscops.com^
 ||qubmedkjzaidi.space^
@@ -3654,6 +3729,7 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||secondarysignal.pro^
 ||seenitro.com^
 ||seginusnervier.click^
+||semuadisini.xyz^
 ||seppndkhrmpcn.website^
 ||serranogossans.cyou^
 ||sfydaeqxwbhla.online^
@@ -3667,8 +3743,10 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||shinyalto.mobi^
 ||shinysail.com^
 ||silkmenrattles.com^
+||simpleaura.mobi^
 ||sinhxpdlctxvb.site^
 ||sisfonfcxsqgm.online^
+||sjlxpnisnow.com^
 ||sjmwpcpxmfyev.site^
 ||sjomiladuplyaraban.cyou^
 ||sjrdlqpvpzcay.online^
@@ -3694,6 +3772,7 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||smaltska.com^
 ||smkdqihbobuxl.site^
 ||smokoscobb.cfd^
+||smudgecarpal.com^
 ||smyalsonxlif.in^
 ||snarescarate.com^
 ||snareskookri.com^
@@ -3706,11 +3785,13 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||snxnrsqxfujgi.website^
 ||snyhyxvbz.com^
 ||soaperynutate.cfd^
+||socthogyhgllt.site^
 ||soferbraccia.click^
 ||soldersablatorhornish.cfd^
 ||somalounshiny.rest^
 ||sonsiecozing.rest^
 ||soupy-objective.pro^
+||southlyclampedpryers.cyou^
 ||sparkbeach.me^
 ||spartanglutted.cyou^
 ||spcfqmlodyqoh.website^
@@ -3721,6 +3802,7 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||spillmettle.click^
 ||spkqcrlngemrv.online^
 ||splhepaqauqdz.site^
+||spmkvrhdswqen.space^
 ||spokesdonnie.rest^
 ||spoolspelage.com^
 ||spungehowes.com^
@@ -3745,6 +3827,7 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||studssecohm.rest^
 ||stunnedlanced.com^
 ||subaridanurias.click^
+||sujgbeemskayu.website^
 ||sukccufhrdbfu.online^
 ||sukhdufrseysa.space^
 ||sulafatmortals.com^
@@ -3764,10 +3847,12 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||syagraqdoaxue.website^
 ||syceesamekhsalumnae.cfd^
 ||syejhsxaag.com^
+||sykesscore.click^
 ||sykqfitqdiwbo.online^
 ||symlxpywzghrn.space^
 ||synangesinky.com^
 ||synyvfhkotldg.online^
+||syrianeffront.rest^
 ||systssczhkth.com^
 ||szcipilourzpu.website^
 ||szfmxsseuoqpc.space^
@@ -3803,6 +3888,7 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||teriannineristilty.cfd^
 ||teriexcited.com^
 ||terpenebandies.cfd^
+||tesuquecymbid.com^
 ||tfattckoquolz.website^
 ||tfucajtkfvomv.online^
 ||tgigyxgmpd.com^
@@ -3823,6 +3909,7 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||tiozgrrarbzlg.website^
 ||tipsripstop.com^
 ||tipzxdvzaducw.site^
+||tiqckevuqav.in^
 ||tissualbulanda.cyou^
 ||titterynemesic.cfd^
 ||tivwrlyzroqve.site^
@@ -3837,9 +3924,11 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||tmkziuhyhasal.space^
 ||tmttmisflltyd.space^
 ||tmwnwlo5c1e3z43.cfd^
+||tndsmiblhdjny.site^
 ||todiesknacks.com^
 ||todmvkbkwtrhr.online^
 ||topkickgarlion.cyou^
+||topkickimmi.com^
 ||torbacku.com^
 ||tornadorainbow.biz^
 ||tornadorainbow.info^
@@ -3951,6 +4040,7 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||unlinksdefet.rest^
 ||unlistydopa.cyou^
 ||unpleasant-aspect.pro^
+||unrovenochreae.com^
 ||unsafertulipschintz.cfd^
 ||unurnalgedo.click^
 ||uohjuatpvtmhy.website^
@@ -3976,14 +4066,17 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||uvkzokivobwdf.site^
 ||uvrudfygblbsc.online^
 ||uvularsbrogue.com^
+||uwtoqdyjswabf.site^
 ||uwudtptngvt.com^
 ||uxoanimebvoln.website^
 ||uxsdrsxdjglvy.space^
 ||uxsyynwodf.com^
+||uxtyulroerfnt.space^
 ||uyvsoydxgzhnq.website^
 ||uzicoerpqqkou.site^
 ||uznelnuamjsxb.website^
 ||uztnsoobcrzoy.site^
+||uzuccqopmxwbv.space^
 ||uzwpszhfnnqz.com^
 ||vadgysytvtull.site^
 ||vafvafnotif.com^
@@ -4005,6 +4098,7 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||vcwvxvwpdliks.online^
 ||vdfnethzjsbng.online^
 ||vdkemngocopsz.online^
+||vecturedips.rest^
 ||vehicleblawspreknow.cfd^
 ||velatekanjiforwake.cfd^
 ||velvetcairns.com^
@@ -4036,6 +4130,7 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||vmiloklnfszpc.website^
 ||vnbbfeecvvmig.site^
 ||voculebatel.com^
+||vofbacdchrhcl.online^
 ||voragobuzziesvicars.cyou^
 ||vpfcglnwbtrqn.space^
 ||vpfettrd.com^
@@ -4087,6 +4182,7 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||wcpbcjxxopfjo.site^
 ||wdasoesaifxov.space^
 ||wdiylvapyzygy.website^
+||wdmcoaxirqpnq.space^
 ||weegbcfrlhiat.space^
 ||weighedlourie.com^
 ||weirdride.pro^
@@ -4129,6 +4225,7 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||wmdrsrgtsjqjo.site^
 ||wmpeeumxqws.com^
 ||wmqeznveapyfl.space^
+||wmukcrethgqcq.online^
 ||wnnbzlovhfhhm.site^
 ||wnvdnpbpvhwhr.online^
 ||wocqtskynmtxc.site^
@@ -4186,12 +4283,15 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||xbmszapvtsaqz.site^
 ||xbqxuijefttnf.online^
 ||xcviqklcuwzml.website^
+||xdeqcxwyepidj.space^
 ||xebmcayqpzmlf.site^
 ||xecnfeepzokjx.online^
 ||xejgagdvlelvc.site^
 ||xeotexbbwxayb.website^
+||xerasiacyamidcloop.cyou^
 ||xevedpsytttfp.site^
 ||xfbknhlkzqwxz.online^
+||xfhucnvpxotti.site^
 ||xfpzvcxzylppp.online^
 ||xfqsdodesfacy.space^
 ||xgpdevelfeeea.space^
@@ -4201,6 +4301,7 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||xhphatlppluzk.site^
 ||xhpjileqbhzwy.website^
 ||xhydzoav.in^
+||xigqlyehplgum.online^
 ||ximnfjzjhznmi.space^
 ||xiumsczf.com^
 ||xizokkitxoohk.website^
@@ -4321,6 +4422,7 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||z989qkwjq2r12qwyc76bbx7yp5k7cp.cfd^
 ||zafossbwimwu.in^
 ||zaguanhagropelabial.cfd^
+||zahcftxxthiru.space^
 ||zamhwtyfwemsg.com^
 ||zatrzmvlegbgu.website^
 ||zayvqbcqlwmpe.site^
@@ -4394,6 +4496,7 @@ x.com#%#//scriptlet('json-prune', 'data.*.home_timeline_urt.instructions.*.entri
 ||zzgorjvsxhfas.online^
 ||zzwugofxijrfm.space^
 ||zzxbmbkhljshw.online^
+||bbcwebhosting.com^$document
 ||hiiltrack.online^$document
 ||anonymousdemographics.com^$third-party
 ||getsquirrel.co^$third-party
@@ -4420,6 +4523,7 @@ techbarrista.com###block-20
 indiatimes.com###custom_ad_wrapper_0
 thedailybeast.com###header-ad__wrapper
 shiftdelete.net###header-container
+steamdb.info###js-deals
 thedailybeast.com###outstream-video-ad-wrap
 techmeme.com###tdbuacdq
 12news.com,8gwifi.org,9news.com,9to5google.com,9to5mac.com,aad.org,advfn.com,all3dp.com,allaboutcookies.org,allnovel.net,amny.com,athleticbusiness.com,audiokarma.org,beeradvocate.com,beliefnet.com,bizjournals.com,bolavip.com,bonappetit.com,breakingac.com,britishheritage.com,businessday.ng,businessinsider.com,capemaynjdaily.com,cbs8.com,cc.com,ccjdigital.com,centralbucksnews.com,dailytrust.com,delish.com,downbeach.com,dutchnews.nl,ecr.co.za,electrek.co,engineeringnews.co.za,equipmentworld.com,euromaidanpress.com,fastcompany.com,fishermap.org,footyheadlines.com,fox10phoenix.com,fox13news.com,fox26houston.com,fox29.com,fox2detroit.com,fox32chicago.com,fox35orlando.com,fox4news.com,fox5atlanta.com,fox5dc.com,fox5ny.com,fox7austin.com,fox9.com,foxbusiness.com,foxla.com,foxnews.com,funkidslive.com,gfinityesports.com,globalspec.com,gmanetwork.com,grammarbook.com,greatbritishchefs.com,greatitalianchefs.com,hbr.org,highdefdigest.com,historynet.com,horshamnow.com,howstuffworks.com,huffpost.com,ibtimes.sg,inc.com,insidehook.com,intouchweekly.com,irishcentral.com,karanpc.com,khou.com,koat.com,ktvu.com,lifeandstylemag.com,longislandpress.com,macstories.net,mail.com,memuplay.com,metro.us,metrophiladelphia.com,minecraftforum.net,miningweekly.com,mixed-news.com,mobilesyrup.com,modernhealthcare.com,namemc.com,nbcnews.com,newrepublic.com,northpennnow.com,nzherald.co.nz,ocnjdaily.com,oneesports.gg,opb.org,outkick.com,papermag.com,perkvalleynow.com,phillydaily.com,physiology.org,pixiv.net,podcastaddict.com,punchng.com,qns.com,realsport101.com,reason.com,refinery29.com,ringsidenews.com,roadandtrack.com,runguides.com,scroll.in,seaislenews.com,seattletimes.com,songkick.com,sportskeeda.com,storyboard18.com,techrepublic.com,the-decoder.com,thelocal.at,thelocal.ch,thelocal.de,thelocal.dk,thelocal.es,thelocal.fr,thelocal.it,thelocal.no,thelocal.se,thenationonlineng.net,thenewstack.io,thepost.co.nz,thetimes.com,tmz.com,toofab.com,tuasaude.com,uploadvr.com,usmagazine.com,vanguardngr.com,wildtangent.com,willowgrovenow.com,wired.com,wogx.com,worldsoccertalk.com,wral.com,yahoo.com##.ad-container
@@ -4456,6 +4560,7 @@ phoronix.com##[name="phoronix_desktop_leaderboard_header"]
 videocardz.com##a[class][href^="https://www.amazon.com"][target]
 simpleflying.com##a[rel*="sponsored"]
 justjared.com,theblast.com##ad-component
+steamdb.info##app-sale-events
 pexels.com##div[class^="AfterDownloadModal_adContainer"]
 igorslab.de##div[id^="advads_ad_widget-"]
 pinterest.*##[role="listitem"]:has(.rounding0_j.fullWidth_1f .subtle_1h.lineClamp_1q)

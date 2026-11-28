@@ -32341,6 +32341,7 @@ kick.com#%#//scriptlet('prevent-setTimeout', 'startBeaconSending')
 ||messrod.com^
 ||nitrojiveband.com^
 ||ordinalzero.com^
+||penbuzz.com^
 ||pitmanmusic.com^
 ||pivotfresh.com^
 ||rapidscraper.com^
